@@ -22,16 +22,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // TODO: return if not owner, only do after adding multiplayer!!!!!
         
         screenPosition = Input.mousePosition;
-        /*screenPosition.z = cam.nearClipPlane + 2f;
+        screenPosition.z = cam.nearClipPlane + 2f;
         
-        worldPosition = cam.ScreenToWorldPoint(screenPosition);*/
+        worldPosition = cam.ScreenToWorldPoint(screenPosition);
         
-        Ray ray = cam.ScreenPointToRay(screenPosition);
+        /*Ray ray = cam.ScreenPointToRay(screenPosition);
 
         if (Physics.Raycast(ray, out RaycastHit hitData))
         {
             worldPosition = hitData.point;
-        }
+        }*/
         
         transform.position = worldPosition;
     }
