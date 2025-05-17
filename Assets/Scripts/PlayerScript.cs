@@ -1,7 +1,8 @@
 using System;
+using Unity.Netcode;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class NewMonoBehaviourScript : NetworkBehaviour
 {
     [SerializeField] Camera cam; 
     [SerializeField] Vector3 screenPosition;
@@ -20,7 +21,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     void Update()
     {
-        // TODO: return if not owner, only do after adding multiplayer!!!!!
+        if (!IsOwner)
+        {
+            return;
+        }
         
         screenPosition = Input.mousePosition;
         screenPosition.z = cam.nearClipPlane + nearClipAddAmount;
