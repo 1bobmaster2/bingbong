@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    [SerializeField] Camera cam; // TODO: make this set dynamically, not force set in editor ok???
-    public Vector3 screenPosition;
-    public Vector3 worldPosition;
-    
-    // Update is called once per frame
+    [SerializeField] Camera cam; 
+    [SerializeField] Vector3 screenPosition;
+    [SerializeField] Vector3 worldPosition;
+    [SerializeField] private int nearClipAddAmount;
+
+// Update is called once per frame
     void Start()
     {
         GameObject camObj = GameObject.FindWithTag("Player1Cam");
@@ -22,7 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // TODO: return if not owner, only do after adding multiplayer!!!!!
         
         screenPosition = Input.mousePosition;
-        screenPosition.z = cam.nearClipPlane + 2f;
+        screenPosition.z = cam.nearClipPlane + nearClipAddAmount;
         
         worldPosition = cam.ScreenToWorldPoint(screenPosition);
         
