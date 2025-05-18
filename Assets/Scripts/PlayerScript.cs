@@ -26,17 +26,16 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             return;
         }
         
+        MovePlayer();
+        
+    }
+
+    void MovePlayer()
+    {
         screenPosition = Input.mousePosition;
         screenPosition.z = cam.nearClipPlane + nearClipAddAmount;
         
         worldPosition = cam.ScreenToWorldPoint(screenPosition);
-        
-        /*Ray ray = cam.ScreenPointToRay(screenPosition);
-
-        if (Physics.Raycast(ray, out RaycastHit hitData))
-        {
-            worldPosition = hitData.point;
-        }*/
         
         transform.position = worldPosition;
     }

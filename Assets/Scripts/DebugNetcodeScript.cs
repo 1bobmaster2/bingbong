@@ -6,11 +6,21 @@ public class DebugNetcodeScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            NetworkManager.Singleton.StartHost();
+            StartHost();
         }
         else if (Input.GetKeyDown(KeyCode.C))
         {
-            NetworkManager.Singleton.StartClient();
+            StartClient();
         }
+    }
+
+    void StartHost()
+    {
+        NetworkManager.Singleton.StartHost();
+    }
+
+    void StartClient()
+    {
+        NetworkManager.Singleton.StartClient();
     }
 }
