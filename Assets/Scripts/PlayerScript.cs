@@ -8,6 +8,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] Vector3 screenPosition;
     [SerializeField] Vector3 worldPosition;
     [SerializeField] private int nearClipAddAmount;
+    
+    //private NetworkVariable<int> debugNumber = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 // Update is called once per frame
     void Start()
@@ -21,13 +23,17 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     }
     void Update()
     {
+        //Debug.Log(OwnerClientId + ";" + debugNumber.Value);
         if (!IsOwner)
         {
             return;
         }
         
         MovePlayer();
-        
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    debugNumber.Value += 1;
+        //}
     }
 
     void MovePlayer()
