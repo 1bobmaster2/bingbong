@@ -14,12 +14,12 @@ public class DebugNetcodeScript : MonoBehaviour
         }
     }
 
-    void StartHost()
+    public void StartHost()
     {
         NetworkManager.Singleton.StartHost();
     }
 
-    void StartClient()
+    public void StartClient()
     {
         NetworkManager.Singleton.StartClient();
     }

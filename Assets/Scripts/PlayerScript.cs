@@ -24,10 +24,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     void Update()
     {
         //Debug.Log(OwnerClientId + ";" + debugNumber.Value);
-        if (!IsOwner)
-        {
-            return;
-        }
+        if (!IsOwner) return;
         
         MovePlayer();
         //if (Input.GetKeyDown(KeyCode.P))
