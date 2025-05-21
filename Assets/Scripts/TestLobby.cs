@@ -4,12 +4,16 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestLobby : MonoBehaviour
 {
 
     private Lobby hostLobby;
     private float heartbeatTimer;
+    private string lobbyCode;
+
+    [SerializeField] private InputField codeInputField;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
@@ -48,11 +52,18 @@ public class TestLobby : MonoBehaviour
         {
             string lobbyName = "TestLobby";
             int maxPlayers = 2;
-            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers);
+
+            CreateLobbyOptions options = new CreateLobbyOptions
+            {
+                IsPrivate = true,
+                
+            };
+            
+            Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
         
             hostLobby = lobby;
             
-            Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers);
+            Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
         }
         catch (LobbyServiceException e)
         {
@@ -76,5 +87,24 @@ public class TestLobby : MonoBehaviour
         {
             Debug.Log(e.Message);
         }
+    }
+
+    public async void JoinLobbyByCode()
+    {
+        try
+        {
+            await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode);
+            
+            Debug.Log("Joined lobby by this code: " + lobbyCode);
+        }
+        catch (LobbyServiceException e)
+        {
+            Debug.Log(e);
+        }
+    }
+
+    public void SetLobbyCode(string lobbyCode)
+    {
+        this.lobbyCode = lobbyCode;
     }
 }
