@@ -10,8 +10,8 @@ public class TestLobby : MonoBehaviour
 {
 
     private Lobby hostLobby;
-    private float heartbeatTimer;
-    private string lobbyCode;
+    private float heartbeatTimer;  
+    [SerializeField] private string lobbyCode;
 
     [SerializeField] private InputField codeInputField;
     
@@ -93,7 +93,7 @@ public class TestLobby : MonoBehaviour
     {
         try
         {
-            await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode);
+            Lobby joinedLobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode);
             
             Debug.Log("Joined lobby by this code: " + lobbyCode);
         }
