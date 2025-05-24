@@ -10,7 +10,9 @@ public class TestLobby : MonoBehaviour
 {
 
     private Lobby hostLobby;
-    private float heartbeatTimer;  
+    private Lobby joinedLobby;
+    private float heartbeatTimer;
+    private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
 
     [SerializeField] private InputField codeInputField;
@@ -27,15 +29,12 @@ public class TestLobby : MonoBehaviour
             Debug.Log("SignedIn: " + AuthenticationService.Instance.PlayerId);
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
-        
-        playerName = "PlayerNum" + UnityEngine.Random.Range(1, 100);
-        
-        Debug.Log("Player name equals: " + playerName);
     }
 
     void Update()
     {
         HandleLobbyHeartbeat();
+        HandleLobbyPollForUpdates();
     }
 
     async void HandleLobbyHeartbeat()
@@ -49,6 +48,21 @@ public class TestLobby : MonoBehaviour
             heartbeatTimer = heartbeatTimerMax;
 
             await LobbyService.Instance.SendHeartbeatPingAsync(hostLobby.Id);
+        }
+    }
+
+    async void HandleLobbyPollForUpdates()
+    {
+        if (joinedLobby == null) return;
+        
+        lobbyUpdateTimer -= Time.deltaTime;
+        if (lobbyUpdateTimer < 0f)
+        {
+            float lobbyUpdateTimerMax = 3f;
+            lobbyUpdateTimer = lobbyUpdateTimerMax;
+
+            Lobby lobby = await LobbyService.Instance.GetLobbyAsync(joinedLobby.Id);
+            joinedLobby = lobby;
         }
     }
 
@@ -68,6 +82,7 @@ public class TestLobby : MonoBehaviour
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
         
             hostLobby = lobby;
+            joinedLobby = hostLobby;
             
             Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
             PrintPlayers(hostLobby);
@@ -105,7 +120,8 @@ public class TestLobby : MonoBehaviour
                 Player = GetPlayer()
             };
             
-            Lobby joinedLobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode, joinLobbyByCodeOptions);
+            Lobby lobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode, joinLobbyByCodeOptions);
+            joinedLobby = lobby;
             
             PrintPlayers(joinedLobby);
             
@@ -128,6 +144,11 @@ public class TestLobby : MonoBehaviour
     public void SetLobbyCode(string lobbyCode)
     {
         this.lobbyCode = lobbyCode;
+    }
+
+    public void SetPlayerName(string name)
+    {
+        this.playerName = name;
     }
 
     private Player GetPlayer()
