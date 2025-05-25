@@ -133,6 +133,23 @@ public class TestLobby : MonoBehaviour
         }
     }
 
+    public async void LeaveLobby()
+    {
+        try
+        {
+            await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, AuthenticationService.Instance.PlayerId);
+        }
+        catch (LobbyServiceException e)
+        {
+            Debug.Log(e);
+        }
+    }
+
+    public void PrintPlayers()
+    {
+        PrintPlayers(joinedLobby);
+    }
+    
     private void PrintPlayers(Lobby lobby)
     {
         foreach (Player player in lobby.Players)
