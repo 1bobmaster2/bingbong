@@ -2542,6 +2542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyCode: 
   codeInputField: {fileID: 163216179}
+  relayScript: {fileID: 1595523828}
 --- !u!114 &1595523828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,6 +2555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98478f1bfa59fb45a4abafdbb822506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joinCode: 
 --- !u!1 &1613429979
 GameObject:
   m_ObjectHideFlags: 0

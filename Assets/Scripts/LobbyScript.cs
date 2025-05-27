@@ -16,8 +16,12 @@ public class TestLobby : MonoBehaviour
     [SerializeField] private string lobbyCode;
 
     [SerializeField] private InputField codeInputField;
+    [SerializeField] private RelayScript relayScript;
 
     private string playerName;
+
+    private string startGame;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
@@ -29,6 +33,8 @@ public class TestLobby : MonoBehaviour
             Debug.Log("SignedIn: " + AuthenticationService.Instance.PlayerId);
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        relayScript.OnCreateRelay += StartGame;
     }
 
     void Update()
@@ -76,7 +82,11 @@ public class TestLobby : MonoBehaviour
             CreateLobbyOptions options = new CreateLobbyOptions
             {
                 IsPrivate = true,
-                Player = GetPlayer()
+                Player = GetPlayer(),
+                Data = new Dictionary<string, DataObject>
+                {
+                    { startGame, new DataObject(DataObject.VisibilityOptions.Member, "0") }
+                }
             };
             
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
@@ -91,6 +101,16 @@ public class TestLobby : MonoBehaviour
         {
             Debug.Log(e.Message);
         }
+    }
+
+    public async void StartGame()
+    {
+        
+    }
+
+    public async void LoadGame()
+    {
+        
     }
 
     public async void ListLobbies()
