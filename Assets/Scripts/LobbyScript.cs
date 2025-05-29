@@ -14,13 +14,11 @@ public class TestLobby : MonoBehaviour
     private float heartbeatTimer;
     private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
-
     [SerializeField] private InputField codeInputField;
     [SerializeField] private RelayScript relayScript;
-
     private string playerName;
-
-    private string startGame;
+    private string startGame = "startGame";
+    private bool isLobbyHost;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -68,6 +66,15 @@ public class TestLobby : MonoBehaviour
             lobbyUpdateTimer = lobbyUpdateTimerMax;
 
             Lobby lobby = await LobbyService.Instance.GetLobbyAsync(joinedLobby.Id);
+
+            if (lobby.Data.TryGetValue("startGame", out var dataObject))
+            {
+                if (dataObject.Value == "1")
+                {
+                    Debug.Log("start game got set to 1");
+                }
+            }
+            
             joinedLobby = lobby;
         }
     }
@@ -93,6 +100,7 @@ public class TestLobby : MonoBehaviour
         
             hostLobby = lobby;
             joinedLobby = hostLobby;
+            isLobbyHost = true;
             
             Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
             PrintPlayers(hostLobby);
@@ -103,9 +111,32 @@ public class TestLobby : MonoBehaviour
         }
     }
 
+    [ContextMenu("Start Game Lobby")]
     public async void StartGame()
     {
+        var UpdateOptions = new UpdateLobbyOptions
+        {
+            Data = new Dictionary<string, DataObject>
+            {
+                { startGame, new DataObject(DataObject.VisibilityOptions.Member, "1") }
+            }
+        };
         
+        await LobbyService.Instance.UpdateLobbyAsync(joinedLobby.Id, UpdateOptions);
+        Debug.Log("set it correctly i think");
+    }
+
+    [ContextMenu("Print key")]
+    private void PrintstartGameKey()
+    {
+        if (joinedLobby.Data.TryGetValue("startGame", out var DataObject))
+        {
+            Debug.Log(DataObject.Value);
+        }
+        else
+        {
+            Debug.Log("something went wrong");
+        }
     }
 
     public async void LoadGame()
@@ -142,6 +173,7 @@ public class TestLobby : MonoBehaviour
             
             Lobby lobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode, joinLobbyByCodeOptions);
             joinedLobby = lobby;
+            isLobbyHost = false;
             
             PrintPlayers(joinedLobby);
             
