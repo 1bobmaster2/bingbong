@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Services.Relay;
@@ -14,7 +15,7 @@ public class RelayScript : MonoBehaviour
             
     }
 
-    async void CreateRelay()
+    public async Task<string> CreateRelay()
     {
         try
         {
@@ -33,14 +34,18 @@ public class RelayScript : MonoBehaviour
                 );
 
             NetworkManager.Singleton.StartHost();
+            
+            return joinCode;
         }
         catch (RelayServiceException e)
         {
             Debug.Log(e);
         }
+
+        return null;
     }
 
-    async void JoinRelay()
+    public async void JoinRelay(string joinCode)
     {
         try
         {
@@ -54,6 +59,8 @@ public class RelayScript : MonoBehaviour
                 allocation.ConnectionData,
                 allocation.HostConnectionData
             );
+            
+            
             
             NetworkManager.Singleton.StartClient();
             

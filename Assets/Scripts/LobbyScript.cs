@@ -69,9 +69,13 @@ public class TestLobby : MonoBehaviour
 
             if (lobby.Data.TryGetValue("startGame", out var dataObject))
             {
-                if (dataObject.Value == "1")
+                if (dataObject.Value != "0")
                 {
-                    Debug.Log("start game got set to 1");
+                    Debug.Log("start game got changed");
+                    if (!isLobbyHost)
+                    {
+                        relayScript.JoinRelay(dataObject.Value);
+                    }
                 }
             }
             
@@ -114,15 +118,17 @@ public class TestLobby : MonoBehaviour
     [ContextMenu("Start Game Lobby")]
     public async void StartGame()
     {
+        string joinCode = await relayScript.CreateRelay();
         var UpdateOptions = new UpdateLobbyOptions
         {
             Data = new Dictionary<string, DataObject>
             {
-                { startGame, new DataObject(DataObject.VisibilityOptions.Member, "1") }
+                { startGame, new DataObject(DataObject.VisibilityOptions.Member, joinCode) }
             }
         };
         
         await LobbyService.Instance.UpdateLobbyAsync(joinedLobby.Id, UpdateOptions);
+        
         Debug.Log("set it correctly i think");
     }
 
