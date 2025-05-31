@@ -19,6 +19,7 @@ public class TestLobby : MonoBehaviour
     private string playerName;
     private string startGame = "startGame";
     private bool isLobbyHost;
+    private bool alreadyConnected = false;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -72,9 +73,10 @@ public class TestLobby : MonoBehaviour
                 if (dataObject.Value != "0")
                 {
                     Debug.Log("start game got changed");
-                    if (!isLobbyHost)
+                    if (!isLobbyHost && !alreadyConnected)
                     {
                         relayScript.JoinRelay(dataObject.Value);
+                        alreadyConnected = true;
                     }
                 }
             }
@@ -128,6 +130,7 @@ public class TestLobby : MonoBehaviour
         };
         
         await LobbyService.Instance.UpdateLobbyAsync(joinedLobby.Id, UpdateOptions);
+        alreadyConnected = true;
         
         Debug.Log("set it correctly i think");
     }
