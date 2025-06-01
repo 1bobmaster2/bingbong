@@ -15,6 +15,7 @@ public class TestLobby : MonoBehaviour
     private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
     [SerializeField] private InputField codeInputField;
+    [SerializeField] private GameObject lobbyUI, hostUI;
     [SerializeField] private RelayScript relayScript;
     private string playerName;
     private string startGame = "startGame";
@@ -77,6 +78,8 @@ public class TestLobby : MonoBehaviour
                     {
                         relayScript.JoinRelay(dataObject.Value);
                         alreadyConnected = true;
+                        lobbyUI.SetActive(false);
+                        hostUI.SetActive(false);
                     }
                 }
             }
@@ -131,6 +134,9 @@ public class TestLobby : MonoBehaviour
         
         await LobbyService.Instance.UpdateLobbyAsync(joinedLobby.Id, UpdateOptions);
         alreadyConnected = true;
+        
+        lobbyUI.SetActive(false);
+        hostUI.SetActive(false);
         
         Debug.Log("set it correctly i think");
     }

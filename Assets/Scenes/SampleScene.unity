@@ -2622,6 +2622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyCode: 
   codeInputField: {fileID: 163216179}
+  lobbyUI: {fileID: 2066176836}
+  hostUI: {fileID: 662335200}
   relayScript: {fileID: 1595523828}
 --- !u!114 &1595523828
 MonoBehaviour:
