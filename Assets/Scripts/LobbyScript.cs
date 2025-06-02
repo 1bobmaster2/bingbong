@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Lobbies;
@@ -15,8 +16,9 @@ public class TestLobby : MonoBehaviour
     private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
     [SerializeField] private InputField codeInputField;
-    [SerializeField] private GameObject lobbyUI, hostUI;
+    [SerializeField] private GameObject lobbyUI;
     [SerializeField] private RelayScript relayScript;
+    [SerializeField] private TextMeshProUGUI lobbyCodeText;
     private string playerName;
     private string startGame = "startGame";
     private bool isLobbyHost;
@@ -33,8 +35,7 @@ public class TestLobby : MonoBehaviour
             Debug.Log("SignedIn: " + AuthenticationService.Instance.PlayerId);
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
-
-        relayScript.OnCreateRelay += StartGame;
+        
     }
 
     void Update()
@@ -79,7 +80,6 @@ public class TestLobby : MonoBehaviour
                         relayScript.JoinRelay(dataObject.Value);
                         alreadyConnected = true;
                         lobbyUI.SetActive(false);
-                        hostUI.SetActive(false);
                     }
                 }
             }
@@ -112,6 +112,7 @@ public class TestLobby : MonoBehaviour
             isLobbyHost = true;
             
             Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
+            lobbyCodeText.text = lobby.LobbyCode;
             PrintPlayers(hostLobby);
         }
         catch (LobbyServiceException e)
@@ -136,7 +137,6 @@ public class TestLobby : MonoBehaviour
         alreadyConnected = true;
         
         lobbyUI.SetActive(false);
-        hostUI.SetActive(false);
         
         Debug.Log("set it correctly i think");
     }
@@ -152,11 +152,6 @@ public class TestLobby : MonoBehaviour
         {
             Debug.Log("something went wrong");
         }
-    }
-
-    public async void LoadGame()
-    {
-        
     }
 
     public async void ListLobbies()

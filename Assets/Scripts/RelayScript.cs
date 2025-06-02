@@ -9,7 +9,6 @@ using UnityEngine;
 public class RelayScript : MonoBehaviour
 {
     public string joinCode;
-    public event Action OnCreateRelay;
     void Start()
     {
             
@@ -23,7 +22,6 @@ public class RelayScript : MonoBehaviour
             
             joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             
-            OnCreateRelay?.Invoke();
             
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData(
                 allocation.RelayServer.IpV4,
@@ -60,10 +58,7 @@ public class RelayScript : MonoBehaviour
                 allocation.HostConnectionData
             );
             
-            
-            
             NetworkManager.Singleton.StartClient();
-            
         }
         catch (RelayServiceException e)
         {
