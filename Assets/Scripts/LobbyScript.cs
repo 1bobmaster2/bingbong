@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -16,7 +17,7 @@ public class TestLobby : MonoBehaviour
     private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
     [SerializeField] private InputField codeInputField;
-    [SerializeField] private GameObject lobbyUI;
+    [SerializeField] private GameObject lobbyUI, nameNullErrorLabel, codeNullErrorLabel;
     [SerializeField] private RelayScript relayScript;
     [SerializeField] private TextMeshProUGUI lobbyCodeText;
     private string playerName;
@@ -92,6 +93,12 @@ public class TestLobby : MonoBehaviour
     {
         try
         {
+            if (isTextNull(playerName, nameNullErrorLabel))
+            {
+                return;
+            }
+            
+            
             string lobbyName = "TestLobby";
             int maxPlayers = 2;
 
@@ -112,6 +119,7 @@ public class TestLobby : MonoBehaviour
             isLobbyHost = true;
             
             Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
+            lobbyCodeText.gameObject.SetActive(true);
             lobbyCodeText.text = lobby.LobbyCode;
             PrintPlayers(hostLobby);
         }
@@ -176,6 +184,13 @@ public class TestLobby : MonoBehaviour
     {
         try
         {
+            bool isNameNull = isTextNull(playerName, nameNullErrorLabel);
+            bool isCodeNull = isTextNull(lobbyCode, codeNullErrorLabel);
+            if (isNameNull || isCodeNull)
+            {
+                return;
+            }
+            
             JoinLobbyByCodeOptions joinLobbyByCodeOptions = new JoinLobbyByCodeOptions
             {
                 Player = GetPlayer()
@@ -239,5 +254,18 @@ public class TestLobby : MonoBehaviour
                 { "PlayerName", new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, playerName) }
             }
         };
+    }
+    
+    private bool isTextNull(string text, GameObject objectToEnable)
+    {
+        if (string.IsNullOrEmpty(text))
+        {
+            objectToEnable.SetActive(true);
+            
+            return true;
+        }
+        
+        objectToEnable.SetActive(false);
+        return false;
     }
 }
