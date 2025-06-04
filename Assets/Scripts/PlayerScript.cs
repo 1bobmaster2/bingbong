@@ -12,13 +12,27 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     //private NetworkVariable<int> debugNumber = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 // Update is called once per frame
-    void Start()
+    public override void OnNetworkSpawn()
     {
-        GameObject camObj = GameObject.FindWithTag("Player1Cam");
+        GameObject camObj;
+        GameObject otherCamObj;
+        if (NetworkManager.Singleton.IsHost)
+        {
+            camObj = GameObject.FindWithTag("Player1Cam");
+            otherCamObj = GameObject.FindWithTag("Player2Cam");
+        }
+        else
+        { 
+            camObj = GameObject.FindWithTag("Player2Cam");
+            otherCamObj = GameObject.FindWithTag("Player1Cam");
+        }
+        
+        otherCamObj.SetActive(false);
+        
         cam = camObj.GetComponent<Camera>();
         if (cam == null)
         {
-            Debug.LogError("No camera found with the tag 'Player1Cam'");
+            Debug.LogError("No camera found.");
         }
     }
     void Update()
