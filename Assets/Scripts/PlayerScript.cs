@@ -26,6 +26,16 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             camObj = GameObject.FindWithTag("Player2Cam");
             otherCamObj = GameObject.FindWithTag("Player1Cam");
         }
+
+        if (camObj == null )
+        {
+            Debug.LogError("camObj is null");
+        }
+        if (otherCamObj == null)
+        {
+            Debug.LogError("otherCamObj is null");
+        }
+        
         
         otherCamObj.SetActive(false);
         
