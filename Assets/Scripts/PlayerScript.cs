@@ -10,9 +10,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private int nearClipAddAmount;
     
     //private NetworkVariable<int> debugNumber = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
-
-// Update is called once per frame
-    public override void OnNetworkSpawn()
+    
+    public void Start()
     {
         GameObject camObj;
         GameObject otherCamObj;
