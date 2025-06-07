@@ -8,40 +8,21 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] Vector3 screenPosition;
     [SerializeField] Vector3 worldPosition;
     [SerializeField] private int nearClipAddAmount;
+    [SerializeField] private GameObject palletObject;
     
     //private NetworkVariable<int> debugNumber = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     
     public void Start()
     {
-        GameObject camObj;
-        GameObject otherCamObj;
-        if (NetworkManager.Singleton.IsHost)
-        {
-            camObj = GameObject.FindWithTag("Player1Cam");
-            otherCamObj = GameObject.FindWithTag("Player2Cam");
-        }
-        else
-        { 
-            camObj = GameObject.FindWithTag("Player2Cam");
-            otherCamObj = GameObject.FindWithTag("Player1Cam");
-        }
-
-        if (camObj == null )
-        {
-            Debug.LogError("camObj is null");
-        }
-        if (otherCamObj == null)
-        {
-            Debug.LogError("otherCamObj is null");
-        }
-        
-        
-        otherCamObj.SetActive(false);
-        
-        cam = camObj.GetComponent<Camera>();
         if (cam == null)
         {
-            Debug.LogError("No camera found.");
+            Debug.LogError("No camera exists.");
+        }
+
+        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
+        {
+            gameObject.transform.position = new Vector3(6.70f, 0f, 9.15f);
+            gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
     void Update()
@@ -63,6 +44,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         worldPosition = cam.ScreenToWorldPoint(screenPosition);
         
-        transform.position = worldPosition;
+        palletObject.transform.position = worldPosition;
     }
 }
