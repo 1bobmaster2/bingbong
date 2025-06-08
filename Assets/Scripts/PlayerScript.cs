@@ -9,8 +9,9 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] Vector3 worldPosition;
     [SerializeField] private int nearClipAddAmount;
     [SerializeField] private GameObject palletObject;
-    
-    //private NetworkVariable<int> debugNumber = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    [SerializeField] private GameObject otherPlayer;
+
+    private bool isOtherCamDisabled;
     
     public void Start()
     {
