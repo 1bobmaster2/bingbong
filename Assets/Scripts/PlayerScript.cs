@@ -22,7 +22,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
-            gameObject.transform.position = new Vector3(6.70f, 0f, 9.15f);
+            gameObject.transform.position = new Vector3(0f, 0f, 10f);
             gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
             gameObject.name = "ClientPlayer";
