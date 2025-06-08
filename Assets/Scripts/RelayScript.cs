@@ -9,10 +9,6 @@ using UnityEngine;
 public class RelayScript : MonoBehaviour
 {
     public string joinCode;
-    void Start()
-    {
-            
-    }
 
     public async Task<string> CreateRelay()
     {
