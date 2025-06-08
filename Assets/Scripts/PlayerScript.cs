@@ -24,6 +24,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position = new Vector3(6.70f, 0f, 9.15f);
             gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+            gameObject.name = "ClientPlayer";
         }
         else
         {
