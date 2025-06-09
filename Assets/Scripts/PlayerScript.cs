@@ -70,4 +70,9 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         palletObject.transform.position = worldPosition;
     }
+    
+    private void OnNameChanged(string oldValue, string newValue)
+    {
+        gameObject.name = newValue;
+    }
 }
