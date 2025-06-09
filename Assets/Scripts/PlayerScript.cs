@@ -15,6 +15,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     
     public void Start()
     {
+        if (!IsOwner) return;
+        
         if (cam == null)
         {
             Debug.LogError("No camera exists.");
