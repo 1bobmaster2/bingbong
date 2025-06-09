@@ -13,6 +13,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
     private bool isOtherCamDisabled;
     
+    private NetworkVariable<string> playerName = new(writePerm: NetworkVariableWritePermission.Owner);
+    
     public void Start()
     {
         if (!IsOwner) return;
