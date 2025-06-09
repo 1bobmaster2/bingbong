@@ -35,6 +35,17 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             playerName.Value = "HostPlayer";
         }
+        else
+        {
+            playerName.Value = "something's fucked up";
+        }
+        
+
+        playerName.OnValueChanged += OnNameChanged;
+
+
+        gameObject.name = playerName.Value; // apply instantly
+        
     }
     void Update()
     {
