@@ -75,4 +75,10 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     {
         gameObject.name = newValue;
     }
+
+    [ServerRpc]
+    private void SetNameRpc(string newValue)
+    {
+        
+    }
 }
