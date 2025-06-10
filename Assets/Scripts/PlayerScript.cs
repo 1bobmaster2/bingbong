@@ -77,7 +77,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     }
 
     [ServerRpc]
-    private void SetNameRpc(string newValue)
+    private void SetNameServerRpc(string newValue)
     {
         
     }
