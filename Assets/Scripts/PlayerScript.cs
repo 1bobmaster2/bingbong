@@ -29,7 +29,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             gameObject.transform.position = new Vector3(0f, 0f, 10f);
             gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
-            playerName.Value = "ClientPlayer";
+            gameObject.name = "ClientPlayer";
         }
         else if (NetworkManager.Singleton.IsHost)
         {
