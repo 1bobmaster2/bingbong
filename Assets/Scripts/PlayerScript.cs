@@ -35,7 +35,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         }
         else if (NetworkManager.Singleton.IsHost)
         {
-            gameObject.name = "HostPlayer";
+            playerName.Value = "HostPlayer";
         }
         else
         {
