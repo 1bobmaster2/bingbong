@@ -42,6 +42,15 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             playerName.Value = "somethings fucked up";
         }
     }
+    
+    public override void OnNetworkSpawn()
+    {
+        playerName.OnValueChanged += (oldValue, newValue) =>
+        {
+            Debug.Log($"{name}'s name changed from '{oldValue}' to '{newValue}'");
+        };
+    }
+    
     void Update()
     {
         if (!IsOwner) return;
