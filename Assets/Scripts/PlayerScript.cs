@@ -39,7 +39,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         }
         else
         {
-            gameObject.name = "somethings fucked up";
+            playerName.Value = "somethings fucked up";
         }
     }
     void Update()
