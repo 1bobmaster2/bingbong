@@ -19,22 +19,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     private NetworkVariable<FixedString32Bytes> playerTag = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     
 
-        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
-        {
-            gameObject.transform.position = new Vector3(0f, 0f, 10f);
-            gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-
-            playerName.Value = "ClientPlayer";
-        }
-        else if (NetworkManager.Singleton.IsHost)
-        {
-            playerName.Value = "HostPlayer";
-        }
-        else
-        {
-            playerName.Value = "something's fucked up";
-        }
-    }
     
     public override void OnNetworkSpawn()
     {
