@@ -25,6 +25,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         playerName.OnValueChanged += (oldValue, newValue) =>
         {
             Debug.Log($"{name}'s name changed from '{oldValue}' to '{newValue}'");
+            gameObject.name = newValue.ToString();
         };
     }
     
