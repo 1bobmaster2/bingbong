@@ -16,15 +16,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     private bool isOtherCamDisabled;
     
     private NetworkVariable<FixedString32Bytes> playerName = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
+    private NetworkVariable<FixedString32Bytes> playerTag = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     
-    public void Start()
-    {
-        if (!IsOwner) return;
-        
-        if (cam == null)
-        {
-            Debug.LogError("No camera exists.");
-        }
 
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
