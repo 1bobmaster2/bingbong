@@ -27,6 +27,36 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             Debug.Log($"{name}'s name changed from '{oldValue}' to '{newValue}'");
             gameObject.name = newValue.ToString();
         };
+        playerTag.OnValueChanged += (oldValue, newValue) =>
+        {
+            Debug.Log($"{tag}'s name changed from '{oldValue}' to '{newValue}'");
+            gameObject.tag = newValue.ToString();
+        };
+        
+        if (!IsOwner) return;
+        
+        if (cam == null)
+        {
+            Debug.LogError("No camera exists.");
+        }
+
+        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
+        {
+            gameObject.transform.position = new Vector3(0f, 0f, 10f);
+            gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+            playerName.Value = "ClientPlayer";
+            playerTag.Value = "ClientPlayer";
+        }
+        else if (NetworkManager.Singleton.IsHost)
+        {
+            playerName.Value = "HostPlayer";
+            playerTag.Value = "HostPlayer";
+        }
+        else
+        {
+            playerName.Value = "something's fucked up";
+        }
     }
     
     void Update()
