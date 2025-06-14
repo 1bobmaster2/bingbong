@@ -7,6 +7,8 @@ TagManager:
   - Player1Cam
   - Player2Cam
   - secondPlayer
+  - HostPlayer
+  - ClientPlayer
   layers:
   - Default
   - TransparentFX
