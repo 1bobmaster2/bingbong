@@ -14,6 +14,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private GameObject otherPlayer;
 
     private bool isOtherCamDisabled;
+    private string otherPlayerTag;
     
     private NetworkVariable<FixedString32Bytes> playerName = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     private NetworkVariable<FixedString32Bytes> playerTag = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
