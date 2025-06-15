@@ -86,4 +86,25 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         palletObject.transform.position = worldPosition;
     }
+
+    IEnumerator WaitForGameObject(string tag)
+    {
+        while (otherPlayer == null)
+        {
+            otherPlayer = GameObject.FindWithTag(tag);
+            yield return null; 
+        }
+    }
+
+    GameObject FindChildObject(GameObject parentObject, string childName)
+    {
+        foreach (Transform child in parentObject.transform)
+        {
+            if (child.name == childName)
+            {
+                return child.gameObject;
+            }
+        }
+        return null; // return null if it didnt find it
+    }
 }
