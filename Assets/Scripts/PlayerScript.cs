@@ -12,6 +12,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private int nearClipAddAmount;
     [SerializeField] private GameObject palletObject;
     [SerializeField] private GameObject otherPlayer;
+    [SerializeField] private GameObject otherPlayerCamObject;
 
     private bool isOtherCamDisabled;
     private string otherPlayerTag;
