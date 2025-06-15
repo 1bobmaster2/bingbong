@@ -55,6 +55,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             playerName.Value = "HostPlayer";
             playerTag.Value = "HostPlayer";
+            otherPlayerTag = "ClientPlayer";
         }
         else
         {
