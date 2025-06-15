@@ -64,13 +64,11 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         if (!IsOwner) return;
         
         MovePlayer();
-        
-        //if (NetworkManager.Singleton.IsHost && !isOtherCamDisabled)
-        //{
-            //Camera otherCamera = GameObject.FindGameObjectWithTag("Player2Cam").GetComponent<Camera>();
-            //otherCamera.enabled = false;
-            //isOtherCamDisabled = true;
-        //}
+
+        if (otherPlayer != null && otherPlayerCamObject != null)
+        {
+            otherPlayerCamObject = FindChildObject(otherPlayer, "Camera");
+        }
     }
 
     void MovePlayer()
