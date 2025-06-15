@@ -61,6 +61,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             playerName.Value = "something's fucked up";
         }
+        
+        StartCoroutine(WaitForGameObject(otherPlayerTag));
     }
     
     void Update()
