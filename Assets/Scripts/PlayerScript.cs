@@ -47,6 +47,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
             playerName.Value = "ClientPlayer";
             playerTag.Value = "ClientPlayer";
+            otherPlayerTag = "HostPlayer";
         }
         else if (NetworkManager.Singleton.IsHost)
         {
