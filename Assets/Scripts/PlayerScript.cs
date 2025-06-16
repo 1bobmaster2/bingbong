@@ -72,7 +72,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         MovePlayer();
 
-        if (otherPlayer != null && otherPlayerCamObject != null)
+        if (otherPlayer != null && otherPlayerCamObject == null)
         {
             otherPlayerCamObject = FindChildObject(otherPlayer, "Camera");
         }
