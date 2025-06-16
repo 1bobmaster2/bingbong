@@ -76,6 +76,12 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             otherPlayerCamObject = FindChildObject(otherPlayer, "Camera");
         }
+
+        if (otherPlayerCamObject != null && !isOtherCamDisabled)
+        {
+            otherPlayerCamObject.GetComponent<Camera>().enabled = false;
+            isOtherCamDisabled = true;
+        }
     }
 
     void MovePlayer()
