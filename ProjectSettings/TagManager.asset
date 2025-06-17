@@ -9,6 +9,8 @@ TagManager:
   - secondPlayer
   - HostPlayer
   - ClientPlayer
+  - HostSpawnPoint
+  - ClientSpawnPoint
   layers:
   - Default
   - TransparentFX
