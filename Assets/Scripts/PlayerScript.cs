@@ -57,6 +57,10 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         }
         else if (NetworkManager.Singleton.IsHost)
         {
+            hostSpawnpoint = GameObject.FindGameObjectWithTag("HostSpawnPoint").transform;
+            
+            gameObject.transform.position = hostSpawnpoint.position;
+            
             playerName.Value = "HostPlayer";
             playerTag.Value = "HostPlayer";
             otherPlayerTag = "ClientPlayer";
