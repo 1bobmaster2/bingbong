@@ -46,7 +46,9 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
-            gameObject.transform.position = new Vector3(0f, 0f, 10f);
+            clientSpawnpoint = GameObject.FindGameObjectWithTag("ClientSpawnPoint").transform;
+            
+            gameObject.transform.position = clientSpawnpoint.position;
             gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
             playerName.Value = "ClientPlayer";
