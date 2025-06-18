@@ -91,6 +91,15 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             otherPlayerCamObject.GetComponent<Camera>().enabled = false;
             isOtherCamDisabled = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            ZoomInAndOut(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            ZoomInAndOut(-1);
+        }
     }
 
     void MovePlayer()
