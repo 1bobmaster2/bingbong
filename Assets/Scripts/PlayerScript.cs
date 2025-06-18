@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : NetworkBehaviour
 {
+    [SerializeField] private float zoomFactor;
+    [Space]
     [SerializeField] Camera cam; 
     [SerializeField] Vector3 screenPosition;
     [SerializeField] Vector3 worldPosition;
