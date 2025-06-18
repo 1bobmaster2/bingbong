@@ -244,11 +244,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  zoomFactor: 5
   cam: {fileID: 4684435537087393114}
   screenPosition: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
   nearClipAddAmount: 2
   palletObject: {fileID: 1221682363219699590}
+  otherPlayer: {fileID: 0}
+  otherPlayerCamObject: {fileID: 0}
+  hostSpawnpoint: {fileID: 0}
+  clientSpawnpoint: {fileID: 0}
 --- !u!114 &3486339162346655244
 MonoBehaviour:
   m_ObjectHideFlags: 0
