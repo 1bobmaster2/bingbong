@@ -112,6 +112,11 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         palletObject.transform.position = worldPosition;
     }
 
+    void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards
+    {
+        nearClipAddAmount += direction * zoomFactor;
+    }
+
     IEnumerator WaitForGameObject(string tag)
     {
         while (otherPlayer == null)
