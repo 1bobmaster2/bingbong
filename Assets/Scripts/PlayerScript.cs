@@ -10,7 +10,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] Camera cam; 
     [SerializeField] Vector3 screenPosition;
     [SerializeField] Vector3 worldPosition;
-    [SerializeField] private int nearClipAddAmount;
+    [SerializeField] private float nearClipAddAmount;
     [SerializeField] private GameObject palletObject;
     [SerializeField] private GameObject otherPlayer;
     [SerializeField] private GameObject otherPlayerCamObject;
