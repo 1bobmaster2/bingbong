@@ -114,7 +114,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
     void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards
     {
-        nearClipAddAmount += direction * zoomFactor;
+        nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
     }
 
     IEnumerator WaitForGameObject(string tag)
