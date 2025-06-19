@@ -96,7 +96,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             ZoomInAndOut(1);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.mouseScrollDelta.y < 0)
         {
             ZoomInAndOut(-1);
         }
