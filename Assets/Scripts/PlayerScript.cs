@@ -92,7 +92,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             isOtherCamDisabled = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.mouseScrollDelta.y > 0)
         {
             ZoomInAndOut(1);
         }
