@@ -248,7 +248,7 @@ MonoBehaviour:
   cam: {fileID: 4684435537087393114}
   screenPosition: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
-  nearClipAddAmount: 2
+  nearClipAddAmount: 1
   palletObject: {fileID: 1221682363219699590}
   otherPlayer: {fileID: 0}
   otherPlayerCamObject: {fileID: 0}
