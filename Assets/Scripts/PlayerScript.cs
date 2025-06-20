@@ -94,7 +94,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            ZoomInAndOut(1);
+            gameObject.transform.position += transform.forward * (1 * zoomFactor * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.S) || Input.mouseScrollDelta.y < 0)
         {
