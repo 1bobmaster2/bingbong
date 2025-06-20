@@ -100,6 +100,14 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position += transform.forward * (-1 * zoomFactor * Time.deltaTime);
         }
+        else if (Input.mouseScrollDelta.y > 0)
+        {
+            gameObject.transform.position += transform.forward * (3 * zoomFactor * Time.deltaTime);
+        }
+        else if (Input.mouseScrollDelta.y < 0)
+        {
+            gameObject.transform.position += transform.forward * (-3 * zoomFactor * Time.deltaTime);
+        }
     }
 
     void MovePlayer()
