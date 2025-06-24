@@ -128,6 +128,14 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
     }
 
+    void SpawnNetworkObject(GameObject prefab)
+    {
+         if(!IsHost) return;
+         
+         GameObject instance = Instantiate(prefab, new Vector3(0,0,5), Quaternion.identity);
+         instance.GetComponent<NetworkObject>().Spawn();
+    }
+
     IEnumerator WaitForGameObject(string tag)
     {
         while (otherPlayer == null)
