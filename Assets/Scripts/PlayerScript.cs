@@ -108,6 +108,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position += transform.forward * (-3 * zoomFactor * Time.deltaTime);
         }
+        
+        SpawnNetworkObject(ballPrefab);
     }
 
     void MovePlayer()
