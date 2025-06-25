@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2942697020
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -186,7 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12d1be485eb9a04f9debca8fd5624e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 3
+  force: 0.85
+  rb: {fileID: 4278312198695691053}
 --- !u!1001 &2061200159957623532
 PrefabInstance:
   m_ObjectHideFlags: 0
