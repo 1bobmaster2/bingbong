@@ -3,6 +3,16 @@ using UnityEngine;
 public class BallScript : MonoBehaviour
 {
     [SerializeField] private float force;
+    [Space]
+    [SerializeField] private Rigidbody rb;
+
+    private Vector3 lastVelocity;
+    
+    void FixedUpdate()
+    {
+        lastVelocity = rb.linearVelocity;
+    }
+    
     void OnCollisionEnter(Collision collision)
     {
         GameObject hit = collision.gameObject;
