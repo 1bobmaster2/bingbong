@@ -74,6 +74,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         }
         
         StartCoroutine(WaitForGameObject(otherPlayerTag));
+        
+        SpawnNetworkObject(ballPrefab);
     }
     
     void Update()
