@@ -123,7 +123,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         palletObject.transform.position = worldPosition;
     }
 
-    void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards
+    void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards.
     {
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
     }
