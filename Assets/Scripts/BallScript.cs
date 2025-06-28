@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class BallScript : MonoBehaviour
+public class BallScript : NetworkBehaviour
 {
     [SerializeField] private float force;
     [Space]
