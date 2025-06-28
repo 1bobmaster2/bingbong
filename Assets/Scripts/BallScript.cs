@@ -50,4 +50,9 @@ public class BallScript : NetworkBehaviour
 
         }
     }
+
+    GameObject WaitForGameObject(string tag)
+    {
+        return GameObject.FindGameObjectWithTag(tag);
+    }
 }
