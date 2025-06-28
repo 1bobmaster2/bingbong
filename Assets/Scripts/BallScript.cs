@@ -19,6 +19,12 @@ public class BallScript : NetworkBehaviour
     void FixedUpdate()
     {
         lastVelocity = rb.linearVelocity;
+
+        if (hostPlayerObject == null || clientPlayerObject == null)
+        {
+            hostPlayerObject = WaitForGameObject("HostPlayer");
+            clientPlayerObject = WaitForGameObject("ClientPlayer");
+        }
     }
     
     void OnCollisionEnter(Collision collision)
