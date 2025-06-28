@@ -10,7 +10,12 @@ public class BallScript : NetworkBehaviour
     [SerializeField] GameObject hostPlayerObject, clientPlayerObject;
 
     private Vector3 lastVelocity;
-    
+    private Material outlineMaterial;
+
+    void Start()
+    {
+        outlineMaterial = gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material;
+    }
     void FixedUpdate()
     {
         lastVelocity = rb.linearVelocity;
