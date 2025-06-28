@@ -6,6 +6,8 @@ public class BallScript : NetworkBehaviour
     [SerializeField] private float force;
     [Space]
     [SerializeField] private Rigidbody rb;
+    [Space]
+    [SerializeField] GameObject hostPlayerObject, clientPlayerObject;
 
     private Vector3 lastVelocity;
     
