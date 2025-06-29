@@ -46,11 +46,6 @@ public class BallScript : NetworkBehaviour
         
 
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
-        
-        if (hit.CompareTag("HostPlayer") || hit.CompareTag("ClientPlayer"))
-        {
-
-        }
     }
 
     GameObject WaitForGameObject(string tag)
