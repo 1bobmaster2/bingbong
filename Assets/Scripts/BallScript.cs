@@ -14,6 +14,8 @@ public class BallScript : NetworkBehaviour
 
     void Start()
     {
+        if (!IsOwner) return;
+        
         outlineMaterial = gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material;
     }
     void FixedUpdate()
