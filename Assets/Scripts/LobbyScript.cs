@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
