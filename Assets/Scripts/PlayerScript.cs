@@ -114,6 +114,12 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position += transform.forward * (-3 * zoomFactor * Time.deltaTime);
         }
+
+        if (NetworkManager.Singleton.IsHost) // temporary solution, will fix later
+        {
+            playerName.Value = "HostPlayer";
+            playerTag.Value = "HostPlayer";
+        }
     }
 
     void MovePlayer()
