@@ -63,8 +63,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             
             gameObject.transform.position = hostSpawnpoint.position;
             
-            playerName.Value = "HostPlayer";
-            playerTag.Value = "HostPlayer";
+            playerName.Value = "temporary name"; // temporary name needed for it to work
+            playerTag.Value = "temporaryDebugTag";
             otherPlayerTag = "ClientPlayer";
         }
         else
