@@ -22,8 +22,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     private NetworkVariable<FixedString32Bytes> playerName = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     private NetworkVariable<FixedString32Bytes> playerTag = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     
-
-    
     public override void OnNetworkSpawn()
     {
         playerName.OnValueChanged += (oldValue, newValue) =>
