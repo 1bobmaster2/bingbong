@@ -79,10 +79,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     
     void Update()
     {
-        // temporary solution
-        gameObject.name = playerName.Value.ToString();
-        gameObject.tag = playerTag.Value.ToString();
-        
         if (!IsOwner) return;
         
         MovePlayer();
