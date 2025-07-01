@@ -2,8 +2,6 @@ using System.Collections;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
-
-
 public class NewMonoBehaviourScript : NetworkBehaviour
 {
     [SerializeField] private float zoomFactor;
