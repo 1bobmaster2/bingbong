@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BallScript : NetworkBehaviour
 {
+    private static readonly int WidthProperty = Shader.PropertyToID("Outline Width");
+    
     [SerializeField] private float force;
     [Space]
     [SerializeField] private Rigidbody rb;
