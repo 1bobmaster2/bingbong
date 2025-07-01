@@ -32,6 +32,14 @@ public class BallScript : NetworkBehaviour
             clientPlayerObject = WaitForGameObject("ClientPlayer");
         }
     }
+
+    void Update()
+    {
+        if (IsHost)
+        {
+            outlineMaterial.SetFloat(WidthProperty, Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position) * 0.1f);
+        }
+    }
     
     void OnCollisionEnter(Collision collision)
     {
