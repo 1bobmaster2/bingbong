@@ -40,6 +40,12 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         };
         
         if (!IsOwner) return;
+
+        if (IsHost)
+        {
+            InvokeRepeating("SetNameAndTagToPlayerHost", 0f, 1f);
+            Invoke("StopRepeatingSetNameAndTagToPlayerHost", 10f);
+        }
         
         if (cam == null)
         {
