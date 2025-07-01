@@ -35,6 +35,8 @@ public class BallScript : NetworkBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
+        if(!IsServer) return;
+        
         GameObject hit = collision.gameObject;
 
 
