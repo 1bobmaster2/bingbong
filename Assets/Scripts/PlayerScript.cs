@@ -141,6 +141,28 @@ public class NewMonoBehaviourScript : NetworkBehaviour
          instance.GetComponent<NetworkObject>().Spawn();
     }
 
+    void SyncNameAndTag()
+    {
+        gameObject.name = playerName.Value.ToString();
+        gameObject.tag = playerTag.Value.ToString();
+    }
+
+    void SetNameAndTagToPlayerHost()
+    {
+        playerName.Value = "HostPlayer";
+        playerTag.Value = "HostPlayer";
+    }
+
+    void StopRepeatingSyncNameAndTag()
+    {
+        CancelInvoke("SyncNameAndTag");
+    }
+
+    void StopRepeatingSetNameAndTagToPlayerHost()
+    {
+        CancelInvoke("SetNameAndTagToPlayerHost");
+    }
+
     IEnumerator WaitForGameObject(string tag)
     {
         while (otherPlayer == null)
