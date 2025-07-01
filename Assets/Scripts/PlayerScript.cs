@@ -39,6 +39,10 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             gameObject.tag = newValue.ToString();
         };
         
+        // temporary solution but better
+        InvokeRepeating("SyncNameAndTag", 0f, 1f);
+        Invoke("StopRepeatingSyncNameAndTag", 10f);
+        
         if (!IsOwner) return;
 
         if (IsHost)
