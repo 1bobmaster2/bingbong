@@ -18,6 +18,7 @@ public class BallScript : NetworkBehaviour
         if (!IsOwner) return;
         
         outlineMaterial = gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material;
+        WidthProperty = Shader.PropertyToID("_OutlineWidth");
     }
     void FixedUpdate()
     {
