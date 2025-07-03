@@ -12,7 +12,7 @@ public class BallScript : NetworkBehaviour
 
     private Vector3 lastVelocity;
     private Material outlineMaterial;
-
+    private int WidthProperty;
     void Start()
     {
         if (!IsOwner) return;
