@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   force: 0.85
-  outlineSizeModifier: 0.01
+  outlineSizeModifier: 0.001
   rb: {fileID: 4278312198695691053}
   hostPlayerObject: {fileID: 0}
   clientPlayerObject: {fileID: 0}
@@ -240,9 +240,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cbb50df706a94714cab41b9b3110dad1, type: 2}
     - target: {fileID: 919132149155446097, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
       propertyPath: m_Name
       value: pingpongball
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
