@@ -8,9 +8,18 @@ Shader "Custom/Outline"
         Tags { "RenderType"="Opaque" }
         Pass {
             Name "OUTLINE"
-            Cull Front  // draw the back faces to fake outline
-            ZWrite On
-            ZTest Less
+            Cull Front
+            ZWrite Off
+            ZTest Always
+
+            Stencil
+            {
+                Ref 1
+                Comp NotEqual
+                Pass Keep
+                Fail Keep
+                ZFail Keep
+            }
 
             CGPROGRAM
             #pragma vertex vert
