@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class BallScript : NetworkBehaviour
     {
         if (IsHost)
         {
-            outlineMaterial.SetFloat(WidthProperty, Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position) * outlineSizeModifier);
+            outlineMaterial.SetFloat(WidthProperty, (float)Math.Pow(Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position), 3.5) * outlineSizeModifier);
         }
     }
     
