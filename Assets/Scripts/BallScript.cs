@@ -6,6 +6,7 @@ public class BallScript : NetworkBehaviour
 {
     [SerializeField] private float force;
     [SerializeField] private float outlineSizeModifier;
+    [SerializeField] private float posPowMult;
     [Space]
     [SerializeField] private Rigidbody rb;
     [Space]
