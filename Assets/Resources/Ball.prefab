@@ -241,9 +241,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cbb50df706a94714cab41b9b3110dad1, type: 2}
+      objectReference: {fileID: 2100000, guid: dc773e0c5806e0849af308d3eb0f6948, type: 2}
     - target: {fileID: 919132149155446097, guid: e51b143d93ab1374ba119d841b39246e, type: 3}
       propertyPath: m_Name
       value: pingpongball

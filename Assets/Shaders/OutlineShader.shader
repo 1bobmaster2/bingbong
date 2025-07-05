@@ -9,18 +9,9 @@ Shader "Custom/Outline"
         Pass {
             Name "OUTLINE"
             Cull Front
-            ZWrite Off
-            ZTest Always
-
-            Stencil
-            {
-                Ref 1
-                Comp NotEqual
-                Pass Keep
-                Fail Keep
-                ZFail Keep
-            }
-
+            ZWrite On
+            ZTest LEqual
+            
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
