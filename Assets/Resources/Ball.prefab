@@ -189,6 +189,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   force: 0.85
   outlineSizeModifier: 0.001
+  posPowMult: 3.5
   rb: {fileID: 4278312198695691053}
   hostPlayerObject: {fileID: 0}
   clientPlayerObject: {fileID: 0}
