@@ -22,8 +22,6 @@ public class BallScript : NetworkBehaviour
     }
     void FixedUpdate()
     {
-        if(!IsServer) return;
-        
         lastVelocity = rb.linearVelocity;
 
         if (hostPlayerObject == null || clientPlayerObject == null)
