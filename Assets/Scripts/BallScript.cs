@@ -37,6 +37,10 @@ public class BallScript : NetworkBehaviour
         {
             outlineMaterial.SetFloat(WidthProperty, (float)Math.Pow(Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
         }
+        else
+        {
+            outlineMaterial.SetFloat(WidthProperty, (float)Math.Pow(Vector3.Distance(clientPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
+        }
     }
     
     void OnCollisionEnter(Collision collision)
