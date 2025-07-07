@@ -40,7 +40,7 @@ public class BallScript : NetworkBehaviour
     {
         if (IsHost)
         {
-            outlineMaterial.SetFloat(WidthProperty, (float)Math.Pow(Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
+            outlineMaterial.SetFloat(widthProperty, (float)Math.Pow(Vector3.Distance(hostPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
         }
         else
         {
