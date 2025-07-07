@@ -51,6 +51,12 @@ public class BallScript : NetworkBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(!IsServer) return;
+
+        if (!hasBeenHit)
+        {
+            hasBeenHit = true;
+            rb.isKinematic = false;
+        }
         
         GameObject hit = collision.gameObject;
 
