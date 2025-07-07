@@ -44,7 +44,7 @@ public class BallScript : NetworkBehaviour
         }
         else
         {
-            outlineMaterial.SetFloat(WidthProperty, (float)Math.Pow(Vector3.Distance(clientPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
+            outlineMaterial.SetFloat(widthProperty, (float)Math.Pow(Vector3.Distance(clientPlayerObject.transform.position, gameObject.transform.position), posPowMult) * outlineSizeModifier);
         }
     }
     
