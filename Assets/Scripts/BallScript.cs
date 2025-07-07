@@ -14,7 +14,9 @@ public class BallScript : NetworkBehaviour
 
     private Vector3 lastVelocity;
     private Material outlineMaterial;
-    private int WidthProperty;
+    private int widthProperty;
+    private bool hasBeenHit;
+    
     void Start()
     {
         outlineMaterial = gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material;
