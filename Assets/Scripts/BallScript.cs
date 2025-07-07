@@ -20,7 +20,10 @@ public class BallScript : NetworkBehaviour
     void Start()
     {
         outlineMaterial = gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material;
-        WidthProperty = Shader.PropertyToID("_OutlineWidth");
+        widthProperty = Shader.PropertyToID("_OutlineWidth");
+
+        hasBeenHit = false;
+        rb.isKinematic = true;
     }
     void FixedUpdate()
     {
