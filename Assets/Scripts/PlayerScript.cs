@@ -134,6 +134,11 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         palletObject.transform.position = worldPosition;
     }
 
+    void Swing()
+    {
+        rb.AddTorque(Vector3.forward * 5, ForceMode.Impulse);
+    }
+
     void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards.
     {
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
