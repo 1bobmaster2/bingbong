@@ -117,6 +117,11 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position += transform.forward * (-3 * zoomFactor * Time.deltaTime);
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Swing();
+        }
     }
 
     void MovePlayer()
