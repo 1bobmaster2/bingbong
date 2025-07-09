@@ -136,7 +136,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
     void Swing()
     {
-        rb.AddTorque(Vector3.forward * 5, ForceMode.Impulse);
+        rb.AddTorque(Vector3.right * 5, ForceMode.Impulse);
     }
 
     void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards.
