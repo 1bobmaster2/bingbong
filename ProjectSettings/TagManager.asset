@@ -12,6 +12,7 @@ TagManager:
   - HostSpawnPoint
   - ClientSpawnPoint
   - temporaryDebugTag
+  - Ball
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private GameObject otherPlayerCamObject;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform hostSpawnpoint, clientSpawnpoint;
-    [SerializeField] private Rigidbody rb;
+    //[SerializeField] private Rigidbody rb;
 
     private bool isOtherCamDisabled;
     private string otherPlayerTag;
@@ -117,11 +117,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         {
             gameObject.transform.position += transform.forward * (-3 * zoomFactor * Time.deltaTime);
         }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Swing();
-        }
     }
 
     void MovePlayer()
@@ -133,12 +128,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         palletObject.transform.position = worldPosition;
     }
-
-    void Swing()
-    {
-        rb.AddTorque(Vector3.right * 5, ForceMode.Impulse);
-    }
-
+    
     void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards.
     {
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
