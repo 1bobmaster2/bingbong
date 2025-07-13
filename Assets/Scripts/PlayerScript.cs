@@ -15,7 +15,6 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private GameObject otherPlayerCamObject;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform hostSpawnpoint, clientSpawnpoint;
-    //[SerializeField] private Rigidbody rb;
 
     private bool isOtherCamDisabled;
     private string otherPlayerTag;
