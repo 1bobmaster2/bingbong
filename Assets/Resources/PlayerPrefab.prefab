@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  force: 10000
 --- !u!1001 &1936947895892252442
 PrefabInstance:
   m_ObjectHideFlags: 0
