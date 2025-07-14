@@ -39,8 +39,6 @@ public class RacketHitbox : NetworkBehaviour
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
-            Rigidbody rb = ballObject.GetComponent<Rigidbody>();
-            rb.AddTorque(Vector3.right * force , ForceMode.Impulse);
         }
     }
 
