@@ -22,6 +22,9 @@ public class RacketHitbox : NetworkBehaviour
         if (ballObject != null && isHitting)
         {
             Debug.Log("hit the ball");
+            Rigidbody rb = ballObject.GetComponent<Rigidbody>();
+            rb.AddTorque(Vector3.forward * torqueForce , ForceMode.Impulse);
+            rb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
         }
     }
 
