@@ -337,6 +337,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   torqueForce: 0.0002
   impulseForce: 0.0002
+  hitTime: 0.1
 --- !u!1001 &1936947895892252442
 PrefabInstance:
   m_ObjectHideFlags: 0
