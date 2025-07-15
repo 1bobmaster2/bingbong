@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RacketHitbox : NetworkBehaviour
 {
-    [SerializeField] private float torqueForce, impulseForce;
+    [SerializeField] private float torqueForce, impulseForce, hitTime;
     private GameObject ballObject;
     private bool isHitting;
     
