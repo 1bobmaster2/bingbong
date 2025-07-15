@@ -17,7 +17,7 @@ public class RacketHitbox : NetworkBehaviour
         {
             isHitting = true;
             Debug.Log("set isHitting to true");
-            Invoke("StopHitting", 1f);
+            Invoke("StopHitting", hitTime);
         }
         
         if (ballObject != null && isHitting)
