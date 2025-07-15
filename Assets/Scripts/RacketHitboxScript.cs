@@ -23,13 +23,12 @@ public class RacketHitbox : NetworkBehaviour
         if (ballObject != null && isHitting)
         {
             Debug.Log("hit the ball");
-            Rigidbody rb = ballObject.GetComponent<Rigidbody>();
-            rb.AddTorque(Vector3.forward * torqueForce , ForceMode.Impulse);
-            rb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
             if (ballRb == null)
             {
                 ballRb = ballObject.GetComponent<Rigidbody>();
             }
+            ballRb.AddTorque(Vector3.forward * torqueForce , ForceMode.Impulse);
+            ballRb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
         }
     }
 
@@ -44,14 +43,6 @@ public class RacketHitbox : NetworkBehaviour
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ball"))
-        {
-            ballObject = null;
         }
     }
 }
