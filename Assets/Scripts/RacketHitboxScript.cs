@@ -5,7 +5,7 @@ public class RacketHitbox : NetworkBehaviour
 {
     [SerializeField] private float torqueForce, impulseForce, hitTime;
     private GameObject ballObject;
-    private bool isHitting;
+    private bool isHitting, canHit;
     private Rigidbody ballRb;
     
     private void Update()
@@ -19,7 +19,7 @@ public class RacketHitbox : NetworkBehaviour
             Invoke("StopHitting", hitTime);
         }
         
-        if (ballObject != null && isHitting)
+        if (ballObject != null && isHitting && canHit)
         {
             Debug.Log("hit the ball");
             if (ballRb.isKinematic)
@@ -39,9 +39,16 @@ public class RacketHitbox : NetworkBehaviour
     
     void OnTriggerEnter(Collider other)
     {
+        canHit = true;
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
+            ballRb = ballObject.GetComponent<Rigidbody>();
         }
+    }
+    
+    void OnTriggerExit(Collider other)
+    {
+        canHit = false;
     }
 }
