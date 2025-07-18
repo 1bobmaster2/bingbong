@@ -68,8 +68,8 @@ public class BallScript : NetworkBehaviour
         
         Vector3 reflectedVelocity = Vector3.Reflect(incomingVelocity, contact.normal);
 
-        
-        Vector3 forceToAdd = reflectedVelocity.normalized * incomingVelocity.magnitude * force;
+        float adjustedMagnitude = incomingVelocity.magnitude * force - rb.linearVelocity.magnitude * 0.01f;
+        Vector3 forceToAdd = reflectedVelocity.normalized * adjustedMagnitude;
         
 
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
