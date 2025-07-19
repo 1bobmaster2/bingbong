@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BallScript : NetworkBehaviour
 {
-    [SerializeField] private float force;
+    [SerializeField, ReadOnly] private float force;
+    [SerializeField] private float forceMultiplier;
     [SerializeField] private float outlineSizeModifier;
     [SerializeField] private float posPowMult;
     [Space]
