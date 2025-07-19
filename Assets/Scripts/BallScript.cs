@@ -29,6 +29,7 @@ public class BallScript : NetworkBehaviour
     void FixedUpdate()
     {
         lastVelocity = rb.linearVelocity;
+        force = rb.linearVelocity.magnitude * forceMultiplier;
 
         if (hostPlayerObject == null || clientPlayerObject == null)
         {
