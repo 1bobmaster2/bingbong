@@ -51,4 +51,21 @@ public class RacketHitbox : NetworkBehaviour
     {
         canHit = false;
     }
+    
+    [ServerRpc]
+    private void RequestHitServerRpc(ServerRpcParams rpcParams = default)
+    {
+        if (ballObject == null) return;
+
+        Rigidbody rb = ballObject.GetComponent<Rigidbody>();
+        if (rb == null) return;
+
+        if (rb.isKinematic)
+        {
+            rb.isKinematic = false;
+        }
+
+        rb.AddTorque(Vector3.forward * torqueForce, ForceMode.Impulse);
+        rb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
+    }
 }
