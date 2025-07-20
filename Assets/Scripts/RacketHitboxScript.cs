@@ -22,12 +22,7 @@ public class RacketHitbox : NetworkBehaviour
         if (ballObject != null && isHitting && canHit)
         {
             Debug.Log("hit the ball");
-            if (ballRb.isKinematic)
-            {
-                ballRb.isKinematic = false;
-            }
-            ballRb.AddTorque(Vector3.forward * torqueForce , ForceMode.Impulse);
-            ballRb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
+            RequestHitServerRpc();
         }
     }
 
