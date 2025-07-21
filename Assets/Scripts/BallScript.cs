@@ -30,6 +30,8 @@ public class BallScript : NetworkBehaviour
     {
         lastVelocity = rb.linearVelocity;
         force = rb.linearVelocity.magnitude * forceMultiplier;
+        
+        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, 25f);
 
         if (hostPlayerObject == null || clientPlayerObject == null)
         {
