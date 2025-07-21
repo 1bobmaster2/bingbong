@@ -65,7 +65,9 @@ public class RacketHitbox : NetworkBehaviour
             rb.isKinematic = false;
         }
 
-        rb.AddTorque(Vector3.forward * torqueForce, ForceMode.Impulse);
-        rb.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
+        Vector3 direction = (midPoint.transform.position - transform.position).normalized;
+        
+        rb.AddTorque(direction * torqueForce, ForceMode.Impulse);
+        rb.AddForce(direction * impulseForce, ForceMode.Impulse);
     }
 }
