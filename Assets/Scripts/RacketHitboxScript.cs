@@ -46,6 +46,11 @@ public class RacketHitbox : NetworkBehaviour
     {
         canHit = false;
     }
+
+    public override void OnNetworkSpawn()
+    {
+        midPoint = GameObject.FindWithTag("MidPoint");
+    }
     
     [ServerRpc]
     private void RequestHitServerRpc(ServerRpcParams rpcParams = default)
