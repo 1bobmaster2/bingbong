@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   force: 0
-  forceMultiplier: 0.5
+  forceMultiplier: 0.2
   outlineSizeModifier: 0.001
   posPowMult: 3.1
   rb: {fileID: 4278312198695691053}
