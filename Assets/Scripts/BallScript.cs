@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BallScript : NetworkBehaviour
 {
-    [SerializeField, ReadOnly] private float force;
-    [SerializeField] private float forceMultiplier;
+    //[SerializeField, ReadOnly] private float force;
+    //[SerializeField] private float forceMultiplier;
     [SerializeField] private float outlineSizeModifier;
     [SerializeField] private float posPowMult;
     [Space]
@@ -29,7 +29,7 @@ public class BallScript : NetworkBehaviour
     void FixedUpdate()
     {
         lastVelocity = rb.linearVelocity;
-        force = rb.linearVelocity.magnitude * forceMultiplier;
+        //force = rb.linearVelocity.magnitude * forceMultiplier;
         
         rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, 25f);
 
@@ -72,8 +72,8 @@ public class BallScript : NetworkBehaviour
         
         Vector3 reflectedVelocity = Vector3.Reflect(incomingVelocity, contact.normal);
 
-        float adjustedMagnitude = Mathf.Max(0f, incomingVelocity.magnitude - force);
-        Vector3 forceToAdd = reflectedVelocity.normalized * adjustedMagnitude;
+        //float adjustedMagnitude = Mathf.Max(0f, incomingVelocity.magnitude - force);  // commented this as it makes the ball bounce stronger and stronger
+        Vector3 forceToAdd = reflectedVelocity.normalized;
         
 
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
