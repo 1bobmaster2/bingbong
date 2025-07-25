@@ -1,9 +1,13 @@
+using System.Threading;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class RacketHitbox : NetworkBehaviour
 {
     [SerializeField] private float torqueForce, impulseForce, hitTime;
+    [SerializeField] private Volume volume;
     private GameObject ballObject, midPoint;
     private bool isHitting, canHit;
     private Rigidbody ballRb;
@@ -35,6 +39,7 @@ public class RacketHitbox : NetworkBehaviour
     void OnTriggerEnter(Collider other)
     {
         canHit = true;
+        ChangeVignette(true);
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
@@ -45,11 +50,21 @@ public class RacketHitbox : NetworkBehaviour
     void OnTriggerExit(Collider other)
     {
         canHit = false;
+        ChangeVignette(false);
     }
 
     public override void OnNetworkSpawn()
     {
         midPoint = GameObject.FindWithTag("MidPoint");
+        volume = GameObject.FindWithTag("PostProcessing").GetComponent<Volume>();
+    }
+
+    private void ChangeVignette(bool input)
+    {
+        if (volume.profile.TryGet(out Vignette vignette))
+        {
+            vignette.active = input;
+        }
     }
     
     [ServerRpc]
