@@ -14,6 +14,7 @@ TagManager:
   - temporaryDebugTag
   - Ball
   - MidPoint
+  - PostProcessing
   layers:
   - Default
   - TransparentFX
