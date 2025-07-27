@@ -55,7 +55,6 @@ public class RacketHitbox : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         midPoint = GameObject.FindWithTag("MidPoint");
-        volume = GameObject.FindWithTag("PostProcessing").GetComponent<Volume>();
     }
 
     private void ChangeVignette(bool input)
