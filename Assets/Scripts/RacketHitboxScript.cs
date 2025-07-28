@@ -9,7 +9,6 @@ public class RacketHitbox : NetworkBehaviour
     [SerializeField] private Volume volume;
     private GameObject ballObject, midPoint;
     private bool isHitting, canHit;
-    private Rigidbody ballRb;
     
     private void Update()
     {
@@ -42,7 +41,6 @@ public class RacketHitbox : NetworkBehaviour
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
-            ballRb = ballObject.GetComponent<Rigidbody>();
         }
     }
     
