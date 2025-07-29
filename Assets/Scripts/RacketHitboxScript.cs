@@ -31,7 +31,10 @@ public class RacketHitbox : NetworkBehaviour
     private void StopHitting()
     {
         isHitting = false;
-        Debug.Log("set isHitting to false");
+        if (Application.isEditor)
+        {
+            Debug.Log("set isHitting to false");
+        }
     }
     
     void OnTriggerEnter(Collider other)
