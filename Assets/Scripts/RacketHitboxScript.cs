@@ -23,7 +23,10 @@ public class RacketHitbox : NetworkBehaviour
         
         if (ballObject != null && isHitting && canHit)
         {
-            Debug.Log("hit the ball");
+            if (Application.isEditor)
+            {
+                Debug.Log("hit the ball");
+            }
             RequestHitServerRpc();
         }
     }
