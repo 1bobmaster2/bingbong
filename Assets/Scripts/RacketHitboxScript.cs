@@ -17,7 +17,10 @@ public class RacketHitbox : NetworkBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isHitting = true;
-            Debug.Log("set isHitting to true");
+            if (Application.isEditor)
+            {
+                Debug.Log("set isHitting to true");
+            }
             Invoke(nameof(StopHitting), hitTime);
         }
         
