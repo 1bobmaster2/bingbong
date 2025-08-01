@@ -32,7 +32,10 @@ public class TestLobby : MonoBehaviour
 
         AuthenticationService.Instance.SignedIn += () =>
         {
-            Debug.Log("SignedIn: " + AuthenticationService.Instance.PlayerId);
+            if (Application.isEditor)
+            {
+                Debug.Log("SignedIn: " + AuthenticationService.Instance.PlayerId);
+            }
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
         
