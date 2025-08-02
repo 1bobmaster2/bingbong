@@ -331,6 +331,18 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &2990592889534344493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565223080070194296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9818a10cde3cbfc449b3bf09135af96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6589997651804731626
 GameObject:
   m_ObjectHideFlags: 0
