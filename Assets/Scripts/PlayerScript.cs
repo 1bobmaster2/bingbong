@@ -36,8 +36,13 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         };
         
         // temporary solution but better
-        InvokeRepeating("SyncNameAndTag", 0f, 1f);
-        Invoke("StopRepeatingSyncNameAndTag", 10f);
+        //InvokeRepeating("SyncNameAndTag", 0f, 1f);
+        //nvoke("StopRepeatingSyncNameAndTag", 10f);
+
+        if (!ClientReadyHandler.instance.allClientsReady)
+        {
+            SyncNameAndTag();
+        }
         
         if (!IsOwner) return;
 
