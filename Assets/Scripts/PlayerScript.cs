@@ -48,8 +48,13 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
         if (IsHost)
         {
-            InvokeRepeating("SetNameAndTagToPlayerHost", 0f, 1f);
-            Invoke("StopRepeatingSetNameAndTagToPlayerHost", 10f);
+            //InvokeRepeating("SetNameAndTagToPlayerHost", 0f, 1f);
+            //Invoke("StopRepeatingSetNameAndTagToPlayerHost", 10f);
+
+            if (!ClientReadyHandler.instance.allClientsReady)
+            {
+                SetNameAndTagToPlayerHost();
+            }
         }
         
         if (cam == null)
