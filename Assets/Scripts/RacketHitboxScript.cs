@@ -61,6 +61,8 @@ public class RacketHitbox : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        if (!ClientReadyHandler.instance.allClientsReady) return;
+        
         midPoint = GameObject.FindWithTag("MidPoint");
     }
 
