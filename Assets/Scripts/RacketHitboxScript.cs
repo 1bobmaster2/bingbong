@@ -7,7 +7,7 @@ public class RacketHitbox : NetworkBehaviour
 {
     [SerializeField] private float torqueForce, impulseForce, hitTime;
     [SerializeField] private Volume volume;
-    private GameObject ballObject, midPoint;
+    private GameObject ballObject, midPoint, otherPlayer;
     private bool isHitting, canHit;
     
     private void Update()
