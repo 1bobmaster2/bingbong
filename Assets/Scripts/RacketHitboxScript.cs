@@ -64,6 +64,16 @@ public class RacketHitbox : NetworkBehaviour
         if (!ClientReadyHandler.instance.allClientsReady) return;
         
         midPoint = GameObject.FindWithTag("MidPoint");
+        if (IsClient && !IsHost)
+        {
+            otherPlayer = GameObject.FindWithTag("HostPlayer");
+        }
+        else
+        {
+            otherPlayer = GameObject.FindWithTag("ClientPlayer");
+        }
+        
+        DisableOtherVolume();
     }
 
     private void ChangeVignette(bool input)
