@@ -83,6 +83,12 @@ public class RacketHitbox : NetworkBehaviour
             vignette.active = input;
         }
     }
+
+    private void DisableOtherVolume()
+    {
+        Volume otherVolume = otherPlayer.GetComponentInChildren<Volume>();
+        otherVolume.enabled = false;
+    }
     
     [ServerRpc]
     private void RequestHitServerRpc(ServerRpcParams rpcParams = default)
