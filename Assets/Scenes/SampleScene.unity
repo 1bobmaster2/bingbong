@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00f06211a7685b4691d37ec08972728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedPlayers: 1
+  expectedPlayers: 2
   allClientsReady: 0
 --- !u!1 &1613429979
 GameObject:
