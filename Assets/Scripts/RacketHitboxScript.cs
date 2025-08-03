@@ -101,4 +101,28 @@ public class RacketHitbox : NetworkBehaviour
         rb.AddTorque(direction * torqueForce, ForceMode.Impulse);
         rb.AddForce(direction * impulseForce, ForceMode.Impulse);
     }
+
+    IEnumerator InitializeVariables()
+    {
+        while (true)
+        {
+            midPoint = GameObject.FindWithTag("MidPoint");
+            if (IsClient && !IsHost)
+            {
+                otherPlayer = GameObject.FindWithTag("HostPlayer");
+            }
+            
+            if (IsHost)
+            {
+                otherPlayer = GameObject.FindWithTag("ClientPlayer");
+            }
+
+            if (ClientReadyHandler.instance.allClientsReady)
+            {
+                yield break;
+            }
+
+            yield return null;
+        }
+    }
 }
