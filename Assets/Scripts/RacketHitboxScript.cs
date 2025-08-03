@@ -62,18 +62,10 @@ public class RacketHitbox : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        if (!ClientReadyHandler.instance.allClientsReady) return;
+        if (!IsOwner) return;
         
-        midPoint = GameObject.FindWithTag("MidPoint");
-        if (IsClient && !IsHost)
-        {
-            otherPlayer = GameObject.FindWithTag("HostPlayer");
-        }
-        else
-        {
-            otherPlayer = GameObject.FindWithTag("ClientPlayer");
-        }
-        
+        StartCoroutine(InitializeVariables());
+
         DisableOtherVolume();
     }
 
