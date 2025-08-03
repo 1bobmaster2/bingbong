@@ -5,7 +5,7 @@ public class ClientReadyHandler : MonoBehaviour
 {
     public static ClientReadyHandler instance;
     private HashSet<ulong> readyClients = new HashSet<ulong>();
-    [SerializeField] private int expectedPlayers;
+    [SerializeField] public int expectedPlayers;
     [ReadOnly]
     public bool allClientsReady;
     
