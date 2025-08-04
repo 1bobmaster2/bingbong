@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9818a10cde3cbfc449b3bf09135af96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!1 &6589997651804731626
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,10 +411,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  torqueForce: 0.0002
+  torqueForce: 0.0005
   impulseForce: 0.0002
   hitTime: 0.1
   volume: {fileID: 2033531776201424732}
+  ballObject: {fileID: 0}
+  midPoint: {fileID: 0}
+  otherPlayer: {fileID: 0}
 --- !u!1 &6882067259245532510
 GameObject:
   m_ObjectHideFlags: 0
