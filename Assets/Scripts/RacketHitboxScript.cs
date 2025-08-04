@@ -117,7 +117,7 @@ public class RacketHitbox : NetworkBehaviour
                 otherPlayer = GameObject.FindWithTag("ClientPlayer");
             }
 
-            if (ClientReadyHandler.instance.allClientsReady)
+            if (otherPlayer != null)
             {
                 yield break;
             }
