@@ -65,8 +65,6 @@ public class RacketHitbox : NetworkBehaviour
         if (!IsOwner) return;
         
         StartCoroutine(InitializeVariables());
-
-        DisableOtherVolume();
     }
 
     private void ChangeVignette(bool input)
@@ -119,6 +117,7 @@ public class RacketHitbox : NetworkBehaviour
 
             if (otherPlayer != null)
             {
+                DisableOtherVolume();
                 yield break;
             }
 
