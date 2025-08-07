@@ -10,16 +10,16 @@ public class ScoreManager : NetworkBehaviour
 
 
     [ServerRpc(RequireOwnership = false)]
-    public void AddScoreServerRpc(ServerRpcParams p = default)
+    public void AddScoreServerRpc(string winner, ServerRpcParams p = default)
     {
         ulong senderId = p.Receive.SenderClientId;
 
-        if (senderId == 0)
+        if (winner == "Host")
         {
             HostScore.Value++;
             Debug.Log("Host got 1 score, host score is now: " + HostScore.Value);
         }
-        else
+        else if (winner == "Client")
         {
             ClientScore.Value++;
             Debug.Log("Client got 1 score, client score is now: " + ClientScore.Value);
