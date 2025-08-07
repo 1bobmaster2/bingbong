@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 594151364}
   m_Layer: 0
   m_Name: HostTableSide
-  m_TagString: Untagged
+  m_TagString: HostTableSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2354,7 +2354,7 @@ GameObject:
   - component: {fileID: 1305565189}
   m_Layer: 0
   m_Name: ClientTableSide
-  m_TagString: Untagged
+  m_TagString: ClientTableSide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
