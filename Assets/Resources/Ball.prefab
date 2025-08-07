@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4278312198695691053}
   - component: {fileID: 5530698807225919277}
   - component: {fileID: 4507785598588402496}
+  - component: {fileID: 588965614921664399}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -187,13 +188,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  force: 0
-  forceMultiplier: 0.2
   outlineSizeModifier: 0.001
   posPowMult: 3.1
   rb: {fileID: 4278312198695691053}
   hostPlayerObject: {fileID: 0}
   clientPlayerObject: {fileID: 0}
+--- !u!114 &588965614921664399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777484518610844732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03cacb38b6d8f544b56a877ffa9db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2061200159957623532
 PrefabInstance:
   m_ObjectHideFlags: 0
