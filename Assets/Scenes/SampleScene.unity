@@ -2749,9 +2749,8 @@ GameObject:
   - component: {fileID: 1595523827}
   - component: {fileID: 1595523828}
   - component: {fileID: 1595523829}
-  - component: {fileID: 1595523830}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: NetworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
