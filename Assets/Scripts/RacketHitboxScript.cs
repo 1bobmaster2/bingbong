@@ -88,6 +88,9 @@ public class RacketHitbox : NetworkBehaviour
 
         Rigidbody rb = ballObject.GetComponent<Rigidbody>();
         if (rb == null) return;
+        
+        ScoreCheck scoreCheck = ballObject.GetComponent<ScoreCheck>();
+        scoreCheck.lastHit = gameObject.transform.parent.gameObject.transform.parent.gameObject;
 
         if (rb.isKinematic)
         {
