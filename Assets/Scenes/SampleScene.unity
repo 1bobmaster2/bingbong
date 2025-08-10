@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  scoreText: {fileID: 927782974}
 --- !u!4 &163402955
 Transform:
   m_ObjectHideFlags: 0
