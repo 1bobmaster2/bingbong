@@ -40,10 +40,17 @@ public class ScoreManager : NetworkBehaviour
             Debug.Log("Client got 1 score, client score is now: " + ClientScore.Value);
         }
     }
+
     [ServerRpc(RequireOwnership = false)]
     private void UpdateTextOnAllClientsServerRpc()
     {
         UpdateTextClientRpc();
     }
 
+    [ClientRpc(RequireOwnership = false)]
+    private void UpdateTextClientRpc()
+    {
+        scoreText.text = HostScore.Value + " - " + ClientScore.Value;
+    }
+    
 }
