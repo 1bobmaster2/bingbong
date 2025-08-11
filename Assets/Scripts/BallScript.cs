@@ -79,6 +79,13 @@ public class BallScript : NetworkBehaviour
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
     }
 
+    [ContextMenu("Move ball to spawn (FOR DEBUG)")]
+    void MoveBallToSpawn()
+    {
+        gameObject.transform.position = new Vector3(0, 0, 5);
+        rb.linearVelocity = Vector3.zero;
+    }
+
     GameObject WaitForGameObject(string tag)
     {
         return GameObject.FindGameObjectWithTag(tag);
