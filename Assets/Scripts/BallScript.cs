@@ -84,6 +84,8 @@ public class BallScript : NetworkBehaviour
     {
         gameObject.transform.position = new Vector3(0, 0, 5);
         rb.linearVelocity = Vector3.zero;
+        SwitchIsKinematic();
+        Invoke(nameof(SwitchIsKinematic), 0.5f);
     }
 
     void SwitchIsKinematic()
