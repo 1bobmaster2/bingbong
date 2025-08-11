@@ -86,6 +86,11 @@ public class BallScript : NetworkBehaviour
         rb.linearVelocity = Vector3.zero;
     }
 
+    void SwitchIsKinematic()
+    {
+        rb.isKinematic = !rb.isKinematic;
+    }
+
     GameObject WaitForGameObject(string tag)
     {
         return GameObject.FindGameObjectWithTag(tag);
