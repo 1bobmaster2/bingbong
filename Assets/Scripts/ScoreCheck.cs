@@ -15,7 +15,16 @@ public class ScoreCheck : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Ground"))
         {
-            
+            if (lastHit == null) return;
+
+            if (lastHit.CompareTag("HostPlayer"))
+            {
+                ScoreManager.instance.AddScoreServerRpc("Client");
+            }
+            else if (lastHit.CompareTag("ClientPlayer"))
+            {
+                ScoreManager.instance.AddScoreServerRpc("Host");
+            }
         }
     }
 }
