@@ -13,6 +13,7 @@ public class ScoreCheck : NetworkBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        ballScript.MoveBallToSpawn();
         if (collision.gameObject.CompareTag("HostTableSide"))
         {
             ScoreManager.instance.AddScoreServerRpc("Client");
