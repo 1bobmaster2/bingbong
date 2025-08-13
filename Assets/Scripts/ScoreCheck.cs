@@ -4,6 +4,8 @@ using UnityEngine;
 public class ScoreCheck : NetworkBehaviour
 {
     public GameObject lastHit;
+    private BallScript ballScript;
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("HostTableSide"))
