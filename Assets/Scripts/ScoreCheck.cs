@@ -6,6 +6,11 @@ public class ScoreCheck : NetworkBehaviour
     public GameObject lastHit;
     private BallScript ballScript;
 
+    public override void OnNetworkSpawn()
+    {
+        ballScript = GetComponent<BallScript>();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("HostTableSide"))
