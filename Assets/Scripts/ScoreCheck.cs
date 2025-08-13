@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class ScoreCheck : MonoBehaviour
+public class ScoreCheck : NetworkBehaviour
 {
     public GameObject lastHit;
     void OnCollisionEnter(Collision collision)
