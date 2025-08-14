@@ -13,6 +13,11 @@ public class ScoreCheck : NetworkBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Untagged"))
+        {
+            return;
+        }
+        
         ballScript.MoveBallToSpawn();
         if (collision.gameObject.CompareTag("HostTableSide"))
         {
