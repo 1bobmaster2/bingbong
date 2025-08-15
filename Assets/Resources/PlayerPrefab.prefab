@@ -412,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   torqueForce: 0.0005
-  impulseForce: 0.0002
+  impulseForce: 0.00021
   hitTime: 0.1
   volume: {fileID: 2033531776201424732}
   ballObject: {fileID: 0}
