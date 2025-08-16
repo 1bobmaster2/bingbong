@@ -4,6 +4,7 @@ using UnityEngine;
 public class ScoreCheck : NetworkBehaviour
 {
     public GameObject lastHit;
+    [SerializeField] private bool moveToClient;
     private BallScript ballScript;
 
     public override void OnNetworkSpawn()
