@@ -79,7 +79,6 @@ public class BallScript : NetworkBehaviour
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
     }
 
-    [ContextMenu("Move ball to spawn (FOR DEBUG)")]
     public void MoveBallToSpawn(Vector3 pos)
     {
         gameObject.transform.position = pos;
