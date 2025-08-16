@@ -80,9 +80,9 @@ public class BallScript : NetworkBehaviour
     }
 
     [ContextMenu("Move ball to spawn (FOR DEBUG)")]
-    public void MoveBallToSpawn()
+    public void MoveBallToSpawn(Vector3 pos)
     {
-        gameObject.transform.position = new Vector3(0, 0, 5);
+        gameObject.transform.position = pos;
         rb.linearVelocity = Vector3.zero;
         SwitchIsKinematic();
     }
