@@ -29,7 +29,7 @@ public class ScoreManager : NetworkBehaviour
     {
         ulong senderId = p.Receive.SenderClientId;
 
-        if (winner == "Host")
+        if (winner == "Host") // winner of the play, not the whole match
         {
             HostScore.Value++;
             Debug.Log("Host got 1 score, host score is now: " + HostScore.Value);
