@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScoreCheck : NetworkBehaviour
 {
-    public GameObject lastHit;
+    public GameObject lastHit; // the GameObject that last hit the ball (either host or client)
     [SerializeField] private bool moveToClient;
     private BallScript ballScript;
 
@@ -16,7 +16,7 @@ public class ScoreCheck : NetworkBehaviour
     {
         if (collision.gameObject.CompareTag("Untagged"))
         {
-            return;
+            return; // we have no interest in untagged GameObjects
         }
 
         if (moveToClient)
