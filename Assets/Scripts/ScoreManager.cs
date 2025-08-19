@@ -12,7 +12,7 @@ public class ScoreManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        HostScore.OnValueChanged += (oldValue, newValue) =>
+        HostScore.OnValueChanged += (oldValue, newValue) => // when either ClientScore or HostScore change, we send an rpc to every user in order to update the score
         {
             UpdateTextOnAllClientsServerRpc();
         };
