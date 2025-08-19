@@ -15,7 +15,7 @@ public class ClientReadyHandler : MonoBehaviour
     {
         readyClients.Add(clientId);
 
-        if (readyClients.Count == expectedPlayers)
+        if (readyClients.Count == expectedPlayers) // if the number of joined clients is equal to the expected players, we set allClientsReady to true
         {
             allClientsReady = true;
             Debug.Log("All clients ready");
