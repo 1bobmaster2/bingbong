@@ -6,13 +6,13 @@ public class ClientReadyScript : NetworkBehaviour
     {
         if (!IsOwner) return;
         
-        NotifyHandlerOnReadyServerRpc();
+        NotifyHandlerOnReadyServerRpc(); // notifies the host when the client has joined
     }
 
     [ServerRpc(RequireOwnership = false)]
     private void NotifyHandlerOnReadyServerRpc(ServerRpcParams p = default)
     {
         ulong clientId = p.Receive.SenderClientId;
-        ClientReadyHandler.instance.MarkClientReady(clientId);
+        ClientReadyHandler.instance.MarkClientReady(clientId); // marks the client ready
     }
 }
