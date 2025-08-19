@@ -31,7 +31,7 @@ public class BallScript : NetworkBehaviour
         lastVelocity = rb.linearVelocity;
         //force = rb.linearVelocity.magnitude * forceMultiplier;
         
-        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, 25f);
+        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, 25f); // we clamp the velocity to prevent uncontrollable speed
 
         if (hostPlayerObject == null || clientPlayerObject == null)
         {
@@ -83,7 +83,7 @@ public class BallScript : NetworkBehaviour
     {
         gameObject.transform.position = pos;
         rb.linearVelocity = Vector3.zero;
-        SwitchIsKinematic();
+        SwitchIsKinematic(); // we switch the kinematic state from false to true here to allow the user to hit the ball in time (instead it would just fall and teleport back)
     }
 
     void SwitchIsKinematic()
