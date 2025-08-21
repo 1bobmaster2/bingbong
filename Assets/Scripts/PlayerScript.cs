@@ -63,7 +63,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             Debug.LogError("No camera exists.");
         }
 
-        
+        Renderer rend = transform.GetChild(2).GetComponent<Renderer>();
         
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
