@@ -15,6 +15,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
     [SerializeField] private GameObject otherPlayerCamObject;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform hostSpawnpoint, clientSpawnpoint;
+    [SerializeField] private Material hostMaterial, clientMaterial;
 
     private bool isOtherCamDisabled;
     private string otherPlayerTag;
@@ -62,6 +63,8 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             Debug.LogError("No camera exists.");
         }
 
+        
+        
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
             clientSpawnpoint = GameObject.FindGameObjectWithTag("ClientSpawnPoint").transform;
