@@ -285,6 +285,8 @@ MonoBehaviour:
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
   hostSpawnpoint: {fileID: 0}
   clientSpawnpoint: {fileID: 0}
+  hostMaterial: {fileID: 2100000, guid: 70c1a59dbec2e9e43a66a78c60fe3cb2, type: 2}
+  clientMaterial: {fileID: 2100000, guid: 73e54e3ef93369547b0bdc2028a6e8a0, type: 2}
 --- !u!114 &3486339162346655244
 MonoBehaviour:
   m_ObjectHideFlags: 0
