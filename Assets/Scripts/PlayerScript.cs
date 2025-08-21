@@ -75,6 +75,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             playerName.Value = "ClientPlayer";
             playerTag.Value = "ClientPlayer";
             otherPlayerTag = "HostPlayer";
+            rend.material = clientMaterial;
         }
         else if (NetworkManager.Singleton.IsHost)
         {
@@ -85,6 +86,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             playerName.Value = "HostPlayer"; // temporary name needed for it to work.
             playerTag.Value = "HostPlayer";
             otherPlayerTag = "ClientPlayer";
+            rend.material = hostMaterial;
         }
         else
         {
