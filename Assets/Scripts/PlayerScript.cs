@@ -105,7 +105,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         
         MovePlayer();
 
-        if (ClientReadyHandler.instance.allClientsReady)
+        if (!materialSynchronized)
         {
             Renderer otherRend = otherPlayer.transform.GetChild(2).GetComponent<Renderer>();
             if (otherRend == null)
