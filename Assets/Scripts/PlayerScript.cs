@@ -111,6 +111,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             if (otherRend == null)
             {
                 Debug.LogError("couldn't find otherRend");
+                return;
             }
             if (IsHost)
             {
