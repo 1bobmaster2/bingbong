@@ -19,6 +19,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
     private bool isOtherCamDisabled;
     private string otherPlayerTag;
+    private bool materialSynchronized;
     
     private NetworkVariable<FixedString32Bytes> playerName = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
     private NetworkVariable<FixedString32Bytes> playerTag = new( "",  NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner );
@@ -103,6 +104,24 @@ public class NewMonoBehaviourScript : NetworkBehaviour
         if (!IsOwner) return;
         
         MovePlayer();
+
+        if (ClientReadyHandler.instance.allClientsReady)
+        {
+            Renderer otherRend = otherPlayer.transform.GetChild(2).GetComponent<Renderer>();
+            if (otherRend == null)
+            {
+                Debug.LogError("couldn't find otherRend");
+            }
+            if (IsHost)
+            {
+                otherRend.material = clientMaterial;
+            }
+            else
+            {
+                otherRend.material = hostMaterial;
+            }
+            materialSynchronized = true;
+        }
 
         if (otherPlayer != null && otherPlayerCamObject == null)
         {
