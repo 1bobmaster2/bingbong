@@ -64,7 +64,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
             Debug.LogError("No camera exists.");
         }
 
-        Renderer rend = transform.GetChild(2).GetComponent<Renderer>();
+        Renderer rend = transform.GetChild(2).GetComponent<Renderer>(); // we get the renderer of the game object, the component with a renderer is the third child (the racket model)
         
         if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
         {
