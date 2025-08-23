@@ -107,7 +107,7 @@ public class NewMonoBehaviourScript : NetworkBehaviour
 
         if (!materialSynchronized)
         {
-            Renderer otherRend = otherPlayer.transform.GetChild(2).GetComponent<Renderer>();
+            Renderer otherRend = otherPlayer.transform.GetChild(2).GetComponent<Renderer>(); // we get the renderer of the other player, and then set the correct material
             if (otherRend == null)
             {
                 Debug.LogError("couldn't find otherRend");
