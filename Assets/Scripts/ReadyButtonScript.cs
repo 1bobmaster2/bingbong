@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ReadyButtonScript : NetworkBehaviour
 {
-    void Start()
+    void Update() //TODO: fix this
     {
         if (!IsHost)
         {
