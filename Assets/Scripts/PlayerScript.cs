@@ -96,7 +96,7 @@ public class PlayerScript : NetworkBehaviour
         
         StartCoroutine(WaitForGameObject(otherPlayerTag));
         
-        SpawnNetworkObject(ballPrefab);
+        //SpawnNetworkObject(ballPrefab);
     }
     
     void Update()
