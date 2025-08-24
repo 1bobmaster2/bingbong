@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class MatchReadyManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject ballPrefab;
 
-    // Update is called once per frame
-    void Update()
+    public void SetReady()
     {
         
     }
