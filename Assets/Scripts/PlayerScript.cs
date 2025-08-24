@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
-public class NewMonoBehaviourScript : NetworkBehaviour
+public class PlayerScript : NetworkBehaviour
 {
     [SerializeField] private float zoomFactor;
     [Space]
