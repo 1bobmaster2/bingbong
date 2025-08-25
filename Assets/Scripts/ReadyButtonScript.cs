@@ -7,7 +7,7 @@ public class ReadyButtonScript : NetworkBehaviour
     {
         if (!IsHost)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false); // TODO: fix this, again!
         }
     }
 }
