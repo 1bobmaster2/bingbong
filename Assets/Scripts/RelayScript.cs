@@ -21,7 +21,7 @@ public class RelayScript : MonoBehaviour
             }
             else
             {
-                allocation = await RelayService.Instance.CreateAllocationAsync(ClientReadyHandler.instance.expectedPlayers - 1);    
+                allocation = await RelayService.Instance.CreateAllocationAsync(ClientLoadedHandler.instance.expectedPlayers - 1);    
             }
             
             joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
