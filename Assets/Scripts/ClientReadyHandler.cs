@@ -6,8 +6,7 @@ public class ClientReadyHandler : MonoBehaviour
     public static ClientReadyHandler instance;
     private HashSet<ulong> readyClients = new HashSet<ulong>();
     [SerializeField] public int expectedPlayers;
-    [ReadOnly]
-    public bool allClientsReady;
+    public bool allClientsLoaded;
     
     void Awake() => instance = this;
 
@@ -17,7 +16,7 @@ public class ClientReadyHandler : MonoBehaviour
 
         if (readyClients.Count == expectedPlayers) // if the number of joined clients is equal to the expected players, we set allClientsReady to true
         {
-            allClientsReady = true;
+            allClientsLoaded = true;
             Debug.Log("All clients ready");
         }
     }
