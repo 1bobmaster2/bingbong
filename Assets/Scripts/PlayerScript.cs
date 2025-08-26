@@ -53,7 +53,7 @@ public class PlayerScript : NetworkBehaviour
             //InvokeRepeating("SetNameAndTagToPlayerHost", 0f, 1f);
             //Invoke("StopRepeatingSetNameAndTagToPlayerHost", 10f);
 
-            if (!ClientReadyHandler.instance.allClientsLoaded)
+            if (!ClientLoadedHandler.instance.allClientsLoaded)
             {
                 SetNameAndTagToPlayerHost();
             }
