@@ -41,7 +41,7 @@ public class PlayerScript : NetworkBehaviour
         //InvokeRepeating("SyncNameAndTag", 0f, 1f);
         //nvoke("StopRepeatingSyncNameAndTag", 10f);
 
-        if (!ClientReadyHandler.instance.allClientsReady)
+        if (!ClientReadyHandler.instance.allClientsLoaded)
         {
             SyncNameAndTag();
         }
