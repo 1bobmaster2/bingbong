@@ -21,7 +21,7 @@ public class MatchReadyManager : NetworkBehaviour
         playerScript.SpawnNetworkObject(ballPrefab);
     }
 
-    public void AddReadyPlayer(ulong playerId)
+    private void AddReadyPlayer(ulong playerId)
     {
         readyPlayersHashSet.Add(playerId);
     }
