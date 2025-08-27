@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class MatchReadyManager : MonoBehaviour
+public class MatchReadyManager : NetworkBehaviour
 {
     [SerializeField] private GameObject ballPrefab;
 
