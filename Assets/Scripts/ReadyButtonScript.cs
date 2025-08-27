@@ -3,11 +3,8 @@ using UnityEngine;
 
 public class ReadyButtonScript : NetworkBehaviour
 {
-    void Update() //TODO: fix this
+    public void AddReadyPlayerWhenClicked()
     {
-        if (!IsHost)
-        {
-            //gameObject.SetActive(false); // TODO: fix this, again! //NOTE: i decided to just comment it and implement it correctly later
-        }
+        MatchReadyManager.instance.NotifyManagerOnReadyServerRpc();
     }
 }
