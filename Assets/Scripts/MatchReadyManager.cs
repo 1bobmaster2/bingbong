@@ -20,6 +20,12 @@ public class MatchReadyManager : NetworkBehaviour
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
     }
+
+    public void AddReadyPlayer(ulong playerId)
+    {
+        readyPlayersHashSet.Add(playerId);
+    }
+    
     [ServerRpc(RequireOwnership = false)]
     private void NotifyHandlerOnReadyServerRpc(ServerRpcParams p = default)
     {
