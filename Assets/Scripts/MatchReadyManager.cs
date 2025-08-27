@@ -20,4 +20,10 @@ public class MatchReadyManager : NetworkBehaviour
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
     }
+    [ServerRpc(RequireOwnership = false)]
+    private void NotifyHandlerOnReadyServerRpc(ServerRpcParams p = default)
+    {
+        ulong clientId = p.Receive.SenderClientId;
+        ClientLoadedHandler.instance.MarkClientReady(clientId); // marks the client ready
+    }
 }
