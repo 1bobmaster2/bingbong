@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MatchReadyManager : NetworkBehaviour
 {
+    public static MatchReadyManager instance;
     [SerializeField] private GameObject ballPrefab;
 
     public void SetReady()
