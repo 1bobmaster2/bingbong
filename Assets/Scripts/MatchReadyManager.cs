@@ -8,6 +8,9 @@ public class MatchReadyManager : NetworkBehaviour
     private HashSet<ulong> readyPlayersHashSet = new HashSet<ulong>();
     [SerializeField] private GameObject ballPrefab;
 
+
+    void Awake() => instance = this;
+    
     public void SetReady()
     {
         GameObject caller = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
