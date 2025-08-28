@@ -13,15 +13,14 @@ public class MatchReadyManager : NetworkBehaviour
     
     public void SetReady()
     {
-        GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
-        PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
-        playerScript.SpawnNetworkObject(ballPrefab);
         NotifyManagerOnReadyServerRpc();
 
-        NotifyManagerOnReadyServerRpc();
-
-        NotifyManagerOnReadyServerRpc();
-
+        if (readyPlayersHashSet.Count == 2)
+        {
+            GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
+            PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
+            playerScript.SpawnNetworkObject(ballPrefab);
+        }
     }
 
     private void AddReadyPlayer(ulong playerId)
