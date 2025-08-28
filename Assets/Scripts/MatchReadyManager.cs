@@ -21,6 +21,8 @@ public class MatchReadyManager : NetworkBehaviour
         playerScript.SpawnNetworkObject(ballPrefab);
         NotifyManagerOnReadyServerRpc();
 
+        NotifyManagerOnReadyServerRpc();
+
     }
 
     private void AddReadyPlayer(ulong playerId)
