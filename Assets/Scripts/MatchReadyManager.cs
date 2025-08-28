@@ -30,6 +30,6 @@ public class MatchReadyManager : NetworkBehaviour
     public void NotifyManagerOnReadyServerRpc(ServerRpcParams p = default)
     {
         ulong clientId = p.Receive.SenderClientId;
-        MatchReadyManager.instance.AddReadyPlayer(clientId); // marks the client ready
+        AddReadyPlayer(clientId); // marks the client ready
     }
 }
