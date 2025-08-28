@@ -19,6 +19,8 @@ public class MatchReadyManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
+        NotifyManagerOnReadyServerRpc();
+
     }
 
     private void AddReadyPlayer(ulong playerId)
