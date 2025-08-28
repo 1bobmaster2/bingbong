@@ -13,12 +13,11 @@ public class MatchReadyManager : NetworkBehaviour
     
     public void SetReady()
     {
-        GameObject caller = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-        Destroy(caller);
-        
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
+        NotifyManagerOnReadyServerRpc();
+
         NotifyManagerOnReadyServerRpc();
 
         NotifyManagerOnReadyServerRpc();
