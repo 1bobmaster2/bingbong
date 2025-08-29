@@ -11,7 +11,7 @@ public class MatchReadyManager : NetworkBehaviour
 
     void Awake() => instance = this;
     
-    public void SetReady()
+    public void SetReady() // we call this from the button
     {
         NotifyManagerOnReadyServerRpc();
 
