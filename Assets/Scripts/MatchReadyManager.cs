@@ -17,9 +17,7 @@ public class MatchReadyManager : NetworkBehaviour
 
         if (readyPlayersHashSet.Count == 2)
         {
-            GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
-            PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
-            playerScript.SpawnNetworkObject(ballPrefab);
+            StartGameServerRpc();
         }
     }
 
