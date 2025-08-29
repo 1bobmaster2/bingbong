@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class MatchReadyManager : NetworkBehaviour
 {
-    public static MatchReadyManager instance;
     private HashSet<ulong> readyPlayersHashSet = new HashSet<ulong>();
     [SerializeField] private GameObject ballPrefab;
-
-
-    void Awake() => instance = this;
     
     public void SetReady() // we call this from the button
     {
