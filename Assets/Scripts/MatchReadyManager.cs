@@ -27,7 +27,7 @@ public class MatchReadyManager : NetworkBehaviour
     }
     
     [ServerRpc(RequireOwnership = false)]
-    public void NotifyManagerOnReadyServerRpc(ServerRpcParams p = default)
+    private void NotifyManagerOnReadyServerRpc(ServerRpcParams p = default)
     {
         ulong clientId = p.Receive.SenderClientId;
         AddReadyPlayer(clientId); // marks the client ready
