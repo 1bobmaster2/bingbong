@@ -22,6 +22,11 @@ public class MatchReadyManager : NetworkBehaviour
     {
         ulong clientId = p.Receive.SenderClientId;
         AddReadyPlayer(clientId); // marks the client ready
+        
+        if (readyPlayersHashSet.Count == 2)
+        {
+            StartGameServerRpc();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
