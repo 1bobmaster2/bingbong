@@ -10,11 +10,6 @@ public class MatchReadyManager : NetworkBehaviour
     public void SetReady() // we call this from the button
     {
         NotifyManagerOnReadyServerRpc();
-
-        if (readyPlayersHashSet.Count == 2)
-        {
-            StartGameServerRpc();
-        }
     }
 
     private void AddReadyPlayer(ulong playerId)
