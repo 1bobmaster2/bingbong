@@ -30,7 +30,7 @@ public class MatchReadyManager : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void StartGameServerRpc() // TODO: this doesnt work when the host calls it first and then the client, so i need to fix it soon
+    private void StartGameServerRpc()
     {
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
