@@ -7,6 +7,11 @@ public class MatchReadyManager : NetworkBehaviour
     private HashSet<ulong> readyPlayersHashSet = new HashSet<ulong>();
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject buttonObject;
+
+    public override void OnNetworkSpawn()
+    {
+        buttonObject.SetActive(true);
+    }
     
     public void SetReady() // we call this from the button
     {
