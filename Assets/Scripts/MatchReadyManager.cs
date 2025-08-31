@@ -41,5 +41,6 @@ public class MatchReadyManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
+        buttonObject.SetActive(false);
     }
 }
