@@ -502,7 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8b64cd059cbf147825de9ebd91c2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
+  buttonObject: {fileID: 0}
 --- !u!1 &236816523
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +789,7 @@ GameObject:
   - component: {fileID: 381849176}
   - component: {fileID: 381849177}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StartMatchButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3600,7 +3602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expectedPlayers: 2
-  allClientsReady: 0
+  allClientsLoaded: 0
 --- !u!1 &1613429979
 GameObject:
   m_ObjectHideFlags: 0
