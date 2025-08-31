@@ -504,7 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
-  buttonObject: {fileID: 0}
+  buttonObject: {fileID: 381849171}
 --- !u!1 &236816523
 GameObject:
   m_ObjectHideFlags: 0
