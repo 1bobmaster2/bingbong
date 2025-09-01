@@ -10,7 +10,7 @@ public class MatchReadyManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        buttonObject.SetActive(true);
+        buttonObject.SetActive(true); // we set the button active when the host and client load in
     }
     
     public void SetReady() // we call this from the button
