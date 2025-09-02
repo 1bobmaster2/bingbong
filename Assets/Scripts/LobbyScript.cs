@@ -22,7 +22,7 @@ public class TestLobby : MonoBehaviour
     private string playerName;
     private string startGame = "startGame";
     private bool isLobbyHost;
-    private bool alreadyConnected = false;
+    private bool alreadyConnected;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
