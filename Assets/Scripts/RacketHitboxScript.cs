@@ -99,8 +99,8 @@ public class RacketHitbox : NetworkBehaviour
 
         Vector3 direction = (midPoint.transform.position - transform.position).normalized;
         
-        rb.AddTorque(direction * torqueForce, ForceMode.Impulse);
-        rb.AddForce(direction * impulseForce, ForceMode.Impulse);
+        rb.AddTorque(direction * torqueForce, ForceMode.Impulse); // we add spin
+        rb.AddForce(direction * impulseForce, ForceMode.Impulse); // we propel the ball forward
     }
 
     IEnumerator InitializeVariables()
