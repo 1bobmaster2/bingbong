@@ -57,7 +57,7 @@ public class BallScript : NetworkBehaviour
         if (!hasBeenHit)
         {
             hasBeenHit = true;
-            rb.isKinematic = false;
+            rb.isKinematic = false; // once the ball gets hit we disable isKinematic
         }
         
         GameObject hit = collision.gameObject;
