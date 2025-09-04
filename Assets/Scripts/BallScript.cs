@@ -52,7 +52,7 @@ public class BallScript : NetworkBehaviour
     
     void OnCollisionEnter(Collision collision)
     {
-        if(!IsServer) return;
+        if(!IsServer) return; // only the server should handle physics
 
         if (!hasBeenHit)
         {
