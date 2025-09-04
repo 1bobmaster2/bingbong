@@ -66,8 +66,7 @@ public class BallScript : NetworkBehaviour
         Vector3 incomingVelocity = lastVelocity;
         
         Vector3 reflectedVelocity = Vector3.Reflect(incomingVelocity, contact.normal);
-
-        //float adjustedMagnitude = Mathf.Max(0f, incomingVelocity.magnitude - force);  // commented this as it makes the ball bounce stronger and stronger
+        
         Vector3 forceToAdd = reflectedVelocity.normalized;
         
 
