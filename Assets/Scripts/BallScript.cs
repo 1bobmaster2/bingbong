@@ -69,7 +69,6 @@ public class BallScript : NetworkBehaviour
         
         Vector3 forceToAdd = reflectedVelocity.normalized;
         
-
         rb.AddForce(forceToAdd, ForceMode.VelocityChange);
     }
 
