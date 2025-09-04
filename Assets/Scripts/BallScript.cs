@@ -64,7 +64,6 @@ public class BallScript : NetworkBehaviour
         ContactPoint contact = collision.contacts[0];
 
         Vector3 incomingVelocity = lastVelocity;
-
         
         Vector3 reflectedVelocity = Vector3.Reflect(incomingVelocity, contact.normal);
 
