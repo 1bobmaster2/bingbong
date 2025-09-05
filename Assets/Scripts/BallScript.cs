@@ -27,7 +27,6 @@ public class BallScript : NetworkBehaviour
     void FixedUpdate()
     {
         lastVelocity = rb.linearVelocity;
-        //force = rb.linearVelocity.magnitude * forceMultiplier;
         
         rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, 25f); // we clamp the velocity to prevent uncontrollable speed
 
