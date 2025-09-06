@@ -12,7 +12,7 @@ public class ClientLoadedScript : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void NotifyHandlerOnReadyServerRpc(ServerRpcParams p = default)
     {
-        ulong clientId = p.Receive.SenderClientId;
+        ulong clientId = p.Receive.SenderClientId; // gets the client id of the client who sent the rpc
         ClientLoadedHandler.instance.MarkClientReady(clientId); // marks the client ready
     }
 }
