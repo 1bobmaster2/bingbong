@@ -46,6 +46,6 @@ public class MatchReadyManager : NetworkBehaviour
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveClientRpc(GameObject gameObject, bool active)
     {
-        
+        gameObject.SetActive(active);
     }
 }
