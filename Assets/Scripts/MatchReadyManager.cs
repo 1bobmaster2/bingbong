@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.Netcode;
+using UnityEditor;
 using UnityEngine;
 
 public class MatchReadyManager : NetworkBehaviour
@@ -41,7 +42,7 @@ public class MatchReadyManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
-        SetActiveClientRpc(buttonObject, false);
+        SetActiveClientRpc(buttonObject, false); // TODO: still need to work
     }
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveClientRpc(GameObject gameObject, bool active)
