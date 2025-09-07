@@ -41,7 +41,7 @@ public class MatchReadyManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
-        buttonObject.SetActive(false); // TODO: make this sync on the client
+        SetActiveClientRpc(buttonObject, false);
     }
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveClientRpc(GameObject gameObject, bool active)
