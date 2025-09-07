@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MatchReadyManager : NetworkBehaviour
 {
-    private HashSet<ulong> readyPlayersHashSet = new HashSet<ulong>();
+    private HashSet<ulong> readyPlayersHashSet = new();
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject buttonObject;
 
