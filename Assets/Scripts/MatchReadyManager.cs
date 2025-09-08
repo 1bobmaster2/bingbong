@@ -45,8 +45,8 @@ public class MatchReadyManager : NetworkBehaviour
         SetActiveClientRpc(buttonObject, false); // TODO: still need to work
     }
     [ClientRpc(RequireOwnership = false)]
-    private void SetActiveClientRpc(GameObject gameObject, bool active)
+    private void SetActiveButtonClientRpc(bool active)
     {
-        gameObject.SetActive(active);
+        buttonObject.SetActive(active);
     }
 }
