@@ -47,6 +47,6 @@ public class MatchReadyManager : NetworkBehaviour
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveButtonClientRpc(bool active)
     {
-        buttonObject.SetActive(active);
+        buttonObject.SetActive(active); // this sets the button to the specified state for all players
     }
 }
