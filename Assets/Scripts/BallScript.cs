@@ -32,6 +32,7 @@ public class BallScript : NetworkBehaviour
 
         if (hostPlayerObject == null || clientPlayerObject == null)
         {
+            // we assign the player references here, using the WaitForGameObject method (made by me)
             hostPlayerObject = WaitForGameObject("HostPlayer");
             clientPlayerObject = WaitForGameObject("ClientPlayer");
         }
