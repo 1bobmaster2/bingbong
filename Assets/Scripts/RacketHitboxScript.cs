@@ -64,7 +64,7 @@ public class RacketHitbox : NetworkBehaviour
     {
         if (!IsOwner) return;
         
-        StartCoroutine(InitializeVariables());
+        StartCoroutine(InitializeVariables()); // initializes all the variables
     }
 
     private void ChangeVignette(bool input)
