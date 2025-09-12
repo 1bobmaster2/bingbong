@@ -179,11 +179,6 @@ public class PlayerScript : NetworkBehaviour
         playerTag.Value = "HostPlayer";
     }
 
-    void StopRepeatingSyncNameAndTag()
-    {
-        CancelInvoke("SyncNameAndTag");
-    }
-
     IEnumerator WaitForGameObject(string tag)
     {
         while (otherPlayer == null)
