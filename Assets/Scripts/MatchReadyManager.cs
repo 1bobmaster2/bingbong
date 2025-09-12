@@ -3,7 +3,7 @@ using Unity.Netcode;
 using UnityEditor;
 using UnityEngine;
 
-public class MatchReadyManager : NetworkBehaviour
+public class MatchManager : NetworkBehaviour
 {
     private HashSet<ulong> readyPlayersHashSet = new();
     [SerializeField] private GameObject ballPrefab;
