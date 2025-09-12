@@ -154,7 +154,7 @@ public class PlayerScript : NetworkBehaviour
         palletObject.transform.position = worldPosition;
     }
     
-    void ZoomInAndOut(int direction) // if its 1 then its forward, if –1 then backwards.
+    void ZoomInAndOut(int direction) // if its 1 then its forward, if its –1 then its backwards.
     {
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
     }
