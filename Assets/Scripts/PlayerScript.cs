@@ -36,10 +36,6 @@ public class PlayerScript : NetworkBehaviour
             Debug.Log($"{tag}'s name changed from '{oldValue}' to '{newValue}'");
             gameObject.tag = newValue.ToString();
         };
-        
-        // temporary solution but better
-        //InvokeRepeating("SyncNameAndTag", 0f, 1f);
-        //nvoke("StopRepeatingSyncNameAndTag", 10f);
 
         if (!ClientLoadedHandler.instance.allClientsLoaded)
         {
@@ -50,9 +46,6 @@ public class PlayerScript : NetworkBehaviour
 
         if (IsHost)
         {
-            //InvokeRepeating("SetNameAndTagToPlayerHost", 0f, 1f);
-            //Invoke("StopRepeatingSetNameAndTagToPlayerHost", 10f);
-
             if (!ClientLoadedHandler.instance.allClientsLoaded)
             {
                 SetNameAndTagToPlayerHost();
@@ -84,7 +77,7 @@ public class PlayerScript : NetworkBehaviour
             
             gameObject.transform.position = hostSpawnpoint.position;
             
-            playerName.Value = "HostPlayer"; // temporary name needed for it to work.
+            playerName.Value = "HostPlayer";
             playerTag.Value = "HostPlayer";
             otherPlayerTag = "ClientPlayer";
             rend.material = hostMaterial;
@@ -95,8 +88,6 @@ public class PlayerScript : NetworkBehaviour
         }
         
         StartCoroutine(WaitForGameObject(otherPlayerTag));
-        
-        //SpawnNetworkObject(ballPrefab);
     }
     
     void Update()
