@@ -184,11 +184,6 @@ public class PlayerScript : NetworkBehaviour
         CancelInvoke("SyncNameAndTag");
     }
 
-    void StopRepeatingSetNameAndTagToPlayerHost()
-    {
-        CancelInvoke("SetNameAndTagToPlayerHost");
-    }
-
     IEnumerator WaitForGameObject(string tag)
     {
         while (otherPlayer == null)
