@@ -6,6 +6,7 @@ using UnityEngine;
 public class MatchManager : NetworkBehaviour
 {
     private HashSet<ulong> readyPlayersHashSet = new();
+    private int playerServing = 0;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject buttonObject;
 
