@@ -55,7 +55,7 @@ public class MatchManager : NetworkBehaviour
         playerScript.SpawnNetworkObject(ballPrefab);
     }
     [ClientRpc(RequireOwnership = false)]
-    private void SetActiveButtonClientRpc(bool active)
+    private void SetActiveSpeificGameObjectClientRpc(NetworkObjectReference reference, bool active)
     {
         startRoundButtonObject.SetActive(active); // this sets the button to the specified state for all players
     }
