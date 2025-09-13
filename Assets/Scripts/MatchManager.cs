@@ -57,6 +57,9 @@ public class MatchManager : NetworkBehaviour
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveSpeificGameObjectClientRpc(NetworkObjectReference reference, bool active)
     {
-        startRoundButtonObject.SetActive(active); // this sets the button to the specified state for all players
+        if (reference.TryGet(out NetworkObject networkObject))
+        {
+            networkObject.gameObject.SetActive(active); // this sets a specific network object to a specific state through a NetworkObjectReference.
+        }
     }
 }
