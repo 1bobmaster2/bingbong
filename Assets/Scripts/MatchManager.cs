@@ -17,6 +17,10 @@ public class MatchManager : NetworkBehaviour
     
     public void SetReady() // we call this from the button
     {
+        if (playerServing == 0)
+        {
+            return; // we return here if it's not decided what player should serve
+        }
         NotifyManagerOnReadyServerRpc();
     }
 
