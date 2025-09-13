@@ -8,11 +8,11 @@ public class MatchManager : NetworkBehaviour
     private HashSet<ulong> readyPlayersHashSet = new();
     private int playerServing = 0; // 0 means undecided, 1 means host and 2 means client
     [SerializeField] private GameObject ballPrefab;
-    [SerializeField] private GameObject buttonObject;
+    [SerializeField] private GameObject startRoundButtonObject;
 
     public override void OnNetworkSpawn()
     {
-        buttonObject.SetActive(true); // we set the button active when the host and client load in
+        startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
     }
     
     public void SetReady() // we call this from the button
@@ -58,6 +58,6 @@ public class MatchManager : NetworkBehaviour
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveButtonClientRpc(bool active)
     {
-        buttonObject.SetActive(active); // this sets the button to the specified state for all players
+        startRoundButtonObject.SetActive(active); // this sets the button to the specified state for all players
     }
 }
