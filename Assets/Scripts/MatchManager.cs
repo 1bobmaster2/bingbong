@@ -29,9 +29,10 @@ public class MatchManager : NetworkBehaviour
         readyPlayersHashSet.Add(playerId);
     }
 
-    private void CoinFlip() // this method decides who should serve
+    private int CoinFlip() // this method decides who should serve
     {
-        
+        int decision = Random.Range(1, 2);
+        return decision;
     }
     
     [ServerRpc(RequireOwnership = false)]
