@@ -53,7 +53,6 @@ public class MatchManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
-        SetActiveButtonClientRpc(false);
     }
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveButtonClientRpc(bool active)
