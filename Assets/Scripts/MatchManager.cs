@@ -28,6 +28,11 @@ public class MatchManager : NetworkBehaviour
     {
         readyPlayersHashSet.Add(playerId);
     }
+
+    private void CoinFlip() // this method decides who should serve
+    {
+        
+    }
     
     [ServerRpc(RequireOwnership = false)]
     private void NotifyManagerOnReadyServerRpc(ServerRpcParams p = default)
