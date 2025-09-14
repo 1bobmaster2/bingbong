@@ -788,7 +788,6 @@ GameObject:
   - component: {fileID: 381849174}
   - component: {fileID: 381849173}
   - component: {fileID: 381849176}
-  - component: {fileID: 381849177}
   m_Layer: 5
   m_Name: StartMatchButton
   m_TagString: Untagged
@@ -935,18 +934,6 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &381849177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381849171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ece2745055d2ba4e8b0cd765f26fa30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,7 +1939,6 @@ GameObject:
   - component: {fileID: 787388569}
   - component: {fileID: 787388568}
   - component: {fileID: 787388567}
-  - component: {fileID: 787388566}
   m_Layer: 5
   m_Name: CoinFlipButton
   m_TagString: Untagged
@@ -1980,18 +1966,6 @@ RectTransform:
   m_AnchoredPosition: {x: -57, y: 266}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &787388566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787388564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ece2745055d2ba4e8b0cd765f26fa30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &787388567
 MonoBehaviour:
   m_ObjectHideFlags: 0
