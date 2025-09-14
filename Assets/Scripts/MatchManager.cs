@@ -5,7 +5,7 @@ using UnityEngine;
 public class MatchManager : NetworkBehaviour
 {
     private HashSet<ulong> readyPlayersHashSet = new();
-    private int playerServing = 0; // 0 means undecided, 1 means host and 2 means client
+    [SerializeField] private int playerServing = 0; // 0 means undecided, 1 means host and 2 means client
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject startRoundButtonObject;
     [SerializeField] private GameObject coinFlipButtonObject;
