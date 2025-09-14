@@ -32,7 +32,7 @@ public class MatchManager : NetworkBehaviour
 
     public void CoinFlip() // this method decides who should serve, this method is called from a button
     {
-        int decision = Random.Range(1, 2);
+        int decision = Random.Range(1, 3);
         playerServing = decision;
     }
     
