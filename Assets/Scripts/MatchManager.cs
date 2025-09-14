@@ -47,10 +47,12 @@ public class MatchManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void StartGameServerRpc()
     {
+        CoinFlip();
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
         SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
+        SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
     }
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveSpecificGameObjectClientRpc(NetworkObjectReference reference, bool active)
