@@ -13,10 +13,11 @@ public class MatchManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
-        coinFlipButtonObject.SetActive(true);
         //startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
         //coinFlipButtonObject.SetActive(true);
+        
+        //TODO: spawn the buttons
+        //TODO: set the onclick listeners
     }
     
     public void SetReady() // we call this from the button
