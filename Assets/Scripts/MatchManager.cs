@@ -77,4 +77,13 @@ public class MatchManager : NetworkBehaviour
             networkObject.gameObject.SetActive(active); // this sets a specific network object to a specific state through a NetworkObjectReference.
         }
     }
+
+    [ClientRpc(RequireOwnership = false)]
+    private void SetPositionOfNetworkObjectClientRpc(NetworkObjectReference reference, Vector3 position)
+    {
+        if (reference.TryGet(out NetworkObject networkObject))
+        {
+            networkObject.gameObject.transform.position = position;
+        }
+    }
 }
