@@ -9,7 +9,7 @@ public class MatchManager : NetworkBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject startRoundButtonObject;
     [SerializeField] private GameObject coinFlipButtonObject;
-    [SerializeField] private Transform gameUIReference;
+    [SerializeField] private GameObject gameUIReference;
 
     public override void OnNetworkSpawn()
     {
