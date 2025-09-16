@@ -16,7 +16,6 @@ public class MatchManager : NetworkBehaviour
         //startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
         //coinFlipButtonObject.SetActive(true);
         
-        //TODO: spawn the buttons
         //TODO: set the onclick listeners
         if (IsServer) // we only execute this on the server as only the server should handle spawning objects
         {
