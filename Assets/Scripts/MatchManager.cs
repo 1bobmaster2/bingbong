@@ -24,10 +24,11 @@ public class MatchManager : NetworkBehaviour
             GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject);
 
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
-            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
+            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference, true);
             
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
+            coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference, true);
         }
     }
     
