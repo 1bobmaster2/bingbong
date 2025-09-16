@@ -506,7 +506,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
   startRoundButtonObject: {fileID: 146333538970775626, guid: 1c79adba4607e0f47b0c1b92bc0709fd, type: 3}
   coinFlipButtonObject: {fileID: 8052350943973753342, guid: 6241a73e8b4f74141ad14b2288cccdc8, type: 3}
-  gameUIReference: {fileID: 415742656}
+  gameUIReference: {fileID: 415742655}
 --- !u!1 &236816523
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415742656}
+  - component: {fileID: 415742657}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -935,6 +936,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &415742657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415742655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 815401999
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!1 &438698679
 GameObject:
   m_ObjectHideFlags: 0
