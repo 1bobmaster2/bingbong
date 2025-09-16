@@ -20,10 +20,9 @@ public class MatchManager : NetworkBehaviour
         //TODO: set the onclick listeners
         if (IsServer) // we only execute this on the server as only the server should handle spawning objects
         {
-            GameObject startRoundButtonObjectInstance = Instantiate(startRoundButtonObject, gameUIReference);
-            GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject, gameUIReference);
-            
-            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
+            GameObject startRoundButtonObjectInstance = Instantiate(startRoundButtonObject);
+            GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject);
+
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
             
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
