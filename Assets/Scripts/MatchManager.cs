@@ -22,13 +22,21 @@ public class MatchManager : NetworkBehaviour
         {
             GameObject startRoundButtonObjectInstance = Instantiate(startRoundButtonObject);
             GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject);
+            
+            //startRoundButtonObjectInstance.transform.position = new Vector2(-532, 268);
+            //coinFlipButtonObjectInstance.transform.position = new Vector2(-176, 268);
+            SetPositionOfNetworkObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), new Vector3(-532, 268, 0));
+            SetPositionOfNetworkObjectClientRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>(), new Vector3(-176, 268, 0));
+            
 
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference, true);
             
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
-            coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference, true);
+
+            SetActiveSpecificGameObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), true);
+            SetActiveSpecificGameObjectClientRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>(), true);
         }
     }
     
