@@ -30,8 +30,11 @@ public class MatchManager : NetworkBehaviour
             
 
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
-            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
             TrySetParentOfReferenceServerRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>());
+            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference); // look for soemr eason this doesnt work and it deosnt work for no reason because it says that game uyi referebnce is not spawned
+            // even though it is and its really driving me crazy ebcause literallyt this was working and now its not what else would i need to spawn on the netwrok every single gameObject? i think im gonna switch to fucking local because look i cant
+            // with this shit like bro im literally doing everything correcltyt and its saying no im gonna fucking delete all this shit or something because i litarally cant any more fucking 200 days of coding only for me to fucking loose it on a simple
+            // problem that i should be able to do in 5 minutes and yet im sitting on it for 3 days now because i fucking literally work 30 minutes per day and i call myself a coder im fr crahing out anwsohehoklujaehlg
             
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
             TrySetParentOfReferenceServerRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>());
