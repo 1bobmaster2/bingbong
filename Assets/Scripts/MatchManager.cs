@@ -78,6 +78,16 @@ public class MatchManager : NetworkBehaviour
         SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
         SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
     }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void TrySetParentOfReferenceServerRpc(NetworkObjectReference reference)
+    {
+        if (reference.TryGet(out NetworkObject networkObject))
+        {
+            bool result = networkObject.TrySetParent(gameUIReference);
+            Debug.LogWarning(result.ToString());
+        }
+    }
     [ClientRpc(RequireOwnership = false)]
     private void SetActiveSpecificGameObjectClientRpc(NetworkObjectReference reference, bool active)
     {
