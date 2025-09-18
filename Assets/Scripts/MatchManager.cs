@@ -31,8 +31,10 @@ public class MatchManager : NetworkBehaviour
 
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
             startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
+            TrySetParentOfReferenceServerRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>());
             
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
+            TrySetParentOfReferenceServerRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>());
             coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
 
             SetActiveSpecificGameObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), true);
