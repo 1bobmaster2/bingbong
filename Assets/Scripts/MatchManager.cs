@@ -13,12 +13,12 @@ public class MatchManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        //startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
-        //coinFlipButtonObject.SetActive(true);
+        startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
+        coinFlipButtonObject.SetActive(true);
         
         //TODO: fix this shit
         //TODO: set the onclick listeners
-        if (IsServer) // we only execute this on the server as only the server should handle spawning objects
+        /*if (IsServer) // we only execute this on the server as only the server should handle spawning objects
         {
             GameObject startRoundButtonObjectInstance = Instantiate(startRoundButtonObject);
             GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject);
@@ -39,7 +39,7 @@ public class MatchManager : NetworkBehaviour
 
             SetActiveSpecificGameObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), true);
             SetActiveSpecificGameObjectClientRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>(), true);
-        }
+        }*/
     }
     
     public void SetReady() // we call this from the button
