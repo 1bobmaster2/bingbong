@@ -504,8 +504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
-  startRoundButtonObject: {fileID: 146333538970775626, guid: 1c79adba4607e0f47b0c1b92bc0709fd, type: 3}
-  coinFlipButtonObject: {fileID: 8052350943973753342, guid: 6241a73e8b4f74141ad14b2288cccdc8, type: 3}
+  startRoundButtonObject: {fileID: 146333540572521829}
+  coinFlipButtonObject: {fileID: 8052350943451107667}
   gameUIReference: {fileID: 415742655}
 --- !u!1 &236816523
 GameObject:
