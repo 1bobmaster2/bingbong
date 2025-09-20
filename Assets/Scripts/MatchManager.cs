@@ -78,8 +78,8 @@ public class MatchManager : NetworkBehaviour
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
         playerScript.SpawnNetworkObject(ballPrefab);
-        SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
-        SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
+        //SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
+        //SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
     }
 
     [ServerRpc(RequireOwnership = false)]
