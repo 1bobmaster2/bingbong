@@ -53,7 +53,7 @@ public class MatchManager : NetworkBehaviour
         readyPlayersHashSet.Add(playerId);
     }
 
-    public void CoinFlip() // this method decides who should serve, this method is called from a button
+    public void CoinFlip() // this method decides who should serve
     {
         int decision = Random.Range(1, 3);
         playerServing = decision;
