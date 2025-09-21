@@ -159,7 +159,7 @@ public class PlayerScript : NetworkBehaviour
         nearClipAddAmount += direction * zoomFactor * Time.deltaTime;
     }
 
-    public void SpawnNetworkObject(GameObject prefab)
+    public void SpawnNetworkObject(GameObject prefab, Vector3 position)
     {
          if(!IsHost) return;
          
