@@ -163,7 +163,7 @@ public class PlayerScript : NetworkBehaviour
     {
          if(!IsHost) return;
          
-         GameObject instance = Instantiate(prefab, new Vector3(0,0,5), Quaternion.identity);
+         GameObject instance = Instantiate(prefab, position, Quaternion.identity);
          instance.GetComponent<NetworkObject>().Spawn();
     }
 
