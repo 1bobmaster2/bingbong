@@ -77,7 +77,14 @@ public class MatchManager : NetworkBehaviour
         CoinFlip();
         GameObject hostPlayer = GameObject.FindWithTag("HostPlayer");
         PlayerScript playerScript = hostPlayer.GetComponent<PlayerScript>();
-        playerScript.SpawnNetworkObject(ballPrefab);
+        if (playerServing == 1)
+        {
+            playerScript.SpawnNetworkObject(ballPrefab, new Vector3(0, 0, 5));
+        }
+        else if (playerServing == 2)
+        {
+            playerScript.SpawnNetworkObject(ballPrefab, new Vector3(0.7f,0,7.6f));
+        }
         //SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
         //SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
     }
