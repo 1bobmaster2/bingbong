@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  playerServing: 0
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
   startRoundButtonObject: {fileID: 146333540572521829}
   coinFlipButtonObject: {fileID: 8052350943451107667}
@@ -4759,7 +4760,7 @@ GameObject:
   - component: {fileID: 725683049060542172}
   m_Layer: 5
   m_Name: StartMatchButton
-  m_TagString: Untagged
+  m_TagString: ButtonsToBeDisabled
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5228,7 +5229,7 @@ GameObject:
   - component: {fileID: 2447474451112246716}
   m_Layer: 5
   m_Name: CoinFlipButton
-  m_TagString: Untagged
+  m_TagString: ButtonsToBeDisabled
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
