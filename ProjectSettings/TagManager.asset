@@ -18,6 +18,7 @@ TagManager:
   - HostTableSide
   - ClientTableSide
   - Ground
+  - ButtonsToBeDisabled
   layers:
   - Default
   - TransparentFX
