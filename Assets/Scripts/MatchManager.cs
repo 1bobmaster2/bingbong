@@ -73,6 +73,13 @@ public class MatchManager : NetworkBehaviour
             Debug.LogWarning(result.ToString());
         }
     }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void DisableTheButtonsServerRpc()
+    {
+        DisableTheButtonsClientRpc();
+    }
+
     [ClientRpc(RequireOwnership = false)]
     private void DisableTheButtonsClientRpc()
     {
