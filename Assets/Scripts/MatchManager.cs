@@ -60,6 +60,8 @@ public class MatchManager : NetworkBehaviour
         {
             playerScript.SpawnNetworkObject(ballPrefab, new Vector3(0.7f,0,7.6f));
         }
+        
+        DisableTheButtonsServerRpc();
         //SetActiveSpecificGameObjectClientRpc(startRoundButtonObject.GetComponent<NetworkObject>(), false);
         //SetActiveSpecificGameObjectClientRpc(coinFlipButtonObject.GetComponent<NetworkObject>(), false);
     }
