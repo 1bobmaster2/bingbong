@@ -16,31 +16,6 @@ public class MatchManager : NetworkBehaviour
         startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
         coinFlipButtonObject.SetActive(true);
         Debug.LogWarning("tried setting the 2 buttons to active");
-        
-        //TODO: fix this shit
-        //TODO: set the onclick listeners
-        /*if (IsServer) // we only execute this on the server as only the server should handle spawning objects
-        {
-            GameObject startRoundButtonObjectInstance = Instantiate(startRoundButtonObject);
-            GameObject coinFlipButtonObjectInstance = Instantiate(coinFlipButtonObject);
-            
-            //startRoundButtonObjectInstance.transform.position = new Vector2(-532, 268);
-            //coinFlipButtonObjectInstance.transform.position = new Vector2(-176, 268);
-            //SetPositionOfNetworkObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), new Vector3(-532, 268, 0));
-            //SetPositionOfNetworkObjectClientRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>(), new Vector3(-176, 268, 0));
-            
-
-            startRoundButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
-            TrySetParentOfReferenceServerRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>());
-            startRoundButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference); 
-            
-            coinFlipButtonObjectInstance.GetComponent<NetworkObject>().Spawn();
-            TrySetParentOfReferenceServerRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>());
-            coinFlipButtonObjectInstance.GetComponent<NetworkObject>().TrySetParent(gameUIReference);
-
-            SetActiveSpecificGameObjectClientRpc(startRoundButtonObjectInstance.GetComponent<NetworkObject>(), true);
-            SetActiveSpecificGameObjectClientRpc(coinFlipButtonObjectInstance.GetComponent<NetworkObject>(), true);
-        }*/
     }
     
     public void SetReady() // we call this from the button
