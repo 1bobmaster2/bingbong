@@ -74,6 +74,16 @@ public class MatchManager : NetworkBehaviour
         }
     }
     [ClientRpc(RequireOwnership = false)]
+    private void DisableTheButtonsClientRpc()
+    {
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("ButtonsToBeDisabled");
+
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
+    }
+    [ClientRpc(RequireOwnership = false)]
     private void SetActiveSpecificGameObjectClientRpc(NetworkObjectReference reference, bool active)
     {
         if (reference.TryGet(out NetworkObject networkObject))
