@@ -19,6 +19,7 @@ TagManager:
   - ClientTableSide
   - Ground
   - ButtonsToBeDisabled
+  - GameManager
   layers:
   - Default
   - TransparentFX
