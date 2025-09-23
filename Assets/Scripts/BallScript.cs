@@ -10,6 +10,7 @@ public class BallScript : NetworkBehaviour
     [SerializeField] private Rigidbody rb;
     [Space]
     [SerializeField] GameObject hostPlayerObject, clientPlayerObject;
+    [SerializeField] MatchManager matchManager;
 
     private Vector3 lastVelocity;
     private Material outlineMaterial;
@@ -23,6 +24,8 @@ public class BallScript : NetworkBehaviour
 
         hasBeenHit = false;
         rb.isKinematic = true; // we set isKinematic to false, to prevent the ball from falling to the table, which would make the player loose a point
+        
+        matchManager = WaitForGameObject("GameManager").GetComponent<MatchManager>();
     }
     void FixedUpdate()
     {
