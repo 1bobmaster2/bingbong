@@ -16,6 +16,8 @@ public class BallScript : NetworkBehaviour
     private Material outlineMaterial;
     private int widthProperty;
     private bool hasBeenHit;
+
+    private int playerServing; // 1 means host 2 means client
     
     void Start()
     {
