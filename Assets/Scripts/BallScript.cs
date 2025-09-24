@@ -29,6 +29,7 @@ public class BallScript : NetworkBehaviour
         rb.isKinematic = true; // we set isKinematic to false, to prevent the ball from falling to the table, which would make the player loose a point
         
         matchManager = WaitForGameObject("GameManager").GetComponent<MatchManager>();
+        playerServing = matchManager.playerServing;
     }
     void FixedUpdate()
     {
