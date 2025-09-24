@@ -18,15 +18,6 @@ public class ScoreCheck : NetworkBehaviour
         {
             return; // we have no interest in untagged GameObjects
         }
-
-        if (moveToClient)
-        {
-            ballScript.MoveBallToSpawn(new Vector3(0.77640003f,0f,7.6322999f));
-        }
-        else
-        {
-            ballScript.MoveBallToSpawn(new Vector3(0,0,5));
-        }
         if (collision.gameObject.CompareTag("HostTableSide"))
         {
             ScoreManager.instance.AddScoreServerRpc("Client");
