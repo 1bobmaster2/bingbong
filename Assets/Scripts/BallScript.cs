@@ -65,7 +65,7 @@ public class BallScript : NetworkBehaviour
         {
             if (playerServing == 1)
             {
-                if (playerServingSwitchHelperVar == 2)
+                if (playerServingSwitchHelperVar == 1)
                 {
                     playerServingSwitchHelperVar = 0;
                     playerServing = 2;
@@ -77,7 +77,7 @@ public class BallScript : NetworkBehaviour
             }
             else if (playerServing == 2)
             {
-                if (playerServingSwitchHelperVar == 2)
+                if (playerServingSwitchHelperVar == 1)
                 {
                     playerServingSwitchHelperVar = 0;
                     playerServing = 1;
