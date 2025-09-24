@@ -61,6 +61,32 @@ public class BallScript : NetworkBehaviour
     {
         if(!IsServer) return; // only the server should handle physics
 
+        if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide")) // this is called when the ball hits the table
+        {
+            if (playerServing == 1)
+            {
+                if (playerServingSwitchHelperVar == 2)
+                {
+                    playerServing = 2;
+                    MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
+                    return;
+                }
+                MoveBallToSpawn(new Vector3(0, 0, 5));
+                playerServingSwitchHelperVar++;
+            }
+            else if (playerServing == 2)
+            {
+                if (playerServingSwitchHelperVar == 2)
+                {
+                    playerServing = 1;
+                    MoveBallToSpawn(new Vector3(0, 0, 5));
+                    return;
+                }
+                MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
+                playerServingSwitchHelperVar++;
+            }
+        }
+
         if (!hasBeenHit)
         {
             hasBeenHit = true;
