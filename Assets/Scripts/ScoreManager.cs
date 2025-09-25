@@ -52,5 +52,11 @@ public class ScoreManager : NetworkBehaviour
     {
         scoreText.text = HostScore.Value + " - " + ClientScore.Value;
     }
+
+    [ClientRpc(RequireOwnership = false)]
+    private void EndGameClientRpc()
+    {
+        
+    }
     
 }
