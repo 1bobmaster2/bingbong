@@ -56,7 +56,7 @@ public class ScoreManager : NetworkBehaviour
     [ClientRpc(RequireOwnership = false)]
     private void EndGameClientRpc()
     {
-        
+        Application.Quit();
     }
     
 }
