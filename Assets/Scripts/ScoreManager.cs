@@ -39,6 +39,11 @@ public class ScoreManager : NetworkBehaviour
             ClientScore.Value++;
             Debug.Log("Client got 1 score, client score is now: " + ClientScore.Value);
         }
+
+        if (ClientScore.Value == 11 || HostScore.Value == 11)
+        {
+            EndGameClientRpc();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
