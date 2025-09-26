@@ -47,7 +47,7 @@ public class RacketHitbox : NetworkBehaviour
     void OnTriggerEnter(Collider other)
     {
         canHit = true;
-        ChangeVignette(true);
+        ChangeVignette(true); // once the racket gets close to the ball we enable the vignette
         if (other.CompareTag("Ball"))
         {
             ballObject = other.gameObject;
