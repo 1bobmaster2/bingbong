@@ -58,6 +58,19 @@ public class ScoreManager : NetworkBehaviour
         EndGameClientRpc();
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    private void EnableEndGameUIServerRpc()
+    {
+        EnableEndGameUIClientRpc();
+    }
+
+    [ClientRpc(RequireOwnership = false)]
+    private void EnableEndGameUIClientRpc()
+    {
+        GameObject go = GameObject.FindWithTag("EndRoundUI");
+        go.SetActive(true);
+    }
+    
     [ClientRpc(RequireOwnership = false)]
     private void UpdateTextClientRpc()
     {
