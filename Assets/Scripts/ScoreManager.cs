@@ -42,7 +42,7 @@ public class ScoreManager : NetworkBehaviour
 
         if (ClientScore.Value == 11 || HostScore.Value == 11)
         {
-            EndGameClientRpc();
+            
         }
     }
 
@@ -50,6 +50,12 @@ public class ScoreManager : NetworkBehaviour
     private void UpdateTextOnAllClientsServerRpc()
     {
         UpdateTextClientRpc();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void EndGameServerRpc()
+    {
+        EndGameClientRpc();
     }
 
     [ClientRpc(RequireOwnership = false)]
