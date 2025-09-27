@@ -42,7 +42,7 @@ public class ScoreManager : NetworkBehaviour
 
         if (ClientScore.Value == 11 || HostScore.Value == 11)
         {
-            
+            EnableEndGameUIServerRpc();
         }
     }
 
@@ -53,7 +53,7 @@ public class ScoreManager : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void EndGameServerRpc()
+    public void EndGameServerRpc() // this is called from the button
     {
         EndGameClientRpc();
     }
