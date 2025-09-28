@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   scoreText: {fileID: 927782974}
+  endRoundUIObject: {fileID: 469315070}
 --- !u!4 &163402955
 Transform:
   m_ObjectHideFlags: 0
