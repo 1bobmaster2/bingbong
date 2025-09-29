@@ -70,6 +70,16 @@ public class ScoreManager : NetworkBehaviour
     private void EnableEndGameUIClientRpc()
     {
         endRoundUIObject.SetActive(true);
+		GameObject endRoundUIObjectParent = endRoundUIObject.transform.parent.gameObject;
+        GameObject endRoundUIText = endRoundUIObjectParent.transform.Find("EndRoundUIText").gameObject;
+        if (ClientScore.Value == 11)
+        {
+            endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won";
+        }
+        else if (HostScore.Value == 11)
+        {
+            endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Host won";
+        }
     }
     
     [ClientRpc(RequireOwnership = false)]
