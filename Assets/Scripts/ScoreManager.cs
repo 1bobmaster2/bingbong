@@ -71,8 +71,8 @@ public class ScoreManager : NetworkBehaviour
     {
         endRoundUIObject.SetActive(true);
 		GameObject endRoundUIObjectParent = endRoundUIObject.transform.parent.gameObject;
-        GameObject endRoundUIText = endRoundUIObjectParent.transform.Find("EndRoundUIText").gameObject;
-        if (ClientScore.Value == 11)
+        GameObject endRoundUIText = endRoundUIObjectParent.transform.Find("EndRoundUIText").gameObject; // here we find the ui text gameobject
+        if (ClientScore.Value == 11) // according to who had won we set the text
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won";
         }
