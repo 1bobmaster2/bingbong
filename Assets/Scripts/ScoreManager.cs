@@ -25,7 +25,6 @@ public class ScoreManager : NetworkBehaviour
     }
     
     
-
     [ServerRpc(RequireOwnership = false)]
     public void AddScoreServerRpc(string winner, ServerRpcParams p = default)
     {
