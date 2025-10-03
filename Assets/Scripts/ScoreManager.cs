@@ -69,7 +69,7 @@ public class ScoreManager : NetworkBehaviour
     private void EnableEndGameUIClientRpc()
     {
         endRoundUIObject.SetActive(true);
-        GameObject endRoundUIText = endRoundUIObject.transform.Find("EndRoundUIText").gameObject; // here we find the ui text gameobject
+        GameObject endRoundUIText = GameObject.FindWithTag("EndRoundUIText"); // here we find the ui text gameobject
         if (ClientScore.Value == 11) // according to who had won we set the text
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won"; // TODO: this doesnt sync on the client :(
