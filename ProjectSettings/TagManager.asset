@@ -21,6 +21,7 @@ TagManager:
   - ButtonsToBeDisabled
   - GameManager
   - EndRoundUI
+  - EndRoundUIText
   layers:
   - Default
   - TransparentFX
