@@ -72,7 +72,7 @@ public class ScoreManager : NetworkBehaviour
         GameObject endRoundUIText = GameObject.FindWithTag("EndRoundUIText"); // here we find the ui text gameobject through the tag
         if (ClientScore.Value == 11) // according to who had won we set the text
         {
-            endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won"; // TODO: this doesnt sync on the client :( (second day of wokring on it)
+            endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won"; // TODO: this doesnt sync on the client :( (third day of wokring on it)
         }
         else if (HostScore.Value == 11)
         {
