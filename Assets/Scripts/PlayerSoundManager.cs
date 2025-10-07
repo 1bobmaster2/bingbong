@@ -6,7 +6,14 @@ public class PlayerSoundManager : NetworkBehaviour
     {
         if (ClientLoadedHandler.instance.allClientsLoaded)
         {
-            
+            if (IsHost)
+            {
+                
+            }
+            else if (IsClient)
+            {
+                
+            }
         }
     }
 }
