@@ -7,6 +7,9 @@ public class PlayerSoundManager : NetworkBehaviour
     {
         if (ClientLoadedHandler.instance.allClientsLoaded)
         {
+            if (!IsOwner) return;
+            
+            
             if (IsHost)
             {
                 GameObject otherPlayer = GameObject.FindGameObjectWithTag("ClientPlayer");
