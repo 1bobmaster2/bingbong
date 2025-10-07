@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerSoundManager : MonoBehaviour
+public class PlayerSoundManager : NetworkBehaviour
 {
     private void Update()
     {
