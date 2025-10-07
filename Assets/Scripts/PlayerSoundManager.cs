@@ -1,4 +1,4 @@
-using UnityEngine;
+using Unity.Netcode;
 
 public class PlayerSoundManager : NetworkBehaviour
 {
