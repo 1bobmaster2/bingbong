@@ -26,7 +26,7 @@ public class ScoreCheck : NetworkBehaviour
         {
             ScoreManager.instance.AddScoreServerRpc("Host");
         }
-        else if (collision.gameObject.CompareTag("Ground"))
+        else if (collision.gameObject.CompareTag("Ground")) // this here doesnt work for some reason
         {
             if (lastHit == null) return;
 
