@@ -30,7 +30,11 @@ public class ScoreCheck : NetworkBehaviour
         }
         else if (collision.gameObject.CompareTag("Ground")) // this here doesnt work for some reason
         {
-            if (lastHit == null) return;
+            if (lastHit == null)
+            {
+                Debug.Log("we hit " + collision.gameObject.name + " but last hit was null so we return");
+                return;
+            }
 
             if (lastHit.CompareTag("HostPlayer"))
             {
