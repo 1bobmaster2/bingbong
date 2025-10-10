@@ -61,7 +61,7 @@ public class BallScript : NetworkBehaviour
     {
         if(!IsServer) return; // only the server should handle physics
 
-        if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide")) // this is called when the ball hits the table
+        if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
         {
             if (playerServing == 1)
             {
