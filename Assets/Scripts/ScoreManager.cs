@@ -70,7 +70,7 @@ public class ScoreManager : NetworkBehaviour
     {
         endRoundUIObject.SetActive(true);
         GameObject endRoundUIText = GameObject.FindWithTag("EndRoundUIText"); // here we find the ui text gameobject through the tag
-        if (ClientScore.Value == 11) // according to who had won we set the text
+        if (ClientScore.Value > HostScore.Value) // according to who had won we set the text
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won";
         }
