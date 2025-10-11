@@ -78,6 +78,10 @@ public class ScoreManager : NetworkBehaviour
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Host won";
         }
+        else if (ClientScore.Value == HostScore.Value)
+        {
+            endRoundUIText.GetComponent<TextMeshProUGUI>().text = "something went wrong";
+        }
     }
     
     [ClientRpc(RequireOwnership = false)]
