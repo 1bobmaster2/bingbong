@@ -74,7 +74,7 @@ public class ScoreManager : NetworkBehaviour
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Client won";
         }
-        else if (HostScore.Value == 11)
+        else if (ClientScore.Value < HostScore.Value)
         {
             endRoundUIText.GetComponent<TextMeshProUGUI>().text = "Host won";
         }
