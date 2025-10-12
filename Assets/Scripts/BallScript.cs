@@ -88,6 +88,17 @@ public class BallScript : NetworkBehaviour
                 playerServingSwitchHelperVar++;
             }
         }
+        else if (collision.gameObject.CompareTag("Net"))
+        {
+            if (playerServing == 1)
+            {
+                MoveBallToSpawn(new Vector3(0, 0, 5));
+            }
+            else if (playerServing == 2)
+            {
+                MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
+            }
+        }
 
         if (!hasBeenHit)
         {
