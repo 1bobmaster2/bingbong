@@ -93,10 +93,12 @@ public class BallScript : NetworkBehaviour
             if (playerServing == 1)
             {
                 MoveBallToSpawn(new Vector3(0, 0, 5));
+                return;
             }
             else if (playerServing == 2)
             {
                 MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
+                return;
             }
         }
 
