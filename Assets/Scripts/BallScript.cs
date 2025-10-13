@@ -19,6 +19,8 @@ public class BallScript : NetworkBehaviour
 
     private int playerServing; // 1 means host 2 means client
     private int playerServingSwitchHelperVar; // helper variable for switching the serving player
+
+    private int amountOfBounces;
     
     void Start()
     {
