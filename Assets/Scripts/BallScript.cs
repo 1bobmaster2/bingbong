@@ -6,7 +6,7 @@ public class BallScript : NetworkBehaviour
 {
     [SerializeField] private float outlineSizeModifier;
     [SerializeField] private float posPowMult;
-    [SerializeField, ReadOnly] private bool isGettingServed;
+    [SerializeField, ReadOnly] public bool isGettingServed;
     [Space]
     [SerializeField] private Rigidbody rb;
     [Space]
