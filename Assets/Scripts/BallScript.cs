@@ -74,6 +74,8 @@ public class BallScript : NetworkBehaviour
                     MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
                     return;
                 }
+                
+                
                 MoveBallToSpawn(new Vector3(0, 0, 5));
                 playerServingSwitchHelperVar++;
             }
@@ -86,6 +88,8 @@ public class BallScript : NetworkBehaviour
                     MoveBallToSpawn(new Vector3(0, 0, 5));
                     return;
                 }
+                
+                
                 MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
                 playerServingSwitchHelperVar++;
             }
