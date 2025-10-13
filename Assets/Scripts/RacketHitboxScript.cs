@@ -87,7 +87,8 @@ public class RacketHitbox : NetworkBehaviour
         if (ballObject == null) return;
 
         Rigidbody rb = ballObject.GetComponent<Rigidbody>();
-        if (rb == null) return;
+        BallScript ballScript = ballObject.GetComponent<BallScript>();
+        if (rb == null || ballScript == null) return;
         
         ScoreCheck scoreCheck = ballObject.GetComponent<ScoreCheck>();
         scoreCheck.lastHit = gameObject.transform.parent.gameObject.transform.parent.gameObject;
