@@ -17,6 +17,9 @@ public class ScoreCheck : NetworkBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
+
+        if (!shouldCheck) return;
+        
         
         if (collision.gameObject.CompareTag("Untagged"))
         {
