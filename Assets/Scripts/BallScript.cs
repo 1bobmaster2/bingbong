@@ -85,18 +85,18 @@ public class BallScript : NetworkBehaviour
                     }
                 
                 
-                MoveBallToSpawn(new Vector3(0, 0, 5));
-                playerServingSwitchHelperVar++;
-            }
-            else if (playerServing == 2)
-            {
-                if (playerServingSwitchHelperVar == 1)
-                {
-                    playerServingSwitchHelperVar = 0;
-                    playerServing = 1;
                     MoveBallToSpawn(new Vector3(0, 0, 5));
-                    return;
+                    playerServingSwitchHelperVar++;
                 }
+                else if (playerServing == 2)
+                {
+                    if (playerServingSwitchHelperVar == 1)
+                    {
+                        playerServingSwitchHelperVar = 0;
+                        playerServing = 1;
+                        MoveBallToSpawn(new Vector3(0, 0, 5));
+                        return;
+                    }
                 
                 
                 MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
