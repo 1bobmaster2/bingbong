@@ -12,6 +12,7 @@ public class BallScript : NetworkBehaviour
     [Space]
     [SerializeField] GameObject hostPlayerObject, clientPlayerObject;
     [SerializeField] MatchManager matchManager;
+    [SerializeField] ScoreCheck scoreCheck;
 
     private Vector3 lastVelocity;
     private Material outlineMaterial;
