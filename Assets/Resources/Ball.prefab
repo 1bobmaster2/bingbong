@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2942697020
+  GlobalObjectIdHash: 257499716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -190,9 +190,12 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   outlineSizeModifier: 0.001
   posPowMult: 3.1
+  isGettingServed: 0
   rb: {fileID: 4278312198695691053}
   hostPlayerObject: {fileID: 0}
   clientPlayerObject: {fileID: 0}
+  matchManager: {fileID: 0}
+  scoreCheck: {fileID: 588965614921664399}
 --- !u!114 &588965614921664399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03cacb38b6d8f544b56a877ffa9db97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  lastHit: {fileID: 0}
+  moveToClient: 0
 --- !u!1001 &2061200159957623532
 PrefabInstance:
   m_ObjectHideFlags: 0
