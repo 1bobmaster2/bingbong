@@ -72,6 +72,7 @@ public class BallScript : NetworkBehaviour
             isGettingServed = false;
             amountOfBounces = 0;
             
+            
             if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
             {
                 if (playerServing == 1)
