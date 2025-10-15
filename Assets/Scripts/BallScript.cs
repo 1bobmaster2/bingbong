@@ -110,6 +110,9 @@ public class BallScript : NetworkBehaviour
             }
             else if (collision.gameObject.CompareTag("Net"))
             {
+                scoreCheck.shouldCheck = false;
+                
+                
                 if (playerServing == 1)
                 {
                     MoveBallToSpawn(new Vector3(0, 0, 5));
