@@ -76,6 +76,9 @@ public class BallScript : NetworkBehaviour
             
             if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
             {
+                scoreCheck.shouldCheck = false;
+                
+                
                 if (playerServing == 1)
                 {
                     if (playerServingSwitchHelperVar == 1)
