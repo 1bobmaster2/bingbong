@@ -65,7 +65,7 @@ public class BallScript : NetworkBehaviour
     {
         if(!IsServer) return; // only the server should handle physics
 
-        amountOfBounces++;
+        amountOfBounces++; // something here doesnt work
 
         if (isGettingServed && amountOfBounces == 2)
         {
