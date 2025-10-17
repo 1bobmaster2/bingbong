@@ -72,6 +72,8 @@ public class BallScript : NetworkBehaviour
         
         if (isGettingServed && amountOfBounces == 2)
         {
+            Debug.Log("isGettingServed is true and there are two bounces so we are calling this if");
+            
             isGettingServed = false;
             amountOfBounces = 0;
             scoreCheck.shouldCheck = true;
