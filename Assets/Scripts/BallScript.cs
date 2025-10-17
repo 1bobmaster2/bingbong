@@ -79,6 +79,7 @@ public class BallScript : NetworkBehaviour
             Debug.Log("set isGettingServed to false, amountOfBounces to 0");
             
             scoreCheck.shouldCheck = true;
+            Debug.Log("accesed score check and set should check to true");
             
             
             if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
