@@ -76,6 +76,8 @@ public class BallScript : NetworkBehaviour
             
             isGettingServed = false;
             amountOfBounces = 0;
+            Debug.Log("set isGettingServed to false, amountOfBounces to 0");
+            
             scoreCheck.shouldCheck = true;
             
             
