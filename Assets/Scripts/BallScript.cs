@@ -103,9 +103,10 @@ public class BallScript : NetworkBehaviour
                         return;
                     }
                 
-                
-                    MoveBallToSpawn(new Vector3(0, 0, 5));
+                    vec = new Vector3(0, 0, 5);
+                    MoveBallToSpawn(vec);
                     Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
+                    
                     playerServingSwitchHelperVar++;
                 }
                 else if (playerServing == 2)
