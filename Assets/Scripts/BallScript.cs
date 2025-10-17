@@ -161,6 +161,7 @@ public class BallScript : NetworkBehaviour
                         playerServingSwitchHelperVar = 0;
                         playerServing = 2;
                         MoveBallToSpawn(new Vector3(0.7f, 0, 7.6f));
+                        Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
                         return;
                     }
                 
