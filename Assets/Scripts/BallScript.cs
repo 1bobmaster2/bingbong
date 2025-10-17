@@ -67,6 +67,9 @@ public class BallScript : NetworkBehaviour
 
         amountOfBounces++; // something here doesnt work
 
+        Vector3 vec;
+        
+        
         if (isGettingServed && amountOfBounces == 2)
         {
             isGettingServed = false;
