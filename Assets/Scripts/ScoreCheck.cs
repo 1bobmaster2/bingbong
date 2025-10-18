@@ -21,6 +21,7 @@ public class ScoreCheck : NetworkBehaviour
         if (!shouldCheck)
         {
             Debug.Log("should check is false, so we dont check");
+            return;
         }
         
         Debug.Log("should check is true, so we check for score");
