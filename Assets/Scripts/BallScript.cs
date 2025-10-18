@@ -70,7 +70,7 @@ public class BallScript : NetworkBehaviour
         Vector3 vec;
         
         
-        if (isGettingServed && amountOfBounces == 2)
+        if (isGettingServed && amountOfBounces == 3)
         {
             Debug.Log("isGettingServed is true and there are two bounces so we are calling this if");
             
@@ -148,7 +148,7 @@ public class BallScript : NetworkBehaviour
                 }
             }
         }
-        else if (amountOfBounces == 1)
+        else if (amountOfBounces == 2)
         {
             amountOfBounces = 0;
             
