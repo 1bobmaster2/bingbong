@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 257499716
+  GlobalObjectIdHash: 2942697020
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -117,7 +117,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3777484518610844732}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f03e4166fe3184b4986af9877b586d38, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   lastHit: {fileID: 0}
   moveToClient: 0
+  shouldCheck: 0
 --- !u!1001 &2061200159957623532
 PrefabInstance:
   m_ObjectHideFlags: 0
