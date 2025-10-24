@@ -23,6 +23,8 @@ public class BallScript : NetworkBehaviour
     private int playerServingSwitchHelperVar; // helper variable for switching the serving player
 
     private int amountOfBounces;
+    private Vector3 vec;
+    
     
     void Start()
     {
