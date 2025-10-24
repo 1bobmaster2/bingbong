@@ -99,7 +99,7 @@ public class BallScript : NetworkBehaviour
             
             EvaluateCollision(collision);
         }
-
+        
         if (!hasBeenHit)
         {
             hasBeenHit = true;
