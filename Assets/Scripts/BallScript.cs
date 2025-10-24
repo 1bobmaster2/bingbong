@@ -69,8 +69,6 @@ public class BallScript : NetworkBehaviour
 
         amountOfBounces++; // something here doesnt work
         Debug.Log("increased amount of bounces by one, the amount of bounces is now: " + amountOfBounces);
-        Vector3 vec;
-        
         
         if (isGettingServed && amountOfBounces == 3)
         {
