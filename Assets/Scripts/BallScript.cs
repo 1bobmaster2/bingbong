@@ -82,72 +82,7 @@ public class BallScript : NetworkBehaviour
             Debug.Log("accesed score check and set should check to true");
             
             
-            if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
-            {
-                
-
-                
-                
-                if (playerServing == 1)
-                {
-                    if (playerServingSwitchHelperVar == 1)
-                    {
-                        playerServingSwitchHelperVar = 0;
-                        playerServing = 2;
-                        
-                        vec = new Vector3(0.7f, 0, 7.6f);
-                        MoveBallToSpawn(vec);
-                        Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                        
-                        return;
-                    }
-                
-                    vec = new Vector3(0, 0, 5);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    
-                    playerServingSwitchHelperVar++;
-                }
-                else if (playerServing == 2)
-                {
-                    if (playerServingSwitchHelperVar == 1)
-                    {
-                        playerServingSwitchHelperVar = 0;
-                        playerServing = 1;
-                        vec = new Vector3(0, 0, 5);
-                        MoveBallToSpawn(vec);
-                        Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                        return;
-                    }
-
-                    vec = new Vector3(0.7f, 0, 7.6f);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    playerServingSwitchHelperVar++;
-                }
-                scoreCheck.shouldCheck = false;
-                Debug.Log("set shouldCheck to false");
-            }
-            else if (collision.gameObject.CompareTag("Net"))
-            {
-                scoreCheck.shouldCheck = false;
-                
-                
-                if (playerServing == 1)
-                {
-                    vec = new Vector3(0, 0, 5);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    return;
-                }
-                else if (playerServing == 2)
-                {
-                    vec = new Vector3(0.7f, 0, 7.6f);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    return;
-                }
-            }
+            EvaluateCollision(collision);
         }
         else if (amountOfBounces == 2)
         {
@@ -162,64 +97,7 @@ public class BallScript : NetworkBehaviour
 
             amountOfBounces = 0;
             
-            if (collision.gameObject.CompareTag("HostTableSide") || collision.gameObject.CompareTag("ClientTableSide") || collision.gameObject.CompareTag("Ground")) // this is called when the ball hits the table
-            {
-				
-
-                if (playerServing == 1)
-                {
-                    if (playerServingSwitchHelperVar == 1)
-                    {
-                        playerServingSwitchHelperVar = 0;
-                        playerServing = 2;
-                        vec = new Vector3(0.7f, 0, 7.6f);
-                        MoveBallToSpawn(vec);
-                        Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                        return;
-                    }
-                
-                    vec = new Vector3(0, 0, 5);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    playerServingSwitchHelperVar++;
-                }
-                else if (playerServing == 2)
-                {
-                    if (playerServingSwitchHelperVar == 1)
-                    {
-                        playerServingSwitchHelperVar = 0;
-                        playerServing = 1;
-                        vec = new Vector3(0, 0, 5);
-                        MoveBallToSpawn(vec);
-                        Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                        return;
-                    }
-
-                    
-                    vec = new Vector3(0.7f, 0, 7.6f);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    playerServingSwitchHelperVar++;
-                }
-                scoreCheck.shouldCheck = false;
-            }
-            else if (collision.gameObject.CompareTag("Net"))
-            {
-                if (playerServing == 1)
-                {
-                    vec = new Vector3(0, 0, 5);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    return;
-                }
-                else if (playerServing == 2)
-                {
-                    vec = new Vector3(0.7f, 0, 7.6f);
-                    MoveBallToSpawn(vec);
-                    Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                    return;
-                }
-            }
+            EvaluateCollision(collision);
         }
 
         if (!hasBeenHit)
