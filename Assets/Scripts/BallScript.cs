@@ -84,7 +84,7 @@ public class BallScript : NetworkBehaviour
             
             EvaluateCollision(collision);
         }
-        else if (amountOfBounces == 2)
+        else if (amountOfBounces == 2 && !isGettingServed)
         {
 			Debug.Log("isGettingServed is true and there is one bounce so we are calling this if");
             
