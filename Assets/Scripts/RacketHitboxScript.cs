@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class RacketHitbox : NetworkBehaviour
+public class RacketHitboxScript : NetworkBehaviour
 {
     [SerializeField] private float torqueForce, impulseForce, hitTime;
     [SerializeField] private Volume volume;
