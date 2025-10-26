@@ -118,6 +118,8 @@ public class RacketHitboxScript : NetworkBehaviour
             if (IsHost)
             {
                 otherPlayer = GameObject.FindWithTag("ClientPlayer");
+                RacketHitboxScript otherPlayerRacketScript = otherPlayer.GetComponentInChildren<RacketHitboxScript>();
+                otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
             }
 
             if (otherPlayer != null)
