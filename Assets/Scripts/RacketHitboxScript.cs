@@ -122,6 +122,10 @@ public class RacketHitboxScript : NetworkBehaviour
                 Debug.Log("setting variables for host");
                 otherPlayer = GameObject.FindWithTag("ClientPlayer");
                 RacketHitboxScript otherPlayerRacketScript = otherPlayer.GetComponentInChildren<RacketHitboxScript>();
+                if (otherPlayerRacketScript == null)
+                {
+                    Debug.Log("something went wrong with setting RacketHitboxScript");
+                }
                 otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
             }
 
