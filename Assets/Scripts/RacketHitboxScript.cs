@@ -109,6 +109,8 @@ public class RacketHitboxScript : NetworkBehaviour
     {
         while (true)
         {
+            Debug.Log("initializing variables");
+            
             midPoint = GameObject.FindWithTag("MidPoint");
             if (IsClient && !IsHost)
             {
