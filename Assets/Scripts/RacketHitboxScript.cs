@@ -126,6 +126,7 @@ public class RacketHitboxScript : NetworkBehaviour
                 {
                     Debug.Log("something went wrong with setting RacketHitboxScript");
                 }
+                Debug.Log(otherPlayerRacketScript.gameObject.name + " is the name of the gameObject that hold the racket script of the other player");
                 otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
             }
 
