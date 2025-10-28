@@ -115,26 +115,23 @@ public class RacketHitboxScript : NetworkBehaviour
             otherPlayer = GameObject.FindWithTag("HostPlayer");
         }
             
-            if (IsHost)
+        if (IsHost)
+        {
+            Debug.Log("setting variables for host");
+            otherPlayer = GameObject.FindWithTag("ClientPlayer");
+            if (otherPlayer == null)
             {
-                Debug.Log("setting variables for host");
-                otherPlayer = GameObject.FindWithTag("ClientPlayer");
-                RacketHitboxScript otherPlayerRacketScript = otherPlayer.GetComponentInChildren<RacketHitboxScript>();
-                if (otherPlayerRacketScript == null)
-                {
-                    Debug.Log("something went wrong with setting RacketHitboxScript");
-                }
-                Debug.Log(otherPlayerRacketScript.gameObject.name + " is the name of the gameObject that hold the racket script of the other player");
-                otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
+                Debug.LogError("couldnt find the other player (client player)");
             }
-
-            if (otherPlayer != null)
+            Debug.Log("other players name is " + otherPlayer.name);
+            RacketHitboxScript otherPlayerRacketScript = otherPlayer.GetComponentInChildren<RacketHitboxScript>();
+            if (otherPlayerRacketScript == null)
             {
-                DisableOtherVolume();
-                yield break;
+                Debug.Log("something went wrong with setting RacketHitboxScript");
             }
-
-            yield return null;
+            Debug.Log(otherPlayerRacketScript.gameObject.name + " is the name of the gameObject that hold the racket script of the other player");
+            otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
+            Debug.Log("other players mid point is: " + otherPlayerRacketScript.midPoint);
         }
     }
 }
