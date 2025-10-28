@@ -103,11 +103,11 @@ public class RacketHitboxScript : NetworkBehaviour
     {
         Debug.Log("initializing variables");
             
-            midPoint = GameObject.FindWithTag("MidPoint");
-            if (IsClient && !IsHost)
-            {
-                otherPlayer = GameObject.FindWithTag("HostPlayer");
-            }
+        midPoint = GameObject.FindWithTag("MidPoint");
+        if (IsClient && !IsHost)
+        {
+            otherPlayer = GameObject.FindWithTag("HostPlayer");
+        }
             
             if (IsHost)
             {
