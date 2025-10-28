@@ -98,11 +98,10 @@ public class RacketHitboxScript : NetworkBehaviour
         rb.AddForce(direction * impulseForce, ForceMode.Impulse); // we propel the ball forward
     }
 
-    IEnumerator InitializeVariables()
+    
+    void InitializeVariables()
     {
-        while (true)
-        {
-            Debug.Log("initializing variables");
+        Debug.Log("initializing variables");
             
             midPoint = GameObject.FindWithTag("MidPoint");
             if (IsClient && !IsHost)
