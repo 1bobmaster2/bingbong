@@ -33,6 +33,12 @@ public class RacketHitboxScript : NetworkBehaviour
             }
             RequestHitServerRpc();
         }
+
+        if (!alreadyInitialized && ClientLoadedHandler.instance.allClientsLoaded)
+        {
+            InitializeVariables();
+            alreadyInitialized = true;
+        }
     }
 
     private void StopHitting()
