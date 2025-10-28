@@ -60,13 +60,6 @@ public class RacketHitboxScript : NetworkBehaviour
         ChangeVignette(false);
     }
 
-    public override void OnNetworkSpawn()
-    {
-        if (!IsOwner) return;
-        
-        StartCoroutine(InitializeVariables()); // initializes all the variables
-    }
-
     private void ChangeVignette(bool input)
     {
         if (volume.profile.TryGet(out Vignette vignette))
