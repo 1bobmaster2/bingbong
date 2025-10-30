@@ -30,6 +30,7 @@ public class ScoreCheck : NetworkBehaviour
         {
             return; // we have no interest in untagged GameObjects
         }
+        
         if (collision.gameObject.CompareTag("HostTableSide"))
         {
             ScoreManager.instance.AddScoreServerRpc("Client");
