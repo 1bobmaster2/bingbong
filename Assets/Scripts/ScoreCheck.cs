@@ -24,6 +24,8 @@ public class ScoreCheck : NetworkBehaviour
             return;
         }
         
+        shouldCheck = true;
+        
         Debug.Log("should check is true, so we check for score");
         
         if (collision.gameObject.CompareTag("Untagged"))
