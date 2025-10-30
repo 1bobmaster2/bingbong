@@ -171,8 +171,6 @@ public class BallScript : NetworkBehaviour
                 Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
                 playerServingSwitchHelperVar++;
             }
-            scoreCheck.shouldCheck = false; // this here should work but it doesnt for some reason
-            Debug.Log("set shouldCheck to false");
         }
         else if (collision.gameObject.CompareTag("Net"))
         {
