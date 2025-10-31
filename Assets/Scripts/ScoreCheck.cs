@@ -49,13 +49,29 @@ public class ScoreCheck : NetworkBehaviour
                 return;
             }
 
-            if (lastHit.CompareTag("HostPlayer"))
+
+
+            if (ballScript.amountOfBounces > 0)
             {
-                ScoreManager.instance.AddScoreServerRpc("Client");
+                if (lastHit.CompareTag("HostPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Host");
+                }
+                else if (lastHit.CompareTag("ClientPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Client");
+                }
             }
-            else if (lastHit.CompareTag("ClientPlayer"))
+            else
             {
-                ScoreManager.instance.AddScoreServerRpc("Host");
+                if (lastHit.CompareTag("HostPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Client");
+                }
+                else if (lastHit.CompareTag("ClientPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Host");
+                }
             }
         }
     }
