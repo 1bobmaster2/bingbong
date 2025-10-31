@@ -7,6 +7,7 @@ public class BallScript : NetworkBehaviour
     [SerializeField] private float outlineSizeModifier;
     [SerializeField] private float posPowMult;
     [SerializeField, ReadOnly] public bool isGettingServed;
+    [ReadOnly] public int amountOfBounces;
     [Space]
     [SerializeField] private Rigidbody rb;
     [Space]
@@ -22,7 +23,7 @@ public class BallScript : NetworkBehaviour
     private int playerServing; // 1 means host 2 means client
     private int playerServingSwitchHelperVar; // helper variable for switching the serving player
 
-    private int amountOfBounces;
+    
     private Vector3 vec;
     
     
