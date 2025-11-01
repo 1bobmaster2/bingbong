@@ -7,7 +7,7 @@ public class ScoreCheck : NetworkBehaviour
     [SerializeField] private bool moveToClient;
     private BallScript ballScript;
 
-    [ReadOnly]public bool shouldCheck;
+    [ReadOnly] public bool shouldCheck;
 
     public override void OnNetworkSpawn()
     {
