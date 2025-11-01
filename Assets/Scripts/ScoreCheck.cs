@@ -70,7 +70,7 @@ public class ScoreCheck : NetworkBehaviour
                 }
                 else if (lastHit.CompareTag("ClientPlayer"))
                 {
-                    ScoreManager.instance.AddScoreServerRpc("Host");
+                    ScoreManager.instance.AddScoreServerRpc("Client");
                 }
             }
         }
