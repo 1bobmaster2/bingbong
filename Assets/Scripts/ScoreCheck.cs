@@ -66,7 +66,7 @@ public class ScoreCheck : NetworkBehaviour
             {
                 if (lastHit.CompareTag("HostPlayer"))
                 {
-                    ScoreManager.instance.AddScoreServerRpc("Client");
+                    ScoreManager.instance.AddScoreServerRpc("Host");
                 }
                 else if (lastHit.CompareTag("ClientPlayer"))
                 {
