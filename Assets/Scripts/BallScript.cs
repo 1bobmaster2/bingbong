@@ -90,8 +90,7 @@ public class BallScript : NetworkBehaviour
         {
 			Debug.Log("isGettingServed is true and there is one bounce so we are calling this if");
             
-            isGettingServed = false;
-            amountOfBounces = 0;
+            
             Debug.Log("set isGettingServed to false, amountOfBounces to 0");
             
             scoreCheck.shouldCheck = true;
