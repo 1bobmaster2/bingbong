@@ -82,7 +82,7 @@ public class ScoreCheck : NetworkBehaviour
                 Debug.Log("unsuccesfull recieve");
                 if (lastHit.CompareTag("HostPlayer"))
                 {
-                    ScoreManager.instance.AddScoreServerRpc("Host");
+                    ScoreManager.instance.AddScoreServerRpc("Client");
                 }
                 else if (lastHit.CompareTag("ClientPlayer"))
                 {
