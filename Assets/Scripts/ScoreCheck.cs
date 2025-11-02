@@ -89,6 +89,18 @@ public class ScoreCheck : NetworkBehaviour
                     ScoreManager.instance.AddScoreServerRpc("Host");
                 }
             }
+            else // this just means the player failed to make the ball bounce even once
+            {
+                Debug.Log("something else happened");
+                if (lastHit.CompareTag("HostPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Client");
+                }
+                else if (lastHit.CompareTag("ClientPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Host");
+                }
+            }
         }
     }
 }
