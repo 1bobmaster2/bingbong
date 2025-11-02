@@ -68,7 +68,7 @@ public class BallScript : NetworkBehaviour
     {
         if(!IsServer) return; // only the server should handle physics
 
-        amountOfBounces++; // something here doesnt work
+        amountOfBounces++; 
         Debug.Log("increased amount of bounces by one, the amount of bounces is now: " + amountOfBounces);
         
         if (isGettingServed && amountOfBounces == 3)
