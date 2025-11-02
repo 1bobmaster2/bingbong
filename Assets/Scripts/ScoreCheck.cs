@@ -65,7 +65,19 @@ public class ScoreCheck : NetworkBehaviour
                     ScoreManager.instance.AddScoreServerRpc("Host");
                 }
             }
-            else
+            else if (snapshotAmountOfBounces == 2 && ballScript.isGettingServed)
+            {
+                Debug.Log("succesfull serve");
+                if (lastHit.CompareTag("HostPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Host");
+                }
+                else if (lastHit.CompareTag("ClientPlayer"))
+                {
+                    ScoreManager.instance.AddScoreServerRpc("Client");
+                }
+            }
+            else if (snapshotAmountOfBounces > 0 && !ballScript.isGettingServed) // this means that the opponent failed to hit the ball in time
             {
                 if (lastHit.CompareTag("HostPlayer"))
                 {
