@@ -96,7 +96,7 @@ public class BallScript : NetworkBehaviour
             scoreCheck.shouldCheck = true;
             Debug.Log("accesed score check and set should check to true");
 
-            amountOfBounces = 0;
+            
             
             EvaluateCollision(collision);
         }
