@@ -53,7 +53,7 @@ public class ScoreCheck : NetworkBehaviour
 
 
 
-            if (ballScript.amountOfBounces > 0)
+            if (snapshotAmountOfBounces is > 0 and < 2 && ballScript.isGettingServed) // since the ball bounced once but the player is still serving it, it means that the serving player failed to serve it correctly
             {
                 if (lastHit.CompareTag("HostPlayer"))
                 {
