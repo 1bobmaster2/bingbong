@@ -84,6 +84,7 @@ public class BallScript : NetworkBehaviour
             
             
             EvaluateCollision(collision);
+            amountOfBounces = 0;
         }
         else if (amountOfBounces == 2 && !isGettingServed)
         {
