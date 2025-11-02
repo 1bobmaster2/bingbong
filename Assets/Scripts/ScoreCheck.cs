@@ -18,6 +18,8 @@ public class ScoreCheck : NetworkBehaviour
     {
         Debug.Log(collision.gameObject.name);
 
+        int snapshotAmountOfBounces = ballScript.amountOfBounces;
+        
         if (!shouldCheck)
         {
             Debug.Log("should check is false, so we dont check");
