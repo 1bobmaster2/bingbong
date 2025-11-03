@@ -6,6 +6,7 @@ public class ScoreCheck : NetworkBehaviour
     public GameObject lastHit; // the GameObject that last hit the ball (either host or client)
     [SerializeField] private bool moveToClient;
     private BallScript ballScript;
+    private int SnapshotForGroundAmountOfBounces;
 
     [ReadOnly] public bool shouldCheck;
 
