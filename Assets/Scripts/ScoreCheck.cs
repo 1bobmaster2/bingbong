@@ -18,7 +18,7 @@ public class ScoreCheck : NetworkBehaviour
     {
         Debug.Log(collision.gameObject.name);
 
-        int snapshotAmountOfBounces = ballScript.amountOfBounces;
+        
         
         if (!shouldCheck)
         {
