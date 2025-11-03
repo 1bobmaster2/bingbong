@@ -78,7 +78,7 @@ public class ScoreCheck : NetworkBehaviour
                     ScoreManager.instance.AddScoreServerRpc("Client");
                 }
             }
-            else if (snapshotAmountOfBounces > 0 && !ballScript.isGettingServed) // this means that the opponent failed to hit the ball in time
+            else if (SnapshotForGroundAmountOfBounces > 0 && !ballScript.isGettingServed) // this means that the opponent failed to hit the ball in time
             {
                 Debug.Log("unsuccesfull recieve");
                 if (lastHit.CompareTag("HostPlayer"))
