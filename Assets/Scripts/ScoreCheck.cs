@@ -7,8 +7,13 @@ public class ScoreCheck : NetworkBehaviour
     [SerializeField] private bool moveToClient;
     private BallScript ballScript;
     private int SnapshotForGroundAmountOfBounces;
-
     private bool SnapshotForGroundIsServing;
+    void Update()
+    {
+        SnapshotForGroundAmountOfBounces = ballScript.amountOfBounces;
+        SnapshotForGroundIsServing = ballScript.isGettingServed;
+    }
+    
     [ReadOnly] public bool shouldCheck;
 
     public override void OnNetworkSpawn()
@@ -55,7 +60,7 @@ public class ScoreCheck : NetworkBehaviour
 
 
 
-            if (SnapshotForGroundAmountOfBounces is > 0 and < 2 && ballScript.isGettingServed) // since the ball bounced once but the player is still serving it, it means that the serving player failed to serve it correctly
+            if (SnapshotForGroundAmountOfBounces is > 0 and < 2 && SnapshotForGroundIsServing) // since the ball bounced once but the player is still serving it, it means that the serving player failed to serve it correctly
             {
                 Debug.Log("unsuccesfull serve");
                 if (lastHit.CompareTag("HostPlayer"))
