@@ -72,7 +72,7 @@ public class ScoreCheck : NetworkBehaviour
                     ScoreManager.instance.AddScoreServerRpc("Host");
                 }
             }
-            else if (SnapshotForGroundAmountOfBounces == 2 && ballScript.isGettingServed)
+            else if (SnapshotForGroundAmountOfBounces == 2 && SnapshotForGroundIsServing)
             {
                 Debug.Log("succesfull serve");
                 if (lastHit.CompareTag("HostPlayer"))
