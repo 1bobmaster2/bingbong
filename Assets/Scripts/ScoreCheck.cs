@@ -109,7 +109,5 @@ public class ScoreCheck : NetworkBehaviour
                 }
             }
         }
-        
-        SnapshotForGroundAmountOfBounces = ballScript.amountOfBounces;
     }
 }
