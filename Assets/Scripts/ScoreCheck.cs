@@ -8,6 +8,7 @@ public class ScoreCheck : NetworkBehaviour
     private BallScript ballScript;
     private int SnapshotForGroundAmountOfBounces;
 
+    private bool SnapshotForGroundIsServing;
     [ReadOnly] public bool shouldCheck;
 
     public override void OnNetworkSpawn()
