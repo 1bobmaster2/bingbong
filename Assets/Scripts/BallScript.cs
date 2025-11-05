@@ -86,7 +86,7 @@ public class BallScript : NetworkBehaviour
             EvaluateCollision(collision);
             amountOfBounces = 0;
         }
-        else if (amountOfBounces == 2 && !isGettingServed)
+        else if (amountOfBounces == 2 && !isGettingServed) // need an exception here where the ball is getting served but it hit the table only once and then fell on the ground
         {
 			Debug.Log("isGettingServed is true and there is one bounce so we are calling this if");
             
