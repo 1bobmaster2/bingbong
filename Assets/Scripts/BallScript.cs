@@ -87,7 +87,6 @@ public class BallScript : NetworkBehaviour
             EvaluateCollision(collision);
             amountOfBounces = 0;
         }
-        else if (amountOfBounces == 2 && !isGettingServed) // need an exception here where the ball is getting served but it hit the table only once and then fell on the ground
         else if (isGettingServed && amountOfBounces == 2 && collision.gameObject.CompareTag("Ground")) // this is the exception (CHECK LINE 103)
         {
             Debug.Log("the player failed to serve correctly and the ball hit the ground after one bounce");
