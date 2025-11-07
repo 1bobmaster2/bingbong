@@ -74,7 +74,7 @@ public class ScoreCheck : NetworkBehaviour
             }
             else if (SnapshotForGroundAmountOfBounces == 2 && SnapshotForGroundIsServing)
             {
-                Debug.Log("succesfull serve");
+                Debug.Log("successful , the amount of bounces was: " + SnapshotForGroundAmountOfBounces + " and the the player was serving: " + SnapshotForGroundIsServing);
                 if (lastHit.CompareTag("HostPlayer"))
                 {
                     ScoreManager.instance.AddScoreServerRpc("Host");
