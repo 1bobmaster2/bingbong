@@ -124,6 +124,9 @@ public class TestLobby : MonoBehaviour
             lobbyCodeText.gameObject.SetActive(true);
             lobbyCodeText.text = lobby.LobbyCode;
             PrintPlayers(hostLobby);
+            
+            
+            // also disable the button that makes the lobby to prevent a player from making two lobbies, and disable the button that lets the player join a lobby, as after making a lobby the player cant join one
             GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
             lobbyCreateButton.SetActive(false);
             
