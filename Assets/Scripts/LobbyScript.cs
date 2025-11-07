@@ -215,6 +215,9 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Joined lobby by this code: " + lobbyCode);
             GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
             lobbyCreateButton.SetActive(false);
+            
+            GameObject lobbyJoinButton = GameObject.Find("JoinFirstLobbyButton");
+            lobbyJoinButton.SetActive(false);
         }
         catch (LobbyServiceException e)
         {
