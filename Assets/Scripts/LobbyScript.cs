@@ -213,6 +213,8 @@ public class TestLobby : MonoBehaviour
             PrintPlayers(joinedLobby);
             
             Debug.Log("Joined lobby by this code: " + lobbyCode);
+            GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
+            lobbyCreateButton.SetActive(false);
         }
         catch (LobbyServiceException e)
         {
