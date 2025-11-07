@@ -243,6 +243,15 @@ public class TestLobby : MonoBehaviour
     {
         PrintPlayers(joinedLobby);
     }
+
+    private void DisableJoinCreateLobbyButtons()
+    {
+        GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
+        lobbyCreateButton.SetActive(false);
+            
+        GameObject lobbyJoinButton = GameObject.Find("JoinFirstLobbyButton");
+        lobbyJoinButton.SetActive(false);
+    }
     
     private void PrintPlayers(Lobby lobby)
     {
