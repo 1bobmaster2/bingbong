@@ -126,6 +126,9 @@ public class TestLobby : MonoBehaviour
             PrintPlayers(hostLobby);
             GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
             lobbyCreateButton.SetActive(false);
+            
+            GameObject lobbyJoinButton = GameObject.Find("JoinFirstLobbyButton");
+            lobbyJoinButton.SetActive(false);
         }
         catch (LobbyServiceException e)
         {
