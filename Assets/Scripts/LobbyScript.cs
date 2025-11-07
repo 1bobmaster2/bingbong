@@ -126,12 +126,7 @@ public class TestLobby : MonoBehaviour
             PrintPlayers(hostLobby);
             
             
-            // also disable the button that makes the lobby to prevent a player from making two lobbies, and disable the button that lets the player join a lobby, as after making a lobby the player cant join one
-            GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
-            lobbyCreateButton.SetActive(false);
-            
-            GameObject lobbyJoinButton = GameObject.Find("JoinFirstLobbyButton");
-            lobbyJoinButton.SetActive(false);
+            DisableJoinCreateLobbyButtons();
         }
         catch (LobbyServiceException e)
         {
