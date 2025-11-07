@@ -124,6 +124,8 @@ public class TestLobby : MonoBehaviour
             lobbyCodeText.gameObject.SetActive(true);
             lobbyCodeText.text = lobby.LobbyCode;
             PrintPlayers(hostLobby);
+            GameObject lobbyCreateButton = GameObject.Find("LobbyCreateButton");
+            lobbyCreateButton.SetActive(false);
         }
         catch (LobbyServiceException e)
         {
