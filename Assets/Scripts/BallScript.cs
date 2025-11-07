@@ -1,7 +1,6 @@
 using System;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
 
 public class BallScript : NetworkBehaviour
 {
