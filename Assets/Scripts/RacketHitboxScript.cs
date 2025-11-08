@@ -97,6 +97,10 @@ public class RacketHitboxScript : NetworkBehaviour
             rb.isKinematic = false;
             ballScript.isGettingServed = true; // since we are hitting the ball when it is kinematic, the player must be serving it.
         }
+        else
+        {
+            ballScript.isGettingServed = false; 
+        }
 
         Vector3 direction = (midPoint.transform.position - transform.position).normalized;
         
