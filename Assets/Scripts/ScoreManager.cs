@@ -97,5 +97,4 @@ public class ScoreManager : NetworkBehaviour
     {
         Application.Quit();
     }
-    
 }
