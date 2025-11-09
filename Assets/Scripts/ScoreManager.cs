@@ -56,7 +56,7 @@ public class ScoreManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ResetGameServerRpc() // this is called from the button
     {
-        EndGameClientRpc();
+        ResetGameClientRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
