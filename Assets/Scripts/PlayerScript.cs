@@ -197,6 +197,6 @@ public class PlayerScript : NetworkBehaviour
                 return child.gameObject;
             }
         }
-        return null; // return null if it didnt find it
+        return null; // return null if it didn't find it
     }
 }
