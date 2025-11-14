@@ -6,7 +6,7 @@ public class BallScript : NetworkBehaviour
 {
     [SerializeField] private float outlineSizeModifier;
     [SerializeField] private float posPowMult;
-    [SerializeField, ReadOnly] public bool isGettingServed;
+    [SerializeField, ReadOnly] public bool isGettingServed; // this is set in the racket hitbox script
     [ReadOnly] public int amountOfBounces;
     [Space]
     [SerializeField] private Rigidbody rb;
