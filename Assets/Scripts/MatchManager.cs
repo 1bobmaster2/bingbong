@@ -15,7 +15,7 @@ public class MatchManager : NetworkBehaviour
     {
         startRoundButtonObject.SetActive(true); // we set the button active when the host and client load in
         coinFlipButtonObject.SetActive(true);
-        Debug.LogWarning("tried setting the 2 buttons to active"); // this doesnt actually say if the 2 operations went smoothly
+        Debug.LogWarning("tried setting the 2 buttons to active"); // this doesn't actually say if the 2 operations went smoothly
     }
     
     public void SetReady() // we call this from the button
