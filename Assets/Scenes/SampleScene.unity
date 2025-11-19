@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 163216181}
   - component: {fileID: 163216180}
   - component: {fileID: 163216179}
+  - component: {fileID: 163216182}
   m_Layer: 5
   m_Name: LobbyCodeInputField
   m_TagString: Untagged
