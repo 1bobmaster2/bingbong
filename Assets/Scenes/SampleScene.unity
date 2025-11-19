@@ -554,6 +554,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163216177}
   m_CullTransparentMesh: 1
+--- !u!114 &163216182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163216177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18309655d7eb6547923c947e0d6a9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PasteHandler
+  inputField: {fileID: 163216179}
 --- !u!1 &163402952
 GameObject:
   m_ObjectHideFlags: 0
