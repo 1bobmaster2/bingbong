@@ -1,16 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PasteHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private InputField inputField; // this is the input field of the ui object the script is attached to
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (inputField.isFocused && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.V))
+        {
+            inputField.text = GUIUtility.systemCopyBuffer;
+        }
     }
 }
