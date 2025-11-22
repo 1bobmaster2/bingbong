@@ -123,7 +123,7 @@ public class TestLobby : MonoBehaviour
             Debug.Log("Created Lobby: " + lobby.Name + " " + lobby.MaxPlayers + " " + lobby.Id + " " + lobby.LobbyCode);
             lobbyCodeText.gameObject.SetActive(true);
             lobbyCodeText.text = lobby.LobbyCode;
-            GUIUtility.systemCopyBuffer = lobbyCode;
+            GUIUtility.systemCopyBuffer = lobby.LobbyCode;
             Debug.Log("the buffer now has: " + GUIUtility.systemCopyBuffer);
             PrintPlayers(hostLobby);
             
