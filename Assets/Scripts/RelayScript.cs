@@ -26,7 +26,7 @@ public class RelayScript : MonoBehaviour
             
             joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             
-            NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData(
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData( // this is an old method
                 allocation.RelayServer.IpV4,
                 (ushort)allocation.RelayServer.Port,
                 allocation.AllocationIdBytes,
