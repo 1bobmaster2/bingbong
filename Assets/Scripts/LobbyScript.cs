@@ -19,6 +19,7 @@ public class TestLobby : MonoBehaviour
     [SerializeField] private GameObject lobbyUI, nameNullErrorLabel, codeNullErrorLabel;
     [SerializeField] private RelayScript relayScript;
     [SerializeField] private TextMeshProUGUI lobbyCodeText;
+    [SerializeField] private GameObject copiedNotificationObject;
     private string playerName;
     private string startGame = "startGame";
     private bool isLobbyHost;
@@ -125,6 +126,7 @@ public class TestLobby : MonoBehaviour
             lobbyCodeText.text = lobby.LobbyCode;
             GUIUtility.systemCopyBuffer = lobby.LobbyCode;
             Debug.Log("the buffer now has: " + GUIUtility.systemCopyBuffer);
+            copiedNotificationObject.SetActive(true);
             PrintPlayers(hostLobby);
             
             
