@@ -15,8 +15,11 @@ public class FadeOutUI : MonoBehaviour
     {
         if (gameObject.activeSelf && shouldCheck)
         {
-            shouldCheck = false;
-            //start fading out
+            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a - Time.deltaTime);
+            if (text.color.a == 0)
+            {
+                shouldCheck = false;
+            }
         }
     }
 }
