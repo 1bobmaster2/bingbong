@@ -1898,6 +1898,7 @@ GameObject:
   - component: {fileID: 740050517}
   - component: {fileID: 740050519}
   - component: {fileID: 740050518}
+  - component: {fileID: 740050520}
   m_Layer: 5
   m_Name: CopiedNotification
   m_TagString: Untagged
@@ -2023,6 +2024,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740050516}
   m_CullTransparentMesh: 1
+--- !u!114 &740050520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740050516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e91a5a9f6cbcb40b8586d9b9bff3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeOutUI
 --- !u!1 &758269115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,6 +3894,7 @@ MonoBehaviour:
   codeNullErrorLabel: {fileID: 1934975167}
   relayScript: {fileID: 1595523828}
   lobbyCodeText: {fileID: 1230646345}
+  copiedNotificationObject: {fileID: 0}
 --- !u!114 &1595523828
 MonoBehaviour:
   m_ObjectHideFlags: 0
