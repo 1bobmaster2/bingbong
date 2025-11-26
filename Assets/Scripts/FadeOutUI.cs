@@ -10,4 +10,13 @@ public class FadeOutUI : MonoBehaviour
     {
         text = GetComponent<TextMeshProUGUI>();
     }
+
+    void Update()
+    {
+        if (gameObject.activeSelf && shouldCheck)
+        {
+            shouldCheck = false;
+            //start fading out
+        }
+    }
 }
