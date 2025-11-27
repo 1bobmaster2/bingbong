@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FadeOutUI : MonoBehaviour
 {
+    [SerializeField] private float fadeOutSpeed; 
     private TextMeshProUGUI text;
     private bool shouldCheck = true;
 
