@@ -2036,6 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e91a5a9f6cbcb40b8586d9b9bff3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeOutUI
+  fadeOutSpeed: 0.01
 --- !u!1 &758269115
 GameObject:
   m_ObjectHideFlags: 0
