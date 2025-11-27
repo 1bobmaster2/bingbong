@@ -16,7 +16,7 @@ public class FadeOutUI : MonoBehaviour
     {
         if (gameObject.activeSelf && shouldCheck)
         {
-            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a - Time.deltaTime);
+            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a - Time.deltaTime * fadeOutSpeed);
             if (text.color.a == 0)
             {
                 shouldCheck = false;
