@@ -3895,7 +3895,7 @@ MonoBehaviour:
   codeNullErrorLabel: {fileID: 1934975167}
   relayScript: {fileID: 1595523828}
   lobbyCodeText: {fileID: 1230646345}
-  copiedNotificationObject: {fileID: 0}
+  copiedNotificationObject: {fileID: 740050516}
 --- !u!114 &1595523828
 MonoBehaviour:
   m_ObjectHideFlags: 0
