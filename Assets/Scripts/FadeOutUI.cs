@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class FadeOutUI : MonoBehaviour
 {
     [SerializeField] private float fadeOutSpeed; 
-    private TextMeshProUGUI text;
+    [SerializeField] private Color fadeOutColor;
+    private Text text;
     private bool shouldCheck = true;
 
     void Start()
