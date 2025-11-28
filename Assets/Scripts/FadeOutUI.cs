@@ -16,10 +16,6 @@ public class FadeOutUI : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.activeSelf && shouldCheck)
-        {
-            text.CrossFadeAlpha(0, fadeOutSpeed, true); // this too doesnt work
-            shouldCheck = false;
-        }
+        text.color = new Color(text.color.r, text.color.g, text.color.b, 50);
     }
 }
