@@ -11,7 +11,7 @@ public class FadeOutUI : MonoBehaviour
 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
+        text = GetComponent<Text>();
     }
 
     void Update()
