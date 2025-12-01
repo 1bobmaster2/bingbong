@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 15317642}
   - component: {fileID: 15317645}
   - component: {fileID: 15317644}
-  - component: {fileID: 15317643}
   m_Layer: 5
   m_Name: CopiedNotification
   m_TagString: Untagged
@@ -157,20 +156,6 @@ RectTransform:
   m_AnchoredPosition: {x: 854, y: -148.06}
   m_SizeDelta: {x: 160, y: 92.126}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &15317643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15317641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e91a5a9f6cbcb40b8586d9b9bff3cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FadeOutUI
-  fadeOutSpeed: 0
-  fadeOutColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &15317644
 MonoBehaviour:
   m_ObjectHideFlags: 0
