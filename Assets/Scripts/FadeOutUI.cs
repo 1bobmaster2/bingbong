@@ -18,4 +18,14 @@ public class FadeOutUI : MonoBehaviour
     {
         //text.color = new Color32(255, 255, 255, 50); // i seriously don't know whats going on here (still waiting for response) (this line has been commented as it doesnt work properly)
     }
+
+    void OnEnable()
+    {
+        Invoke("DisableObject", 3);
+    }
+
+    void DisableObject()
+    {
+        gameObject.SetActive(false);
+    }
 }
