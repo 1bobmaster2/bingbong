@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 15317642}
   - component: {fileID: 15317645}
   - component: {fileID: 15317644}
+  - component: {fileID: 15317646}
   m_Layer: 5
   m_Name: CopiedNotification
   m_TagString: Untagged
