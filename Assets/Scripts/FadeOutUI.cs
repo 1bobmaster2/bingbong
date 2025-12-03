@@ -16,6 +16,6 @@ public class FadeOutUI : MonoBehaviour
 
     void Update()
     {
-        text.color = new Color32(255, 255, 255, 50); // i seriously don't know whats going on here (still waiting for response)
+        //text.color = new Color32(255, 255, 255, 50); // i seriously don't know whats going on here (still waiting for response) (this line has been commented as it doesnt work properly)
     }
 }
