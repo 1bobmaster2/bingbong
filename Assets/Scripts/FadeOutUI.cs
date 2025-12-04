@@ -26,6 +26,6 @@ public class FadeOutUI : MonoBehaviour
 
     void DisableObject()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
