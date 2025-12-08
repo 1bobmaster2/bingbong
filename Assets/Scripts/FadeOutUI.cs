@@ -21,7 +21,7 @@ public class FadeOutUI : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("DisableObject", 3);
+        Invoke("DisableObject", 3); //
     }
 
     void DisableObject()
