@@ -141,6 +141,8 @@ public class TestLobby : MonoBehaviour
     [ContextMenu("Start Game Lobby")]
     public async void StartGame()
     {
+        if(hostLobby == null) return;
+        
         string joinCode = await relayScript.CreateRelay();
         var UpdateOptions = new UpdateLobbyOptions
         {
