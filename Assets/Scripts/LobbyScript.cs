@@ -228,6 +228,12 @@ public class TestLobby : MonoBehaviour
 
     public async void LeaveLobby()
     {
+        if (joinedLobby == null)
+        {
+            joinedLobbyNullErrorLabel.SetActive(true);
+            return;
+        }
+        
         try
         {
             await LobbyService.Instance.RemovePlayerAsync(joinedLobby.Id, AuthenticationService.Instance.PlayerId);
