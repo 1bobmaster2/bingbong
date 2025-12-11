@@ -26,7 +26,6 @@ public class TestLobby : MonoBehaviour
     private bool alreadyConnected;
     
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
     {
         await UnityServices.InitializeAsync();
