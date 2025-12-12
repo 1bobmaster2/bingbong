@@ -18,10 +18,8 @@ public class RacketHitboxScript : NetworkBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isHitting = true;
-            if (Application.isEditor) // i feel like i shouldnt have this anymore
-            {
-                Debug.Log("set isHitting to true");
-            }
+            Debug.Log("set isHitting to true");
+
             Invoke(nameof(StopHitting), hitTime);
         }
         
