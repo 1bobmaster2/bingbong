@@ -197,7 +197,6 @@ public class BallScript : NetworkBehaviour
                 vec = new Vector3(0, 0, 5);
                 MoveBallToSpawn(vec);
                 Debug.Log($"moved ball to {vec.x}, {vec.y}, {vec.z}");
-                return;
             }
             else if (playerServing == 2)
             {
