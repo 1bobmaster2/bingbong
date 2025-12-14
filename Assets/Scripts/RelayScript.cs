@@ -19,7 +19,7 @@ public class RelayScript : MonoBehaviour
                 allocation = await RelayService.Instance.CreateAllocationAsync(ClientLoadedHandler.instance.expectedPlayers + 1); // the amount of connections in an allocation cannot be 0,
                                                                                                                                                // so if the expected players is less than 1 we add a 1 to prevent the error
             }
-            else
+            else // this is also here to prevent an error
             {
                 allocation = await RelayService.Instance.CreateAllocationAsync(ClientLoadedHandler.instance.expectedPlayers - 1);    
             }
