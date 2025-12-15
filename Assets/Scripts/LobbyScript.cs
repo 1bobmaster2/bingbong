@@ -214,6 +214,8 @@ public class TestLobby : MonoBehaviour
             joinedLobby = lobby;
             isLobbyHost = false;
             
+            Destroy(loadPlayersButton); 
+            
             PrintPlayers(joinedLobby);
             
             Debug.Log("Joined lobby by this code: " + lobbyCode);
