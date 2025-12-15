@@ -214,7 +214,7 @@ public class TestLobby : MonoBehaviour
             joinedLobby = lobby;
             isLobbyHost = false;
             
-            Destroy(loadPlayersButton); 
+            Destroy(loadPlayersButton); // the player that joined a lobby cannot load the players in
             
             PrintPlayers(joinedLobby);
             
