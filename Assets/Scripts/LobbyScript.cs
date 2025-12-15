@@ -16,7 +16,7 @@ public class TestLobby : MonoBehaviour
     private float lobbyUpdateTimer;
     [SerializeField] private string lobbyCode;
     [SerializeField] private InputField codeInputField;
-    [SerializeField] private GameObject lobbyUI, nameNullErrorLabel, codeNullErrorLabel, lobbyNullErrorLabel, joinedLobbyNullErrorLabel;
+    [SerializeField] private GameObject lobbyUI, nameNullErrorLabel, codeNullErrorLabel, lobbyNullErrorLabel, joinedLobbyNullErrorLabel, loadPlayersButton;
     [SerializeField] private RelayScript relayScript;
     [SerializeField] private TextMeshProUGUI lobbyCodeText;
     [SerializeField] private GameObject copiedNotificationObject;
