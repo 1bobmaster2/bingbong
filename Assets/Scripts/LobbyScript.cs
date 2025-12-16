@@ -215,6 +215,7 @@ public class TestLobby : MonoBehaviour
             isLobbyHost = false;
             
             Destroy(loadPlayersButton); // the player that joined a lobby cannot load the players in
+            joinSucesfullyLabel.SetActive(true); 
             
             PrintPlayers(joinedLobby);
             
