@@ -2,7 +2,7 @@ using Unity.Netcode;
 
 public class ClientLoadedScript : NetworkBehaviour
 {
-    public override void OnNetworkSpawn()
+    public override void OnNetworkSpawn()//
     {
         if (!IsOwner) return; // only the owner should run this script
         
