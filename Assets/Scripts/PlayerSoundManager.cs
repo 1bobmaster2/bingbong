@@ -10,7 +10,7 @@ public class PlayerSoundManager : NetworkBehaviour
             if (!IsOwner) return;
             
             
-            if (IsHost) // this script disables the audio listener of the other player
+            if (IsHost) // this script disables the audio listener of the other player, also sometimes doesnt work
             {
                 GameObject otherPlayer = GameObject.FindGameObjectWithTag("ClientPlayer");
                 AudioListener otherPlayerListener = otherPlayer.GetComponentInChildren<AudioListener>();
