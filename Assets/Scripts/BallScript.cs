@@ -112,7 +112,7 @@ public class BallScript : NetworkBehaviour
             
             
             EvaluateCollision(collision);
-            amountOfBounces = 0;
+            amountOfBounces = 0; //
         }
         
         if (!hasBeenHit)
