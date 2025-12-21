@@ -26,7 +26,6 @@ public class ScoreCheck : NetworkBehaviour
         Debug.Log(collision.gameObject.name);
 
         
-        
         if (!shouldCheck)
         {
             Debug.Log("should check is false, so we dont check");
