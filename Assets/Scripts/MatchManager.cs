@@ -31,7 +31,7 @@ public class MatchManager : NetworkBehaviour
     public void CoinFlip() // this method decides who should serve
     {
         int decision = Random.Range(1, 3);
-        playerServing = decision;
+        playerServing = decision; //
     }
     
     [ServerRpc(RequireOwnership = false)]
