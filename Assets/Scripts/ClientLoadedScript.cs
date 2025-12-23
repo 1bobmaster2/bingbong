@@ -1,6 +1,6 @@
 using Unity.Netcode;
 
-public class ClientLoadedScript : NetworkBehaviour
+public class ClientLoadedScript : NetworkBehaviour//
 {
     public override void OnNetworkSpawn()//
     {
