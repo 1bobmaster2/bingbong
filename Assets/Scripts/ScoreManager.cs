@@ -35,7 +35,7 @@ public class ScoreManager : NetworkBehaviour
             HostScore.Value++;
             Debug.Log("Host got 1 score, host score is now: " + HostScore.Value);
         }
-        else if (winner == "Client")
+        else if (winner == "Client") // 
         {
             ClientScore.Value++;
             Debug.Log("Client got 1 score, client score is now: " + ClientScore.Value);
