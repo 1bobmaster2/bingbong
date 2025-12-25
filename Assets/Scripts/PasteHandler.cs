@@ -9,7 +9,7 @@ public class PasteHandler : MonoBehaviour
     {
         if (inputField.isFocused && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.V))
         {
-            inputField.text = GUIUtility.systemCopyBuffer; //
+            inputField.text = GUIUtility.systemCopyBuffer;
             Debug.Log("pasted"); 
         }
     }
