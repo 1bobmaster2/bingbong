@@ -10,7 +10,7 @@ public class ScoreCheck : NetworkBehaviour
     private bool SnapshotForGroundIsServing;
     void Update()
     {
-        SnapshotForGroundAmountOfBounces = ballScript.amountOfBounces;
+        SnapshotForGroundAmountOfBounces = ballScript.amountOfBounces; //
         SnapshotForGroundIsServing = ballScript.isGettingServed;
     }
     
