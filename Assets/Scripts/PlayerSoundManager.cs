@@ -39,6 +39,10 @@ public class PlayerSoundManager : NetworkBehaviour
             else if (IsClient)
             {
                 GameObject otherPlayer = GameObject.FindGameObjectWithTag("HostPlayer");
+                if (otherPlayer == null)
+                {
+                    Debug.Log("lookforthis otherPlayer is null");
+                }
                 AudioListener otherPlayerListener = otherPlayer.GetComponentInChildren<AudioListener>();
                 otherPlayerListener.enabled = false;
             }
