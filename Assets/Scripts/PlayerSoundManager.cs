@@ -12,17 +12,7 @@ public class PlayerSoundManager : NetworkBehaviour
             
             if (IsHost) // this script disables the audio listener of the other player, also sometimes doesnt work (doesnt work if the host is hosting from an instance not from the unity editor)
             {
-                GameObject[] gameObjects = FindObjectsOfType<GameObject>();
-                string message = "lookforthisaaa  ";
-                foreach (GameObject go in gameObjects)
-                { 
-                    message += go.name;
-                    message += "  and the tag is ";
-                    message += go.tag;
-                    message += " NEXT ";
-                }
                 
-                Debug.Log(message);
                 
                 GameObject otherPlayer = GameObject.FindGameObjectWithTag("ClientPlayer");
                 if (otherPlayer == null)
