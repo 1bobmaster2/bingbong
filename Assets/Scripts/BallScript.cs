@@ -84,7 +84,7 @@ public class BallScript : NetworkBehaviour
             
             
             EvaluateCollision(collision);
-            amountOfBounces = 0;
+            amountOfBounces = 0;//
         }
         else if (isGettingServed && amountOfBounces == 2 && collision.gameObject.CompareTag("Ground")) // this is the exception (CHECK LINE 103)
         {
