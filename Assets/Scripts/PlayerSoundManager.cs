@@ -26,7 +26,7 @@ public class PlayerSoundManager : NetworkBehaviour
                 }
                 otherPlayerListener.enabled = false;
             }
-            else if (IsClient)
+            else if (IsClient) // this should work
             {
                 GameObject otherPlayer = GameObject.FindGameObjectWithTag("HostPlayer");
                 if (otherPlayer == null)
