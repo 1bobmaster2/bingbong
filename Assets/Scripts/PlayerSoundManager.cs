@@ -3,6 +3,8 @@ using UnityEngine;//
 
 public class PlayerSoundManager : NetworkBehaviour
 {
+    private bool done;
+    
     private void Update()
     {
         if (ClientLoadedHandler.instance.allClientsLoaded)
