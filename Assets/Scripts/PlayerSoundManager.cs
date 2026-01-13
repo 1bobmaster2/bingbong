@@ -42,6 +42,7 @@ public class PlayerSoundManager : NetworkBehaviour
                 if (otherPlayerListener == null)
                 {
                     Debug.Log("lookforthis otherPlayerListener is null");
+                    return;
                 }
                 otherPlayerListener.enabled = false;
             }
