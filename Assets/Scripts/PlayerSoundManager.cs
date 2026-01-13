@@ -11,7 +11,7 @@ public class PlayerSoundManager : NetworkBehaviour
 
         if (!done)
         {
-            if (IsHost) // this script disables the audio listener of the other player, also sometimes doesnt work (doesnt work if the host is hosting from an instance not from the unity editor)
+            if (IsHost) // this script disables the audio listener of the other player
             {
                 
                 
