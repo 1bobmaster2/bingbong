@@ -45,6 +45,7 @@ public class PlayerSoundManager : NetworkBehaviour
                     return;
                 }
                 otherPlayerListener.enabled = false;
+                done = true;
             }
         }
     }
