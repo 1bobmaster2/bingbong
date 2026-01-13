@@ -19,6 +19,7 @@ public class PlayerSoundManager : NetworkBehaviour
                 if (otherPlayer == null)
                 {
                     Debug.Log("lookforthis otherPlayer is null");
+                    return;
                 }
                 AudioListener otherPlayerListener = otherPlayer.GetComponentInChildren<AudioListener>();
                 if (otherPlayerListener == null)
