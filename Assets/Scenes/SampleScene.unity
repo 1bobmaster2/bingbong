@@ -1063,6 +1063,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 3777484518610844732, guid: 86cd281e2c24e404f9aea5d78084d8fb, type: 3}
   startRoundButtonObject: {fileID: 146333540572521829}
   coinFlipButtonObject: {fileID: 8052350943451107667}
+  EscapeMenuObject: {fileID: 156700462}
   gameUIReference: {fileID: 415742655}
 --- !u!1 &236816523
 GameObject:
