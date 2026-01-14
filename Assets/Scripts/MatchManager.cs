@@ -11,6 +11,7 @@ public class MatchManager : NetworkBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject startRoundButtonObject;
     [SerializeField] private GameObject coinFlipButtonObject;
+    [SerializeField] private GameObject EscapeMenuObject;
     [SerializeField] private GameObject gameUIReference;
 
     public override void OnNetworkSpawn()
