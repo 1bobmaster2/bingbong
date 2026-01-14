@@ -20,7 +20,15 @@ public class MatchManager : NetworkBehaviour
         coinFlipButtonObject.SetActive(true);
         Debug.LogWarning("tried setting the 2 buttons to active"); // this doesn't actually say if the 2 operations went smoothly
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            EscapeMenuObject.SetActive(!EscapeMenuObject.activeSelf);
+        }
+    }
+
     public void SetReady() // we call this from the button
     {
         NotifyManagerOnReadyServerRpc();
