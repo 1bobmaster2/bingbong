@@ -144,6 +144,11 @@ public class PlayerScript : NetworkBehaviour
         }
     }
 
+    void LeaveGame()
+    {
+        NetworkManager.Singleton.Shutdown();
+    }
+
     void MovePlayer()
     {
         screenPosition = Input.mousePosition;
