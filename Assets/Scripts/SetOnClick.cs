@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SetOnClick : MonoBehaviour
+public class SetOnClick : NetworkBehaviour
 {
     
 }
