@@ -144,7 +144,7 @@ public class PlayerScript : NetworkBehaviour
         }
     }
 
-    void LeaveGame()
+    public void LeaveGame()
     {
         NetworkManager.Singleton.Shutdown();
     }
