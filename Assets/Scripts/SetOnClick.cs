@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SetOnClick : NetworkBehaviour
 {
     [SerializeField] private Button button;
-    private void Update()
+    private void Update() // doesnt work btw
     {
         if (IsHost)
         {
