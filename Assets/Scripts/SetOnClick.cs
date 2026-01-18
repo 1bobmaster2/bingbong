@@ -29,6 +29,10 @@ public class SetOnClick : NetworkBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("ClientPlayer");
             PlayerScript playerScript = player.GetComponent<PlayerScript>();
+            if (player == null || playerScript == null)
+            {
+                Debug.LogWarning("player or playerScript might be null");
+            }
             button.onClick.AddListener(playerScript.LeaveGame);
         }
     }
