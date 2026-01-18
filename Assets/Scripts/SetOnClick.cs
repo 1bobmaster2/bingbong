@@ -36,4 +36,15 @@ public class SetOnClick : NetworkBehaviour
             button.onClick.AddListener(playerScript.LeaveGame);
         }
     }
+
+    public override void OnNetworkSpawn()
+    {
+        
+    }
+
+    void Spawn()
+    {
+        networkObject.Spawn();
+        transform.parent = parent.transform;
+    }
 }
