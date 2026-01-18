@@ -10,6 +10,11 @@ public class SetOnClick : NetworkBehaviour
     [SerializeField] private GameObject parent;
     private void Update() // doesnt work btw
     {
+        if (!networkObject.IsSpawned)
+        {
+            Spawn();
+        }
+        
         if (IsHost)
         {
             GameObject player = GameObject.FindGameObjectWithTag("HostPlayer");
