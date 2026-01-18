@@ -146,6 +146,7 @@ public class PlayerScript : NetworkBehaviour
 
     public void LeaveGame()
     {
+        Debug.Log("Leaving game");
         NetworkManager.Singleton.Shutdown();
     }
 
