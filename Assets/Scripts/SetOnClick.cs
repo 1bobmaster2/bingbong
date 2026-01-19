@@ -9,31 +9,10 @@ public class SetOnClick : NetworkBehaviour
     [SerializeField] private GameObject parent;
     private void Update()
     {
-        if (!networkObject.IsSpawned)
-        {
-            Spawn();
-        }
-        
-        if (IsHost)
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("HostPlayer");
-            PlayerScript playerScript = player.GetComponent<PlayerScript>();
-            if (player == null || playerScript == null)
-            {
-                Debug.LogWarning("player or playerScript might be null");
-            }
-            button.onClick.AddListener(playerScript.LeaveGame);
-        }
-        else // when client
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("ClientPlayer");
-            PlayerScript playerScript = player.GetComponent<PlayerScript>();
-            if (player == null || playerScript == null)
-            {
-                Debug.LogWarning("player or playerScript might be null");
-            }
-            button.onClick.AddListener(playerScript.LeaveGame);
-        }
+        GameObject player = NetworkManager.LocalClient.PlayerObject.gameObject;
+        PlayerScript script = player.GetComponent<PlayerScript>();
+        button.onClick.AddListener(script.LeaveGame);
+        enabled = false;
     }
 
     public override void OnNetworkSpawn()
