@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SetOnClick : NetworkBehaviour
 {
     [SerializeField] private Button button;
-    [SerializeField] private NetworkObject networkObject;
     [SerializeField] private GameObject parent;
     private void Update() // doesnt work btw
     {
