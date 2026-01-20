@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class FadeOutUI : MonoBehaviour
 {
     [SerializeField] private float fadeOutSpeed; 
-    [SerializeField] private Color fadeOutColor; //
+    [SerializeField] private Color fadeOutColor;
     private Text text;
     private bool shouldCheck = true;
 
