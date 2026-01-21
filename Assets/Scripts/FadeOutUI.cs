@@ -25,7 +25,7 @@ public class FadeOutUI : MonoBehaviour
 
     void DisableObject()
     {
-        Destroy(gameObject); // please help me
+        Destroy(gameObject);
         text.color = new Color32(255, 50, 255, 50); // this wont work no matter what, im leaving it here (i dont know what to work on now)
     }
 }
