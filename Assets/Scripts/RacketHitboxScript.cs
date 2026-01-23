@@ -132,5 +132,6 @@ public class RacketHitboxScript : NetworkBehaviour
             otherPlayerRacketScript.midPoint = GameObject.FindWithTag("MidPoint");
             Debug.Log("other players mid point is: " + otherPlayerRacketScript.midPoint);
         }
+        DisableOtherVolume();
     }
 }
