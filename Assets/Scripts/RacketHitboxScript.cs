@@ -75,6 +75,8 @@ public class RacketHitboxScript : NetworkBehaviour
     private void DisableOtherVolume() // isn't related with audio
     {
         Volume otherVolume = otherPlayer.GetComponentInChildren<Volume>();
+        Debug.LogWarning(otherVolume != null);
+        Debug.LogWarning(otherPlayer != null);
         otherVolume.enabled = false;
     }
     
