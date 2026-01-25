@@ -34,6 +34,7 @@ public class RacketHitboxScript : NetworkBehaviour
 
         if (!alreadyInitialized && ClientLoadedHandler.instance.allClientsLoaded)
         {
+            Debug.LogWarning("initalizing the variables");
             InitializeVariables();
             alreadyInitialized = true;
         }
