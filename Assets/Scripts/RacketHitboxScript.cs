@@ -32,7 +32,7 @@ public class RacketHitboxScript : NetworkBehaviour
             RequestHitServerRpc();//
         }
 
-        if (!alreadyInitialized && ClientLoadedHandler.instance.allClientsLoaded)
+        if ((!alreadyInitialized && ClientLoadedHandler.instance.allClientsLoaded) || (!IsHost && !alreadyInitialized))
         {
             Debug.LogWarning("initalizing the variables");
             InitializeVariables();
