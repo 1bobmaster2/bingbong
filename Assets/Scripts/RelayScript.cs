@@ -69,4 +69,9 @@ public class RelayScript : MonoBehaviour
             Debug.Log(e);
         }
     }
+
+    private void SetObjectActiveState(GameObject go, bool state)
+    {
+        go.SetActive(state);
+    }
 }
