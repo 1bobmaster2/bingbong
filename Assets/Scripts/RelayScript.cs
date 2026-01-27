@@ -37,6 +37,8 @@ public class RelayScript : MonoBehaviour
 
             NetworkManager.Singleton.StartHost();
             
+            SetObjectActiveState(gameUI, true);
+            
             return joinCode;
         }
         catch (RelayServiceException e)
@@ -63,6 +65,7 @@ public class RelayScript : MonoBehaviour
             );
             
             NetworkManager.Singleton.StartClient();
+            SetObjectActiveState(gameUI, true);
         }
         catch (RelayServiceException e)
         {
