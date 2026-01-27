@@ -1477,7 +1477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &415742656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4445,7 +4445,6 @@ GameObject:
   - component: {fileID: 1595523825}
   - component: {fileID: 1595523824}
   - component: {fileID: 1595523823}
-  - component: {fileID: 1595523826}
   - component: {fileID: 1595523827}
   - component: {fileID: 1595523828}
   - component: {fileID: 1595523829}
@@ -4481,6 +4480,7 @@ MonoBehaviour:
     Address: 127.0.0.1
     Port: 7777
     ServerListenAddress: 127.0.0.1
+    ClientBindPort: 0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
@@ -4543,18 +4543,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1595523826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595523822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e794c781648af64e88578da8ed6d411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1595523827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4576,6 +4564,7 @@ MonoBehaviour:
   joinedLobbyNullErrorLabel: {fileID: 972178757}
   loadPlayersButton: {fileID: 2106212688}
   joinSucesfullyLabel: {fileID: 75851281}
+  gameUI: {fileID: 415742655}
   relayScript: {fileID: 1595523828}
   lobbyCodeText: {fileID: 1230646345}
   copiedNotificationObject: {fileID: 15317641}
