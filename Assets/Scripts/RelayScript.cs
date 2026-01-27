@@ -8,6 +8,7 @@ using UnityEngine;
 public class RelayScript : MonoBehaviour
 {
     public string joinCode;
+    [SerializeField] private GameObject gameUI;
 
     public async Task<string> CreateRelay()
     {
