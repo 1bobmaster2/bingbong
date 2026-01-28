@@ -4564,7 +4564,6 @@ MonoBehaviour:
   joinedLobbyNullErrorLabel: {fileID: 972178757}
   loadPlayersButton: {fileID: 2106212688}
   joinSucesfullyLabel: {fileID: 75851281}
-  gameUI: {fileID: 415742655}
   relayScript: {fileID: 1595523828}
   lobbyCodeText: {fileID: 1230646345}
   copiedNotificationObject: {fileID: 15317641}
@@ -4581,6 +4580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joinCode: 
+  gameUI: {fileID: 415742655}
 --- !u!114 &1595523829
 MonoBehaviour:
   m_ObjectHideFlags: 0
