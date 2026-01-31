@@ -29,7 +29,7 @@ public class RacketHitboxScript : NetworkBehaviour
             {
                 Debug.Log("hit the ball");
             }
-            RequestHitServerRpc();//
+            RequestHitServerRpc();
         }
 
         if ((!alreadyInitialized && ClientLoadedHandler.instance.allClientsLoaded) || (!IsHost && !alreadyInitialized))
