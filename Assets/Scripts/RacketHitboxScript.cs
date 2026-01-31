@@ -9,7 +9,7 @@ public class RacketHitboxScript : NetworkBehaviour
     [SerializeField] private float torqueForce, impulseForce, hitTime;
     [SerializeField] private Volume volume;
     [SerializeField, ReadOnly] private GameObject ballObject, midPoint, otherPlayer;
-    private bool isHitting, canHit, alreadyInitialized;//
+    private bool isHitting, canHit, alreadyInitialized;
     
     private void Update()
     {
