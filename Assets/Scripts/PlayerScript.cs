@@ -148,6 +148,7 @@ public class PlayerScript : NetworkBehaviour
     {
         Debug.Log("Leaving game");
         NetworkManager.Singleton.Shutdown();
+        Application.Quit();
     }
 
     void MovePlayer()
