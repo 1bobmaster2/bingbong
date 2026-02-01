@@ -4,7 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 public class PlayerScript : NetworkBehaviour
 {
-    [SerializeField] private float zoomFactor;
+    [SerializeField] private float zoomFactor;//
     [Space]
     [SerializeField] Camera cam; 
     [SerializeField] Vector3 screenPosition;
