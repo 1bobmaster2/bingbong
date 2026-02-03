@@ -8,7 +8,7 @@ public class ClientLoadedHandler : MonoBehaviour
     [SerializeField] public int expectedPlayers;
     public bool allClientsLoaded;
     
-    void Awake() => instance = this;
+    void Awake() => instance = this;//
 
     public void MarkClientReady(ulong clientId)
     {
