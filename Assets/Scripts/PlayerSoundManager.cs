@@ -7,7 +7,7 @@ public class PlayerSoundManager : NetworkBehaviour
     
     private void Update()
     {
-        if (!IsOwner) return;
+        if (!IsOwner) return;//
 
         if (!done)
         {
