@@ -13,5 +13,5 @@ public class SetOnClick : NetworkBehaviour
         PlayerScript script = player.GetComponent<PlayerScript>();
         button.onClick.AddListener(script.LeaveGame);
         enabled = false;
-    }
+    }//
 }
